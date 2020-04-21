@@ -1,0 +1,24 @@
+Enemies
+-------------
+
+goblin1 - a goblin that can use a sword
+
+goblin2 - a goblin that can use a bow
+
+goblin3 - a goblin that can do both
+
+bee - hurts you on impact.  flies around really, really fast
+
+bug - dungeon enemy.  same as a bee, except limited to ground movement
+
+plant - stationary enemy.  when the player is at close range, it's vines come from underground to try and harm you
+
+plant_spore - launched form the plant enemy at long range
+
+plant_explode - explosion created by the spore when it hits the ground (or you)
+
+frankenhead - dungeon enemy.  makes something happen with his eye...shoots a laser?  makes a big flash of light?  who knows?
+
+potofdoom - releases jellyofdoom constantly until it is destroyed
+
+jellyofdoom - comes from a potofdoom.  homes in on the player, but moves slowly.  dies on impact with player

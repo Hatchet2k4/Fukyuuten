@@ -1,0 +1,143 @@
+(ika-map 
+	(version '1.2')
+	(information 
+		(title 'temple 15')
+		(meta 
+			(entityLayer 'B2')
+		)
+	)
+	(header 
+		(dimensions 
+			(width '320')
+			(height '320')
+		)
+		(tileset 'level1.vsp')
+	)
+	(waypoints )
+	(zones 
+		(zone 
+			(label 'toTemple14')
+			(script 'toTemple14')
+		)
+		(zone 
+			(label 'toTemple16')
+			(script 'toTemple16')
+		)
+	)
+	(layers 
+		(layer 
+			(label 'B1')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '20')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJyk1L9LQzEQwPG4KaJU/IFaFR0EHRQdlKropHWxdCl0UrTQVp20vPXhf6J/g7uLq3+V30ACx3FPEx0+JHk5jktyvJZz7jq4Meb6m163MCZ0MY4JTP7BFKZxFfK1UcMMZjPNYR4L6Ih8i1jCMuoZVrCKNVXfOjZwi7sMPWxiV9Tn728L27jHQzAQ8yqP2FH52ka+F5RCXBdinZOv/KWu0sgX7886r48f/nDumG+Ej4T6isT6XvGm6qu6P52jL+Zxv2fcnz7vUJ039f5y3mOgxv/m67v0+qz3tfov9l7h8vsvldV/Pt8e9vGEZ8X32LuxNwoOcKjO28ARjnEifIXxU62lU5yJ+vz/9SJoBnHu9y7DeC5im0a8/k9X6YbYTmL8NwAAAP//'
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFgwkAAAAA//8='
+			)
+			(entities )
+			(zones )
+		)
+		(layer 
+			(label 'B2')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '20')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJxiYBgF1AJKJKpXoYkrBjfYQkWzdlPRLFqA00B8ZqAdMQqIBkZo/ENAvAHK3gTlIwMTMuzYAaV3kaF3MAIAAAAA//8='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYKAEMKICiBiqCmqLga1BFWMgUh1d3Ae3HeQA5HCByWO6HVkMAAAA//8='
+			)
+			(entities )
+			(zones 
+				(zone 
+					(label 'toTemple14')
+					(x '144')
+					(y '288')
+					(width '16')
+					(height '16')
+				)
+				(zone 
+					(label 'toTemple16')
+					(x '272')
+					(y '144')
+					(width '16')
+					(height '16')
+				)
+			)
+		)
+		(layer 
+			(label 'A')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '20')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJxiYBgFo4C+YCsQxwBxLJXM2wvEvlBMKTgCxEeB2AWI3ahg3igYBehg50A7gIoAAAAA//8='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFgwkAAAAA//8='
+			)
+			(entities )
+			(zones )
+		)
+	)
+)

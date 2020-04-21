@@ -1,0 +1,47 @@
+List of things to do:
+
+-------------------------------
+ADDITIONS
+
+- /sprites/airboat_small.png should be used at the title screen (all logos/text will disappear) to show that Ana's ship is coming in for a landing on Green Isle.
+
+- The stone should be shown in the cutscene.
+
+- The characters should move around some more in all cutscenes past the intro.  In the cave the action just pauses.
+
+- Sound needs a boost in some places.  When dungeon puzzles are solved (killing the enemies in an enemy room), there needs to be a little victory or unlocking sound effect.
+
+- Leveling up needs a little victory animation and a little tune.
+
+- Town sprites and the bee hive need to be resprited.  The current sprites are out of date.
+
+- Blacksmith will be moved to the town and the town will be expanded.
+
+-------------------------------
+BUGFIXES
+
+- Most dialogue boxes cut part of the character's head off.  They either need to be repositioned, or moved to a fixed location.
+
+- Anastasia's portrait should always appear on the opposite side of the screen as the person she's talking to (just like the intro conversation)
+
+- The lifebar shouldn't appear until after the intro conversation.
+
+- The long cave cutscene should be split up into it's original format (Ana takes the stone and goes home with it...later it starts glowing)
+
+-------------------------------
+PICKY
+
+- Enemy "poof" sound needs to be beefed up a little.
+
+-------------------------------
+HALF IRRELEVANT
+
+- Stats affected by powerups need to be shown above Ana's head.  For example, getting a golden egg should make a "Def +1" appear above her head.  That, or we need a knowledgeable NPC to explain a few of these things.
+
+- The subscreen needs rearranging to accomodate the following:
+	- stats window (currently there)
+	- weapon window
+	- tools window
+	- inventory window (seashells/quest items)
+	- menu (currently there)
+	- description window (to explain what items do/are)

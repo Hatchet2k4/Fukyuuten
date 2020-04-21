@@ -1,0 +1,158 @@
+(ika-map 
+	(version '1.2')
+	(information 
+		(title 'temple 01')
+		(meta 
+			(entityLayer 'B2')
+		)
+	)
+	(header 
+		(dimensions 
+			(width '320')
+			(height '240')
+		)
+		(tileset 'level1.vsp')
+	)
+	(waypoints )
+	(zones 
+		(zone 
+			(label 'toGreen10')
+			(script 'toGreen10')
+		)
+		(zone 
+			(label 'toTemple03')
+			(script 'toTemple03')
+		)
+	)
+	(layers 
+		(layer 
+			(label 'B1')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '15')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJyE1M0rRFEYx/FrRyLykvdYKBbEgkhsNHfB3JRu2TAhM9coC/aWWGGlsPC28wfYUTZKVv4Qy/kDfE+ek6enc7P4dO55mV/PM+fOJFEUbYiSeU5QpyTqTCnn3Brq0YBG4+2feROaUVR5K2hBK9qMD1zhGjcy93vt6EAnUpPXhW70oFf5wj0e8Chzv9eHfgxgXfXt+h3EEDaxZWzjKbDn1oexqPpOpb4RjGIXVZSRyfM+jmT0exXsYQnLqu9iIM+f96POy2StKnmrpu9U+rX1VeWz5Zz63N6O6fs5+ntfbF6mcnVeyCFe8Kru1+fVVI7Ny3OLO7wH6quJSs59hLh+xzAeuN9vk+nyjnGCU1Wzvy9/LzrP1TeBScnzmQfiDOe4UGua+/6mMB39vi8ubwazmDM+Zbw0c2seC1Kf+43EKIhYCf2/xIHzBXX+BwAA//8='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFxAIAAAAA//8='
+			)
+			(entities )
+			(zones )
+		)
+		(layer 
+			(label 'B2')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '15')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJxiYBgF1AJKaPzzQLwCyl4F5cOACl1cRF8gwYifDwIgf2/Bof8nGXbuBuLleOSZGUkz9zAQr8ch9wGIXwPxbxLMOw3EZ/DIv4TSIDcSE374gBGUhrnxEBBvgIptgvLRgQlpVgw4AAAAAP//'
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYIAARiBEB4TFGCEASsNUQAkYRlAoHFQxRrg2JH2MGOrIESPGPBR/MDIiSyM4AAAAAP//'
+			)
+			(entities 
+				(entity 
+					(label 'savepoint')
+					(x '76')
+					(y '85')
+					(sprite 'savepoint.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+			)
+			(zones 
+				(zone 
+					(label 'toTemple03')
+					(x '144')
+					(y '32')
+					(width '16')
+					(height '16')
+				)
+				(zone 
+					(label 'toGreen10')
+					(x '144')
+					(y '225')
+					(width '16')
+					(height '15')
+				)
+			)
+		)
+		(layer 
+			(label 'A')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '15')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJxiYMAP4oHYF4hjCKgjFkwA4olAPIlK5lETHCfAH25AgBE/f6gBXzrbN9zCjxiwA4h3AvEuKpnnzgCJNxci1QMAAAD//w=='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFxAIAAAAA//8='
+			)
+			(entities )
+			(zones )
+		)
+	)
+)

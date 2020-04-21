@@ -1,0 +1,214 @@
+(ika-map 
+	(version '1.2')
+	(information 
+		(title 'temple 09')
+		(meta 
+			(entityLayer 'B2')
+		)
+	)
+	(header 
+		(dimensions 
+			(width '320')
+			(height '240')
+		)
+		(tileset 'level1.vsp')
+	)
+	(waypoints )
+	(zones 
+		(zone 
+			(label 'toTemple05')
+			(script 'toTemple05')
+		)
+		(zone 
+			(label 'toTemple08')
+			(script 'toTemple08')
+		)
+	)
+	(layers 
+		(layer 
+			(label 'B1')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '15')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJys0stqwkAUxvG4q0hLpSi9Cl0IdaHgQul9l64q2RSytdWFV9DupW/RVaEv4iO5zAP4HziB02HSMOLiR0Im55uTOYmCIDhAEaUdHeIIb4hxjDJOdlRBFa+IcIoznOPC0yWuUJP+TN4NrtHHu6cP1NGS/mLJa2CEsacJmiqvkJM3w1JMc/IKKu8HC0eNeT8R9n5mr0+srTzjG3NHTZq3ylj7wq/K0edn5jFw1Mylzs4byjzS79XzzTq/oZqlvZdrHr7zTRQ7T/fXlnks/2EyNiKRZ2YeHXRVf7e4wz0ePD3iCc/SXw8hXqxreq+51kOlF/z9Z/ZhCwAA//8='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFxAIAAAAA//8='
+			)
+			(entities )
+			(zones )
+		)
+		(layer 
+			(label 'B2')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '15')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJxiYMANDhApRiw4QaQYseACkWK4gBIa/wYWNehiKiSYTwmYQoHeLTjE55Jh1m4S1J4nUgwbWAPEa0mwi4URQp8G4jMk6EMHrEBzfgDpnxSY8QdKg8x5BcQfgPg1EWYaofEPIbFhZsHEXgLxbyA2IcFdp4gUG0oAAAAA//8='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYCAWMKIBsBiaEuLFoAagGI9NB3Z15NuL3R/EAQAAAAD//w=='
+			)
+			(entities 
+				(entity 
+					(label 'bug1')
+					(x '161')
+					(y '110')
+					(sprite 'bug.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'bug2')
+					(x '143')
+					(y '126')
+					(sprite 'bug.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'bug3')
+					(x '161')
+					(y '127')
+					(sprite 'bug.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'pot1')
+					(x '62')
+					(y '58')
+					(sprite 'pot.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'frankenhead')
+					(x '151')
+					(y '60')
+					(sprite 'frankenhead.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+			)
+			(zones 
+				(zone 
+					(label 'toTemple08')
+					(x '288')
+					(y '112')
+					(width '16')
+					(height '16')
+				)
+				(zone 
+					(label 'toTemple05')
+					(x '16')
+					(y '112')
+					(width '16')
+					(height '16')
+				)
+			)
+		)
+		(layer 
+			(label 'A')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '15')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJxiYBgFgwnEA/FkKpizFYhjgNgXiGfjUHOcSDEQ2As1yx2IFwPxEgrcdgSIjwKxCwVmjIKRCQAAAAD//w=='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFxAIAAAAA//8='
+			)
+			(entities )
+			(zones )
+		)
+	)
+)

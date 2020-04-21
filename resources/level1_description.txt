@@ -1,0 +1,26 @@
+Level 1 room description
+----------------------------------
+Note: The rope works just like Zelda's grapple.
+
+01 - entrance to the dungeon.  No enemies here.  Door to the right is shut...it is a one-way passage from map 02.
+
+02 - this is where you'll get a key.  It's in the upper half of the room.  Once you have the rope, you can enter the room using the warp system, travel to the other side of the gap, then get the key.  The button on the floor will switch all stone blocks with "eye" floor tiles, so that you can get back across (and the other switch pops up).
+
+03 - This room works like map 02, except more complex.  The door to the north is a key door.  There is a key at the very obvious spot enclosed in blocks (in the bottom left of the room).  Once the player steps on the button in the lower-right of the room, all "eye" floor tiles will turn to blocks, and vice versa.  It would be fun to put enemies enclosed in the blocks that are released when this happens.  The player can then go all the way left to the button left of the key.  That switch will only make the wall of blocks above the key disappear, so the player can then make his way all the way around and grab the key.
+
+04 - Just an intersection.  The gap in the middle can be traveled across with ease once the rope is obtained.  The sky background is below (and depicted beneath all holes in the dungeon).
+
+05 - 09  These are one-room warp maps.  The tiles in the middle of each room hint at where you will warp to.  The entrances and exits are all shown on level1_map.png.  It is suggested that we need a different sound effect to play when you warp instead of just travel through a door.  This can help avoid too much confusion on the player's part.
+
+10 - This is a warp room as well as the room taht contains the rope treasure.  The player must go through map 11 to get to the top.  Once you re-enter the room, the button in the bottom-left will turn all blocks in the upper half of  the room into "eye" floor tiles.  The upper-left is where the rope is.  The other two "cells" can be holding enemies that are released with the puzzle.
+
+11 - Just a simple maze-like enemy map.  The bottom door (from map 10) is one-way, so you can only exit through the north door.  That door is also one-way.
+
+12 - Another intersection map.  Obviously the rope is needed to travel north.  The north door is also a key door (the key from map 02 is needed).
+
+13 - This is an enemy room.  The wild blue-colored doors indicate that you cannot leave this map until all enemies are dead.  So, obviuosly, it's a big mazey room with lots of monsters.  The intersection in the middle can be traveled across using the rope.  The buttons in the top-right of the map toggle whether or not you'll be able to travel north/south or east/west at this intersection (there will be enemies near the second button that you must kill).
+\
+
+enter maze from top left entrance
+go left, left, right right
+

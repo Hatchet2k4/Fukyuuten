@@ -1,0 +1,186 @@
+(ika-map 
+	(version '1.2')
+	(information 
+		(title 'cave 03')
+		(meta 
+			(entityLayer 'B2')
+		)
+	)
+	(header 
+		(dimensions 
+			(width '320')
+			(height '480')
+		)
+		(tileset 'cave.vsp')
+	)
+	(waypoints )
+	(zones 
+		(zone 
+			(label 'toCave02')
+			(script 'toCave02')
+		)
+		(zone 
+			(label 'toggleBlocks')
+			(script 'toggleBlocks')
+		)
+	)
+	(layers 
+		(layer 
+			(label 'B1')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '30')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJzU1LtKA0EUBuCznUYUc1HWK0mRkBRKUiiKl0INQhIIaOMtD7CF1Wwb8kw+gm/mvzALw+Sc3TMkjcXHwJD8OdnZ+SMiimC2osgxhQ3YhApsBdqBiZe3C1WoQT3AHuwzeTEcwCEcBTiBUyavCS34hjljwezF+HIba4fJ60LPfi6FxJHaPOPsGesMzkvyEsZC2NfmGSHP3w+dLyV5vuz5XWC9VOZ9wCfcCG7hDu5L8oydK/8vTzAs4d8Pbj7u2Wj8xzz3Xf0ifbcUzfcAjyT3yjYtd0tR3gjGxPdKg/hukfKy9+UFXonvlWPiu0V7P/yOyO6GdF6aPtB2QZ7Xh4H9Xen7xluL8q7gmuS7+gbvyvkyRXfz2Xke2jzt+56fjdTNoXlun65zvlXz3PP/IbmbtXnu+f/aletmLW03r9sfAAAA//8='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFo4D6AAAAAP//'
+			)
+			(entities )
+			(zones )
+		)
+		(layer 
+			(label 'B2')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '30')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJxiYBgF1AQSjNjF66hk/nYqmwcDQ9E8EyrbMQpGwSgYBaNgFFALAAAAAP//'
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYKAMMCIBuBCEQmIzoFAUiCGbh2EvQi3CeQMphuo8ZDUobkaXZ2TEFEM2jOZuZ0RxAkwhhhBeMQAAAAD//w=='
+			)
+			(entities 
+				(entity 
+					(label 'goblin2')
+					(x '73')
+					(y '154')
+					(sprite 'goblin2.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'goblin1')
+					(x '121')
+					(y '308')
+					(sprite 'goblin1.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'friedrich')
+					(x '180')
+					(y '120')
+					(sprite 'friedrich.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+			)
+			(zones 
+				(zone 
+					(label 'toCave02')
+					(x '208')
+					(y '448')
+					(width '16')
+					(height '16')
+				)
+				(zone 
+					(label 'toggleBlocks')
+					(x '128')
+					(y '80')
+					(width '16')
+					(height '16')
+				)
+			)
+		)
+		(layer 
+			(label 'A')
+			(type 'tile')
+			(dimensions 
+				(width '20')
+				(height '30')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJxiYBjZQICRNmpHASYYDb9RMAqwg4HKG6N5cmQDWPwP1nSwA4h3AvEuKpnnDsSuQOxCJfP8gRgUdD445AEAAAD//w=='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFo4D6AAAAAP//'
+			)
+			(entities )
+			(zones )
+		)
+	)
+)

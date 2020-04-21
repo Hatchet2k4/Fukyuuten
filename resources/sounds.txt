@@ -1,0 +1,39 @@
+Sound Effects
+--------------------
+
+sword slash
+sword thrust
+sword hit
+spear thrust
+spear hit
+grapple sound
+enemy dying (some fade-out effect or even a "poof" sound)
+level-up ding/celebration noise
+menu select (moving the cursor)
+menu choice
+bell ringing
+wings flapping
+bee buzzing
+goblin irks
+new game/exit game choice (like the menu choice but more grand)
+save sound effect
+menu back (cancel)
+dungeon warp
+dungeon door close
+dungeon door open
+dungeon switch
+dungeon solve (as in "you've just killed all the enemies here please proceed")
+fall in a hole
+pot breaking
+jelly launch (imagine blowing a bubble filled with jello)
+jelly destruction (imagine popping a bubble filled with jello)
+boss sounds (giant crab noises?)
+
+MORE SOUNDS
+------------------------
+powerup sound (for when the player gets a boost of energy or refills some HP)
+grapple CATCHING sound (for when it clings to something)
+rumble sound (for the earthquakes in the story)
+a "bonk" sounds (for when the fish bonks the girl on the head)
+draining of a lake (to get to dungeon1)
+seashell money sound (for when you pick up a seashell and get richer)

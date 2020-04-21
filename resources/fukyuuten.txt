@@ -1,0 +1,297 @@
+FUKYUUTEN SCRIPT
+------------------------------
+
+-Title Screen-
+
+*logo disappers
+
+Ana's ship (airboat_small.png) flies toward the floating island.
+
+-Green 00-
+
+Ana jumps off her ship.
+
+ANA: Pfft!  I can't believe I came away empty handed today!  If it wasn't for that flock of gulls I'd still have that seventy-pounder.
+
+Ana walks to the edge of the cliff and points.
+
+ANA: You hear me?!  Give me back my fish!
+
+Suddenly a seventy-pound fish falls from the sky and clunks Ana on the head.
+
+ANA: Ouch!!!
+FRED: Drop something?
+
+Freidrich the merchant flies in and lands next to Ana.
+
+ANA: Freidrich!  It's been almost a week!
+FRED: Indeed!  It has been quite some time.  Oh, but I've got some stories for you!
+ANA: Yeah?  Find any new treasure on that deserted isle?
+FRED: You wouldn't believe me if I told you.  I shall have to take you there someday.  We'll plan a trip!
+ANA: Ooooh!  Sounds like fun!
+FRED: As a matter of fact, there is something I'd like to show you at my shop.  Swing by when you get a chance.
+ANA: Sure!  I need to get this fish down to the village anyway.
+FRED: Oh do take your time, dear.
+
+Ana grabs the huge fish and holds it above her head.
+
+FRED: Hehe.  I've been all over the world, Ana.  You're still the best fisherman I've ever known.
+ANA: FisherPERSON!
+
+Ana begins to make her way south a few steps.
+
+FRED: haha.  Of course.  Oh...I almost forgot.  There have been some pesky goblins about.  Should you run into trouble, don't hesitate to use this...
+
+*Ana gets a piece of fruit
+
+FRED: Olivar's orchard yielded quite the crop this year!
+ANA: Thanks!
+FRED: Don't mention it.  Tootles!
+ANA: Okie dokie!
+
+
+-Green 03- (town)
+
+Ana plops the fish down next to Yolander.
+
+YOLANDER: Oh my!  That's the biggest catch you've made all month!
+ANA: Yeah...  Except it's the only one I have.
+YOLANDER: Tsk tsk, Anastasia!  How can I run a restaurant without fish?
+ANA: I'm really sorry, Yolander.  This really hasn't been my day.  I swear, those gulls were out to get me!
+YOLANDER: Sure, sure.  Don't worry about it.  This should be enough for today.  Here you are...
+
+*Ana gets 10 seashells (money)
+
+YOLANDER: Don't spend it all in one place!
+
+Ana steps away with her money.
+
+ANA: (Hmm...I wonder what Freidrich is going to show me...)
+
+Ana walks over to his shop and looks around for him.
+
+ANA: (now where'd he run off to?)
+
+Ana asks around town.  She finally gets to the two dancer girls.
+
+ANA: Have you seen Freidrich?
+DANCER1: Freidrich?  Oh yes!  The little wolf bird!
+DANCER2: He's so cuuute!
+DANCER1: Oh I know!  I just want to cuddle him and squeeze him until he...
+ANA: *ahem*
+DANCER1: ...um...I think I saw him running after a goblin.
+DANCER2: Yeah...to the north.
+DANCER1: He accused that little goblin of stealing something from him.  Personally, I think goblins are harmless.
+DANCER2: They're just so cute!
+DANCER1: I know!  I could just eat them right up!
+
+Ana turns away.
+
+ANA: (You would...)
+
+
+-Cave 03- (goblin cave)
+
+Ana unties Frederiech.
+
+FRED: Ana!  Thank goodness!
+ANA: What happened to you?
+FRED: Remember the item I told you about earlier?  One of the little buggers took it!  I thought nothing of chasing down a young goblin...but then he came in here.
+ANA: A cave full of goblins!
+FRED: Yes...how they built a home this close to town without anyone noticing still eludes me.  I'll have to talk to the mayor about this.
+
+Ana turns around and looks at the item on the ground behind her.  It's a stone with an engraving on it.
+
+ANA: Is that it?
+FRED: Yes...
+ANA: It's...
+FRED: I know...
+ANA: ...just a rock!
+
+Fred falls over.
+
+FRED: Just a rock??  Do you have any idea how old it is?
+ANA: A thousand years?
+FRED: ONLY A THOUSA...oh...well, you're right, actually.  It is precisely 998 years old.
+ANA: How do you know?
+FRED: Because it belongs to the Kojima...a race of people who once populated this very island.  They were wiped out by a natural disaster ages ago.
+FRED: It's amazing, really.  This is perhaps the oldest Kojima artifact ever found!
+
+A lightbulb finally appears over Anastasia's head.
+
+ANA: Ooooh!  So that means this is really, really important!
+
+Fred slaps himself.
+
+FRED: YES!!!
+ANA: Wow, Fred...this could make you filthy rich!
+
+Fred hops over and picks up the stone.
+
+FRED: Let's not get ahead of ourselves.  I still have many authenticity tests to run.  You never know who might be out to prank us.
+ANA: Don't worry...if anybody tries that I'll kick their butts!
+FRED: I know you would, Ana.  *phew* It has been quite a day.  I think I'll go home and get some rest.
+ANA: But what if the goblins come lurking around again?
+FRED: Hmm...  You're right.  I need to keep this in a safe place.  Here...you keep it for the night...
+
+*Ana gets the artifact
+
+Fred flies off (yes...inside the dungeon teehee).
+
+*fade to black
+
+-Green 00- (Ana's house, the next morning)
+
+Ana yawns and then stretches outside her front door.
+
+ANA: Alright, you stupid gulls!  I've got some catching up to do for Yolander!  So you better stay out of my way today!
+
+Ana begins walking toward her ship when, suddenly, the ground starts shaking.
+
+*RUUUUUUUMBLE*
+
+Ana falls over and gets up.
+
+ANA: What on earth?
+
+Then, a slight whining sound catchers her ear.  Ana pulls out the artifact.  It is now glowing.
+
+ANA: ...  It's so...bright.  Something's up.  I better go talk to Fred.
+
+
+-Green 03- (town, fred's house)
+
+Ana activates Fred's totem.  Fred comes flying in.
+
+FRED: Ana!  Good to see you.  Did you come to bring me the artifact?
+ANA: Fred!  Didn't you feel the ground shaking??
+FRED: Well, as you can tell, I don't do a lot of standing around...
+
+*RUUUUUUUUMBLE!*
+
+FRED: Sweet Candy!  What was THAT?
+ANA: Look!
+
+Ana pulls out the artifact.  It is glowing brightly like before.
+
+FRED: Ana!  How is this happening?
+ANA: Don't look at me!
+
+Suddenly it stops.
+
+ANA: It's the same thing that happened when I got up this morning!
+FRED: Well...hmm...
+ANA: ...any ideas?
+FRED: It seems that...hmm...
+ANA: ...that?
+FRED: ...that the shaking and the glowing MUST be related!
+ANA: JESUS, Fred!  Even I could've figured that one out!  You know, you're not as smart as you look.
+FRED: Hmph!  I...honestly have no idea what it could be!
+ANA: Arg!
+
+Ana goes stomping off.
+
+FRED: .......unless...
+ANA: *turns around* ?
+FRED: ...there could be one posibility.  But...of course it is all a Kojima legend.  But it couldn't possibly...
+ANA: What's the legend?
+FRED: Well...it is believed that the natural disaster that caused the Kojima to vanished was this very thing.  It was called an "earthquake."
+ANA: Earthquake?
+FRED: Yes.  But it's all impossible of course.  Earthquakes are a myth.
+
+*RUUUUUUUMBLE*
+
+ANA: That feel like a myth to you?!?
+FRED: Aaaagh!
+
+Fred starts flying and hangs in the air for a bit.
+
+ANA: Wait...I think it's trying to tell me something.  These arrows...what are they?
+
+Fred lands.
+
+FRED: They look like directions!  Everytime the stone lights up it's pointing you in a direction.  It's pointing...west!
+ANA: What's west?
+FRED: I don't know...maybe you should see!
+ANA: Me?  You're the one with wings, buster!  Why do I have to run my ass off?
+FRED: Dear, Anastasia.  I can't carry such a thing in my talons!  It would be suicide!
+ANA: Oh I get it...you're still scared of the tiny little itsy-bitsy goblins.
+FRED: No!  I just...don't want to drop it is all.  Now, head west, Ana!  If something comes up just use my totem to call me.
+ANA: Right!
+FRED: Good luck!
+ANA: (What a wimp!)
+
+
+-Green 09- (Fred's totem)
+
+FRED: Found anything yet?
+ANA: Nope.
+FRED: It seems there's a dead end up ahead.
+ANA: Arrow's pointing south.
+FRED: Strange...  Well, keep looking!
+ANA: Right!
+
+Fred flies off.
+
+
+-Green 10- (at the Kojima gravestone)
+
+The gravestone is glowing brightly just like the stone.  Fred lands.
+
+FRED: Well I think we've found what we're looking for.
+ANA: No kidding...
+FRED: But what does it all mean?  Is there something here we're supposed to see?
+ANA: Hmmm...
+
+*minigame symbol-matching puzzle (ok we don't have to do this...and we probably won't get to)
+
+The stone slides into place and the flashing stops.
+
+FRED: ...and just what was that suppose to d...WHOA!
+
+The ground from beneath Fred disappears and he catches himself flying.  An entire crater is revealed with an entrance to an underground temple.
+
+FRED: Ana, look!  An entrance!
+
+Fred flies down to it.
+
+ANA: ...so...what's inside?
+FRED: I'll be damned if I'm going to find out!
+
+Fred takes off.
+
+ANA: Fred you're such a wuss!  Get back down here!
+FRED: I've had too much excitement for one day, Ana.  And I don't think getting lost in some underground cavern is the best way to reduce my stress level!
+ANA: Jeez...
+FRED: I need to see my theropist!  Good day!
+
+Fred flies off.
+
+ANA: ...such a dork.
+
+Ana turns toward the entrance.
+
+ANA: Here goes nothing...
+
+
+-Level1_16-
+
+Ana touches the crystal in the middle of the room and is knocked back.  A spirit appears before her.
+
+SPIRIT: So it is you who has answered my call.  Wait...a woman?
+ANA: Hey!  What's that supposed to mean?
+SPIRIT: Erm...nothing!  Tell me...how did you do it?
+ANA: That plant thing?  I er.... poked it with a sharp piece of metal, you see.  Most anything eventually stops moving if you poke enough holes in it.
+SPIRIT: The guardian you defeated was the very reason I called you here.  He finally broke free of the spell put on him a millennium ago.  It seems he tampered with the crystal.
+ANA: Crystal?  What's this thing for, anyway?
+SPIRIT: Are your people truly so blind?  Did you not read the great Book of Kojima??
+ANA: Um... "book"?  Is that a kind of plant?
+SPIRIT: Ana, this crystal is what keeps this island afloat.  You see, thousands of years ago, blah blah blah, and a big flood, blah blah blah.  The earth was blah and covered in water.  It was up to us Kojima to blah blah blah.  Blah blah blah blah blah blah.  And that's how Green Island got here!  It is all a part of Fukyuuten!
+ANA: Cool!  So...um.  What am I supposed to do now?
+SPIRIT: The crystal's power is fading.  If you don't find a replacement soon, this whole island could fall into the ocean!
+ANA: Oh no!  Where can I get a new one!
+SPIRIT: On the desert island that wasn't built!
+ANA: ???
+SPIRIT: Yes!  As much ass as Your Mother kicked over the past couple weeks, they didn't kick quite enough ass to get a second island completed.  So, you'll have to settle for this text ending!
+
+*AND THUS THE ISLAND WAS DOOMED.  EVERYBODY DIED GRUESOME, HORRIBLE DEATHS.  THANK YOU FOR PLAYING*

@@ -1,0 +1,294 @@
+(ika-map 
+	(version '1.2')
+	(information 
+		(title 'green 10')
+		(meta 
+			(entityLayer 'B2')
+		)
+	)
+	(header 
+		(dimensions 
+			(width '640')
+			(height '480')
+		)
+		(tileset 'green.vsp')
+	)
+	(waypoints )
+	(zones 
+		(zone 
+			(label 'Default Zone')
+			(script '')
+		)
+		(zone 
+			(label 'friedTotem')
+			(script 'friedTotem')
+		)
+		(zone 
+			(label 'toGreen07')
+			(script 'toGreen07')
+		)
+		(zone 
+			(label 'toGreen09')
+			(script 'toGreen09')
+		)
+		(zone 
+			(label 'toTemple01')
+			(script 'toTemple01')
+		)
+	)
+	(layers 
+		(layer 
+			(label 'B1')
+			(type 'tile')
+			(dimensions 
+				(width '40')
+				(height '30')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJzsl0FPAjEQhXdBjJFEjCZo4k8xIZH/AJyUE/B3PWLiReViPKk34WAb++Jj7Ey7G1YvHl5gt/TN15lOdxkURTEglRmq8luvQ6eO06kyfhPRRMTimPKeplgMjW9P8A0ic1mLBEvuOi1JvrOE75W7GJbfbBrfLtnAh9yNxPhlue2/MOJae2hWk+2IattO+Eg2ixtq0ffrDDb4tEVtee+B0dcS86ZG3XjMr7cr1MvIYcwfuYMsL87PlPLC3uy3L7wtxrnwxxrZp6N4oScmxXbOxkHM1xdM7Ct7b5bgOjHEXtgz2v6S52Hf8GspHsxlnSNQu9hep8bGfFzzdgV/uaYUW1Wl+rdJpfIQ69+/lq+h3y/ooaZyp533qeeAZ0NPdjPYrEFtaF787G0I55M2V/ZnKg8Hpa66ucXZpI3n7EuvpdNxqWvZwL7IlY+9croL12un2/Dpry8CHxhz3zN2zXhPfPzp2TeRmv0m44ryuA7ahJyuKbdyb6Ev5PNmGFSVQzsDweAZH5wenZ6czssv5lx/+U5ah4+fwVzfTeB8dvpwelHyZgnvAL2K8ySfxfjq9Ob0ruQH70Ny/oi88Y5atcaob51nHcfnNYIZ98BfZw+m/gNoXIgf89FUh29o1Nfi4ryMxf26vZCTQxkzFt/Kz67ZqtSnqdj/akafAAAA//8='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFo2AUjIKhAQAAAAD//w=='
+			)
+			(entities )
+			(zones )
+		)
+		(layer 
+			(label 'B2')
+			(type 'tile')
+			(dimensions 
+				(width '40')
+				(height '30')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJyslztvU0EQhdcC6Qo6goC/kIJHMI6DULBDhLEjjHg1BKfAjjsoLNFEokFCSpCQ4B9CBx10PDpmxB75eDx779pmpKNk753d+XZmd723GUJoRm2JWhVqizaj7+34rCO6F9UlP1URZm1Sm/ZrkU9Dnm+KmqIt0bE8O4k+62bsdYpn1Y08+Fvm1448bEWc10PiU59t5Ra1RG3RR3n+yXCBjdtVvFdkrKuia6LLtXlGy6dtm2815KugPkVi3pap69QpODWx7XHN6WT6wZAvtQPRk6iy+uj4r6I8HlsT204Z+1lTtqei51GLmBffMne0xiVssI6Tb7ANRKMovMs1Gz83Z57ZvvflWV90GN/rmlxm3GVz5lkRpnsDfDBdkzqu3WNVtkrOrI3pLFG+u6I6SefPe/NlZrxVcmYN+RuLtg3fqvOvss/0/5eED/J33bDVS8blM6hMzyr6fqXn3xJ9tMbKdlN0y8jbv/YMKtNjh5nff6dxf1AfZgTbC2euWOOTKD6Dcvj2TXsQZs+vnxTrV3y2b+a1I7oTfR4YPjDBF2zgK7MU32FZJ7Eh9VP/nmgv4WtrOQir8dnaVTEq26OSfraWzDeqiIFa2XojVtnePQjTvA3DfM0hzhXzcY1+m7G5PQzTtQYhlrd3OS74dI1xzb31bNfPGu3pP6IL0r4oulT714adc85PxPL2LtQzfEVirv0wu9+Qt7XMc9vjA6O3d0dhmjsV1sKkNntHhfF9gS2H75T4nM2cx0S0G9Uz2otM+B3h7xHlO1qCbxE2tQ8ZfKizGu4g/djHMp6Rd6cT8Rdls3xDhw9sfJfqEF+K8bwjy6a1e+305/eIAdsJ8/nD+uP7JfO9z01GIva7hM9b0Rvi09/bDWJE/rD++H7ZkPaNJdiQs12jo+Dfk1gbJC9/arhfKh8YFzFeTyzkpoyPGfnewt+YqDH4chir8sJxq/zqIX2nUkONma+RETuHz7tnevLY5r6x/zMfcoL7ZJVVffP/BQAA//8='
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJyckgsOwCAIQ+n9L73MTVZo3Y/EROWJpRrhA+d4inccMDgBMYLXWbQiOwXa4bLRzsBVMbMxr/eTxM515ZaDtJgbTyb94y53eHnkyTWwd5OpjzLYdnly5QGkSapuGoCxAFDjpuDyT5DJPIYoouQPTRkoXZuX1u8YyhnIFnjPrcDahsi7PLjlsOb6XRQlZTivV4rdNLZOf4sNAAD//w=='
+			)
+			(entities 
+				(entity 
+					(label 'plant4')
+					(x '95')
+					(y '110')
+					(sprite 'plant.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'archer2')
+					(x '170')
+					(y '160')
+					(sprite 'goblin1.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'friedTotem')
+					(x '64')
+					(y '144')
+					(sprite 'nothing.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'false')
+					(obstructed_by_map 'false')
+					(adj_activate_script '')
+					(activate_script 'friedTotem')
+				)
+				(entity 
+					(label 'archer3')
+					(x '321')
+					(y '114')
+					(sprite 'goblin2.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'archer2')
+					(x '351')
+					(y '141')
+					(sprite 'goblin1.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'archer4')
+					(x '466')
+					(y '108')
+					(sprite 'goblin3.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'archer5')
+					(x '449')
+					(y '135')
+					(sprite 'goblin3.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+			)
+			(zones 
+				(zone 
+					(label 'toGreen09')
+					(x '400')
+					(y '0')
+					(width '48')
+					(height '16')
+				)
+				(zone 
+					(label 'toGreen07')
+					(x '624')
+					(y '192')
+					(width '16')
+					(height '64')
+				)
+				(zone 
+					(label 'toTemple01')
+					(x '176')
+					(y '271')
+					(width '16')
+					(height '16')
+				)
+			)
+		)
+		(layer 
+			(label 'A')
+			(type 'tile')
+			(dimensions 
+				(width '40')
+				(height '30')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJzsmMsOwiAQRelCXak/4GPj2/pI/CR/vEuX/oDV2ygJoSNQaGESPcldTALTywSaASH8mWRCTKEZNM/qseu8ttDzLqAltILWRPwN13FN0fPmRM0O0BE6Gb6bf8ZtoK2ljk1qnBPfD6nF2WGuT161ZpRnV1zm+uTtav9Q+JyfkJo1pev1h6Kv/8rMb9v/yLaJscdDiLHHf50itQELNy0uUpgwcIceUAk9Rd1vaip/PZyhPjTI3jE3hvA1gsaRzrrsQbgiexCuyB6EI2p/yRG1v+SI2l9y5X9+/ZB120F7Bv5Md/4LA3/UnT/W3avC9kYT24+O7xuN5AUAAP//'
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFo2AUjIKhAQAAAAD//w=='
+			)
+			(entities )
+			(zones )
+		)
+		(layer 
+			(label 'Secret')
+			(type 'tile')
+			(dimensions 
+				(width '40')
+				(height '30')
+			)
+			(position 
+				(x '0')
+				(y '0')
+			)
+			(parallax 
+				(mulx '1')
+				(muly '1')
+				(divx '1')
+				(divy '1')
+			)
+			(wrap 
+				(x 'false')
+				(y 'false')
+			)
+			(data 
+				(format 'zlib')
+				'eJzslcsKgCAQRf22vkgIJGgjtOmzK2gRMuk4zpjQPXA3xejh2sM5AAAAANTiz8x3FqN1c6H2fM5OSTQ8PbHuWwLhzJmTOta4tYbbZXoegViLusbtN3d/H6iv1HVjdKfVkyQSP8u+WvwkvWnMlN4Pa5/WM+71rMFvHD+rb/Ff+uuZ0v/Nat+VkZLbRfygk1o0HbXdDgAAAP//'
+			)
+			(obstructions 
+				(style 'tile')
+				(format 'zlib')
+				'eJxiYBgFo2AUjIKhAQAAAAD//w=='
+			)
+			(entities )
+			(zones )
+		)
+	)
+)
