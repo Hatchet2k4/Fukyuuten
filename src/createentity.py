@@ -14,7 +14,7 @@ import frankenhead
 import hive
 # ----------------
 import pot
-
+import powerup
 
 # BOSSES
 import maneater
@@ -27,6 +27,10 @@ from spirit import Spirit
 
 # match each sprite name up with the associated class
 spawnMap = {
+    powerup.Seashell.SPRITE: powerup.createShell,
+    powerup.GoldenEgg.SPRITE: powerup.createEgg,
+    powerup.BlackPearl.SPRITE: powerup.createPearl,
+    powerup.Skull.SPRITE: powerup.createSkull,
 
     bee.Bee.SPRITE : bee.createBee,
     goblin.Goblin.SPRITE : goblin.createGoblin,
@@ -59,8 +63,10 @@ spawnMap = {
     Dancer.SPRITE : Dancer,
     Dancer.SPRITE2 : Dancer,
     Friedrich.SPRITE : Friedrich,
-
     Spirit.SPRITE : Spirit
+    
+    
+    
 }
 
 
@@ -81,3 +87,4 @@ def createEntity(spriteName, *args, **kw):
                              spriteName)
     factory = spawnMap[spriteName]
     return factory(*args, **kw)
+

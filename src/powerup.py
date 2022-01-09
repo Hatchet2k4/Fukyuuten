@@ -54,7 +54,9 @@ class GreenBerry(_Powerup):
     def apply(self):
         engine.player.stats.hp += 40    
 
-
+def createShell(entity):
+    return Seashell(entity, money=1)
+    
 class Seashell(_Powerup):
     SPRITE = 'seashell.ika-sprite'
     
@@ -62,21 +64,27 @@ class Seashell(_Powerup):
         engine.player.stats.money += self.kwargs['money']
         print `engine.player.stats.money`
         
-
+def createPearl(entity):
+    return BlackPearl(entity)
+    
 class BlackPearl(_Powerup):
     SPRITE = 'pearl.ika-sprite'
     
     def apply(self):
         engine.player.stats.att += 1
         
-
+def createEgg(entity):
+    return GoldenEgg(entity)
+    
 class GoldenEgg(_Powerup):
     SPRITE = 'egg.ika-sprite'
     
     def apply(self):
         engine.player.stats.pres += 1
         
-        
+def createSkull(entity):
+    return Skull(entity)
+    
 class Skull(_Powerup):
     SPRITE = 'skull.ika-sprite'
     
