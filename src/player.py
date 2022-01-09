@@ -221,9 +221,10 @@ class Player(Entity):
         
         self.items = []
         
-        self.weapon = self.spear
+        #self.weapon = self.spear
+        self.weapon = self.sword
         
-        print `self.weapon.item.overlaySprite`
+        #print `self.weapon.item.overlaySprite`
 
     def giveXP(self, amount):
         self.stats.exp += amount * (100 / self.expFactor) / (self.exponent ** (self.stats.level - 1))
