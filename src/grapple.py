@@ -34,7 +34,7 @@ class _GrappleEntity(Entity):
 
         self.direction = direction
         self.image = ika.Image(self.IMAGE)
-        self.speed = 200
+        self.speed = 250
 
     def __render(self, entity, x, y, frame):
         ox = x
@@ -87,7 +87,7 @@ class _GrappleEntity(Entity):
 
     def defaultState(self):
         self.anim = 'fly'
-        self.move(self.direction, 100)
+        self.move(self.direction, 144)
 
         while True:
             oldx = self.x
@@ -101,7 +101,7 @@ class _GrappleEntity(Entity):
 class Grapple(object):
     GRIPPABLE_TILES = {
         'level1.vsp' : set((126, 280, 281, 282, 283, 284)),
-        'green.vsp' : set((363,)),
+        'green.vsp' : set((363,79)),
     }
 
     def activate(self, me):

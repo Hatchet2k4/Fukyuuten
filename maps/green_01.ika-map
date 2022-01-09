@@ -81,12 +81,12 @@
 			)
 			(data 
 				(format 'zlib')
-				'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'
+				'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'
 			)
 			(obstructions 
 				(style 'tile')
 				(format 'zlib')
-				'eJyslOESwyAIg837v/Sum5MEkl53N/9U8TMgFNdyA0DNLbG3IKuI3S3L5+WWJD2HT3hQy6/c5Wt7HdGJYUtAQ+t6mMNxrHVO1aaqbbxLHkwdnXkdIqe6LKHOrZBNw9nx1vwjxwFhTCy2dhYCJ0XLHODnymidZ+owijE4fMsjReKbsLP5E/JFDmWD2TbmELCml9Rm8iJmApFoVygDq9JHuwGHY16aEZh6LRfSi7x/uN5z9G+KXuY4APsG1M2rkDEvzfaUM6s7PUlj4NpTGB8RXYXON+a7DnzAMRv8vgAAAP//'
+				'eJyslFEOwzAIQ/H9Lz11SwIGu92k5WMi6atxgSxCLQAZS2I9Au0sdrfNnFfaIqk5fOyBT37lrlwr63BHB0sCbK3rYS7FVa3zVj5ktYV3yYNxohPnSyUpb1Ooc2GqKTi53pp/5KohjEBisapgOGqa5wAdM8N9nqXDaMbgsNtDTapfUpPNIawfcihpZp1VDgZrek5tFs9iwgi5DV/mLk4Xu5nDVN+1tYrq0oJ/sVNpLkf0gSNe/gcIA3I8M8qG33LuDJ7rkydnj+9y7IEWXBuEcXsMZ/1tjS+4ypq8LwAAAP//'
 			)
 			(entities 
 				(entity 
@@ -136,6 +136,48 @@
 					(x '176')
 					(y '544')
 					(sprite 'hive.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'gap1')
+					(x '352')
+					(y '460')
+					(sprite 'vgap.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'gap2')
+					(x '448')
+					(y '460')
+					(sprite 'vgap.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
+				(entity 
+					(label 'egg01')
+					(x '544')
+					(y '512')
+					(sprite 'egg.ika-sprite')
 					(speed '100')
 					(direction 'up')
 					(move_script '')

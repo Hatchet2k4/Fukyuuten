@@ -244,7 +244,7 @@ class ToolWindow(SubScreenWindow):
             sound.menuMove.Play()
 
             # have to use pressed and not position here, because the other menu eats it
-            #return self.select(self.cursorPos)
+            return self.select(self.cursorPos)
         
         return False
 

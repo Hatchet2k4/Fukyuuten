@@ -214,7 +214,7 @@ class Player(Entity):
         self.sword = Sword()
         self.spear = Spear()
         self.spear.item = item.Item('Fishing Pole')
-        
+        self.sword.item = item.Item('Sharp Slicer')
         self.armor = None
         
         self.grapple = Grapple()
