@@ -387,10 +387,10 @@ class PauseScreen(object):
             ika.Video.ShowPage()
             ika.Input.Update()
             
-            if self.menu.cursorPos == 2:
-                toolResult = self.toolWnd.update()
-                if toolResult:
-                    self.refresh()
+            #if self.menu.cursorPos == 1:
+            toolResult = self.toolWnd.update()
+            if toolResult:
+                self.refresh()
                 
             result = self.menu.update()
 
