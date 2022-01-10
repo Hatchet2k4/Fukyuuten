@@ -98,7 +98,7 @@
 			(obstructions 
 				(style 'tile')
 				(format 'zlib')
-				'eJyckgsOwCAIQ+n9L73MTVZo3Y/EROWJpRrhA+d4inccMDgBMYLXWbQiOwXa4bLRzsBVMbMxr/eTxM515ZaDtJgbTyb94y53eHnkyTWwd5OpjzLYdnly5QGkSapuGoCxAFDjpuDyT5DJPIYoouQPTRkoXZuX1u8YyhnIFnjPrcDahsi7PLjlsOb6XRQlZTivV4rdNLZOf4sNAAD//w=='
+				'eJyckgEOwyAMA+P/f3oqK9SOTdstEhKQIziGqhw4x1O844DBGYgRvF5FFTko0A6XrXYGqUqYjbneTxI715VHDtbi2ngy6T/ucoeX3zy5BvZuMvooGCe6+JOTB7AmqXpoAMECwI2bguWfYCXXMZSIsj80ZUC6Di/t37GcC1As8J7bgdqGybs8uOWw5/pdFJIKXNZrxW4a26d/iw8AAAD//w=='
 			)
 			(entities 
 				(entity 
@@ -131,8 +131,8 @@
 				)
 				(entity 
 					(label 'friedTotem')
-					(x '64')
-					(y '144')
+					(x '32')
+					(y '304')
 					(sprite 'nothing.ika-sprite')
 					(speed '100')
 					(direction 'up')
@@ -247,7 +247,7 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJzsmMsOwiAQRelCXak/4GPj2/pI/CR/vEuX/oDV2ygJoSNQaGESPcldTALTywSaASH8mWRCTKEZNM/qseu8ttDzLqAltILWRPwN13FN0fPmRM0O0BE6Gb6bf8ZtoK2ljk1qnBPfD6nF2WGuT161ZpRnV1zm+uTtav9Q+JyfkJo1pev1h6Kv/8rMb9v/yLaJscdDiLHHf50itQELNy0uUpgwcIceUAk9Rd1vaip/PZyhPjTI3jE3hvA1gsaRzrrsQbgiexCuyB6EI2p/yRG1v+SI2l9y5X9+/ZB120F7Bv5Md/4LA3/UnT/W3avC9kYT24+O7xuN5AUAAP//'
+				'eJzkmEsOwiAQhulCXakX8LHxbX0kHsmDeNUuXXqBqn+jJGSKQKGFSfySf0FShp8J0wwI4c8kE2IKzaB5Vh+7zmsLGncBLaEVtNaMf+H6XVNo3FyTswN0hE6GdfPvdxtoa8ljkxznmvVDcnF2mOsTV82ZzrMrLnN94nZ1fnT41E9IzprS9f5Dofu/MvPb9j+ybWKc8RBinPF/p0htwMKdjIsUJgw8oBJ6Qi9R95uayl8PNdSHBtlnzI0hfI2gcaRalz2I5BZnWWdkD8IV2YNwRO0vOaL2lxxR+0uu0PrlBtf6lXnbQXsG/kx3/gsDf7o7f6y7V4XtjSa2H4rvG43kDQAA//8='
 			)
 			(obstructions 
 				(style 'tile')

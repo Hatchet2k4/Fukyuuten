@@ -9,6 +9,7 @@ def AutoExec():
 
     if 'rescued' not in engine.saveData:
         del ika.Map.entities["friedrich"]
+        
 
 
 def friedrich():
