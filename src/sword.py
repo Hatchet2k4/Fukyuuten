@@ -126,7 +126,7 @@ class Sword(object):
             me.state = self.backSlashState(me)
         else:
             # Stall:
-            count = 10
+            count = 8
             while count > 0:
                 count -= 1
                 #if controls.attack2():
