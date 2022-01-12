@@ -27,18 +27,31 @@ _keyNames = [
 # Name : Control pairs
 _allControls = {}
 
-
+#  'up': 'UP',
+#   'down': 'DOWN',
+#   'left': 'LEFT',
+#   'right': 'RIGHT',
+#   'cancel': 'ESCAPE',
+#   'attack1': 'SPACE',
+#   'attack2' : 'F',
+#   'tool1': 'D',
+#   'tool2': 'S',
+#   'tool3': 'A',
+    
 defaultControls = {
-    'up': 'UP',
-    'down': 'DOWN',
-    'left': 'LEFT',
-    'right': 'RIGHT',
-    'cancel': 'ESCAPE',
-    'attack1': 'SPACE',
-    'attack2' : 'F',
-    'tool1': 'D',
-    'tool2': 'S',
-    'tool3': 'A',
+    'up': 'joy0axis1-',
+    'down': 'joy0axis1+',
+    'left': 'joy0axis0-',
+    'right': 'joy0axis0+',
+    'cancel': 'joy0button2',
+    'attack1': 'joy0button1',
+    'attack2' : 'joy0button0',
+    'tool1': 'joy0button3',
+    'tool2': 'joy0button4',
+    'tool3': 'joy0button5',
+    
+
+    
 }
 
 

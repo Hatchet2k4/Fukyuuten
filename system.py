@@ -39,7 +39,11 @@ try:
 except IOError:
     c = controls.defaultControls
     controls.writeConfig(config.CONTROL_CONFIG, c)
+
+c = controls.defaultControls
 controls.setConfig(c)
+
+
 
 import data
 data.init()

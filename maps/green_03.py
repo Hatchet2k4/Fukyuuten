@@ -1,5 +1,5 @@
-
 from mapscript import *
+import sound
 
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
@@ -12,16 +12,19 @@ def AutoExec():
 
 def innkeeper():
     me = ika.Map.entities['innkeeper']
-    text(me, "I'll be running an inn... soon!")
+    text('right', "I'll be running an inn... soon!")
         
 
 def guard1():
     me = ika.Map.entities['guard1']
-    ana = engine.player.ent
-    text(me, "Well, someone's gotta keep the goblins out!")
+    ana = engine.player.ent    
     if 'guardconvo' not in engine.saveData:
-        text(ana, "anastasia", "I'm just glad it's not me. I find enough of them just walkimg from home!")
+        text('right', "Hey Anastasia. It's a tough job, but someone's gotta keep the goblins out!")
+        text('left', "anastasia", "I'm just glad it's not me. I find enough of them just walking here!")
+        text('right', "There's certainly been more of them lately...")
         engine.saveData['guardconvo'] = True
+    else:
+        text('right', "Beautiful day!")
         
     
 def guard2():
@@ -129,7 +132,7 @@ def yolander():
         text(yo, "yolander", "Tsk tsk, Anastasia!  How can I run a restaurant without fish?")
         text(ana, "anastasia", "I'm really sorry, Yolander.  This really hasn't been my day.  I swear, those gulls were out to get me!")
         text(yo, "yolander", "Sure, sure.  Don't worry about it.  This should be enough for today.  Here you are..")
-
+        sound.powerup.Play()
         engine.player.stats.money += 20
         text(ana, "Recieved 20 shells!")
         text(yo, "yolander", "Don't spend it all in one place!")

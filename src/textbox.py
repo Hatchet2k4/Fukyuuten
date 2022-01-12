@@ -57,8 +57,16 @@ def createTextBox(where, txt):
     width = max([gui.default_font.StringWidth(s) for s in text])
     height = len(text) * gui.default_font.height
     x, y = (0, 0)
-    automove = True #automatic moving of where to display the box
+    automove = False #automatic moving of where to display the box
 
+    ika.Log('Textbox logging')
+    if where=='left':
+        x, y = (20, 120)
+        ika.Log('left')
+    elif where=='right':
+        x, y = (320-20-width, 120)
+        ika.Log('right')
+            
     if isinstance(where, (tuple, list)):
         x, y = where
 
@@ -68,9 +76,9 @@ def createTextBox(where, txt):
     if isinstance(where, ika.Entity):
         ent = where
         x, y = ent.x + ent.hotwidth / 2 - ika.Map.xwin, ent.y - ika.Map.ywin
-    else:
-        x, y = where
-        automove = False
+    #else:
+    #    x, y = where
+    #    automove = False
 
 
     if automove and x < ika.Video.xres / 2:
@@ -98,20 +106,23 @@ def createTextBox(where, txt):
 #------------------------------------------------------------------------------
 
 class TextBox(object):
-    def __init__(self, where, portrait, text, forceleft):
+    def __init__(self, where, portrait, text):
         self.frame = createTextBox(where, text)
-        self.forceleft=forceleft
+
         if portrait is not None:
             self.img = getPortrait(portrait)
         else:
             self.img = None
-
+        self.left=False    
+        if (isinstance(where, basestring) and where=='left') or self.frame.x < ika.Video.xres / 2:
+            self.left=True
+        
     def update(self):
         pass
 
     def draw(self):
         if self.img is not None:
-            if self.frame.x < ika.Video.xres / 2 or self.forceleft:
+            if self.left:
                 ika.Video.Blit(self.img, 0, ika.Video.yres - self.img.height)
             else:
                 ika.Video.ScaleBlit(self.img, ika.Video.xres, ika.Video.yres - self.img.height, -self.img.width, self.img.height)
@@ -124,7 +135,7 @@ def text(where, *args):
     Where can be either a point or an entity.
     TODO: update Things while the textbox is visible
     """
-    portrait, text, forceleft = None, '', False
+    portrait, text = None, ''
 
     if len(args) == 1:
         text = args[0]
@@ -132,11 +143,11 @@ def text(where, *args):
     elif len(args) == 2:
         portrait, text = args
     elif len(args) == 3:
-        portrait, text, forceleft = args
+        portrait, text = args
     else:
         assert False, 'text recieves 1 or two arguments.'
 
-    textBox = TextBox(where, portrait, text, forceleft)
+    textBox = TextBox(where, portrait, text)
 
     engine.things.append(textBox)
 
