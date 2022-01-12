@@ -98,9 +98,9 @@ def createTextBox(where, txt):
 #------------------------------------------------------------------------------
 
 class TextBox(object):
-    def __init__(self, where, portrait, text):
+    def __init__(self, where, portrait, text, forceleft):
         self.frame = createTextBox(where, text)
-
+        self.forceleft=forceleft
         if portrait is not None:
             self.img = getPortrait(portrait)
         else:
@@ -111,7 +111,7 @@ class TextBox(object):
 
     def draw(self):
         if self.img is not None:
-            if self.frame.x < ika.Video.xres / 2:
+            if self.frame.x < ika.Video.xres / 2 or self.forceleft:
                 ika.Video.Blit(self.img, 0, ika.Video.yres - self.img.height)
             else:
                 ika.Video.ScaleBlit(self.img, ika.Video.xres, ika.Video.yres - self.img.height, -self.img.width, self.img.height)
@@ -124,18 +124,19 @@ def text(where, *args):
     Where can be either a point or an entity.
     TODO: update Things while the textbox is visible
     """
-    portrait, text = None, ''
+    portrait, text, forceleft = None, '', False
 
     if len(args) == 1:
         text = args[0]
 
     elif len(args) == 2:
         portrait, text = args
-
+    elif len(args) == 3:
+        portrait, text, forceleft = args
     else:
         assert False, 'text recieves 1 or two arguments.'
 
-    textBox = TextBox(where, portrait, text)
+    textBox = TextBox(where, portrait, text, forceleft)
 
     engine.things.append(textBox)
 
