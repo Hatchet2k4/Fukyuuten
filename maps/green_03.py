@@ -9,9 +9,25 @@ def AutoExec():
 
     if 'rescued' not in engine.saveData:
         del ika.Map.entities["friedrich"]
+
+def innkeeper():
+    me = ika.Map.entities['innkeeper']
+    text(me, "I'll be running an inn... soon!")
         
 
-
+def guard1():
+    me = ika.Map.entities['guard1']
+    ana = engine.player.ent
+    text(me, "Well, someone's gotta keep the goblins out!")
+    if 'guardconvo' not in engine.saveData:
+        text(ana, "anastasia", "I'm just glad it's not me. I find enough of them just walkimg from home!")
+        engine.saveData['guardconvo'] = True
+        
+    
+def guard2():
+    me = ika.Map.entities['guard2']
+    text(me, "This armor is too hot...")
+    
 def friedrich():
     fried = ika.Map.entities["friedrich"]
     ana = engine.player.ent

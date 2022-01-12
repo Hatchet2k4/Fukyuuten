@@ -212,7 +212,7 @@
 					(activate_script '')
 				)
 				(entity 
-					(label 'Townwoman2')
+					(label 'innkeeper')
 					(x '176')
 					(y '220')
 					(sprite 'townwoman2.ika-sprite')
@@ -226,7 +226,7 @@
 					(activate_script '')
 				)
 				(entity 
-					(label 'Guard1')
+					(label 'guard1')
 					(x '140')
 					(y '32')
 					(sprite 'guard.ika-sprite')
@@ -240,7 +240,7 @@
 					(activate_script '')
 				)
 				(entity 
-					(label 'Guard2')
+					(label 'guard2')
 					(x '196')
 					(y '32')
 					(sprite 'guard.ika-sprite')

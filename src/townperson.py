@@ -13,6 +13,8 @@ class TownPerson(Npc):
         'townguy2.ika-sprite',
         'townguy3.ika-sprite',
         'townwoman.ika-sprite',
+        'guard.ika-sprite',
+        'townwoman2.ika-sprite',
         'yolander.ika-sprite',
         'smith.ika-sprite',
         'fish.ika-sprite',
@@ -62,3 +64,4 @@ class Friedrich(Npc):
     def __init__(self, ent):
         super(Friedrich, self).__init__(ent, self._anim)
         anim = 'fly'
+
