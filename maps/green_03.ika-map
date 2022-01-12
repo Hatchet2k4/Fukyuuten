@@ -211,6 +211,20 @@
 					(adj_activate_script '')
 					(activate_script '')
 				)
+				(entity 
+					(label 'Townwoman2')
+					(x '176')
+					(y '220')
+					(sprite 'townwoman2.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
 			)
 			(zones 
 				(zone 
@@ -245,7 +259,7 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJzslkkOwjAMRZMVt4AdwwauwZI7cCFGiVEqUI7EkrvgCCKC45Q2Q1WpftKXWtVqvhLHthBvBlIkZVby/2XjQliDNkhP0BbFLUBLJBW3SuzvCDoROqO4HWhP6JDY3w2UE7qjuAx0+Sg3nq+B609ryJEQ6shhTRfW6qH1qPzGuW6+47yPSV/atcWV3y7hvI/JELyN5O8+NsmfxtxH1/1zCd/LFIzB26Th97LtcN30R9VUakb4R6fgW8zz0DWrai2i+ocm5nn4+qP6h0LNZuo88HzmO5v5+qP6hyL2bObrT4P3MRPfeewh7NlsXvHsdU/y7TXcPxjGpqh/MEzbeQEAAP//'
+				'eJzslkkOwjAMRZMVt4AdwwauwZI7cCFGiVEq0B6Lu+AILILrlDZNqkr1k77UqlbzlTi2lXoz0ioqi5L/LxtXhy1oR/QE7UncCrQmMnGbyP7OoAujK4k7gI6MTpH9PUApo4zEJaDbR6n1fK+5/ryBHKlDEzmM9GGtAVmPy2+a6/Y7zfuQDHW+trjy2yWa9yEZg7eJ/t3HNvlD7H103T+X6L2MwRS8zVp+L7uO1E1/TE3lZoR/9Aq+hTwPrFlVaxHXP5CQ5+Hrj+sfBjObmfOg85nvbObrj+sfhtCzma8/hO5jor7zmC2czZYVzx57km+vkf4hCHmK+ocgdJ0XAAAA//8='
 			)
 			(obstructions 
 				(style 'tile')
@@ -278,7 +292,7 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJzszqENACAQBEH6rwISqAgK4sUrJAJBZpJVZ64UuDejno1jq1HL1ttbAAAAwEc2AAAA//8='
+				'eJzszjEOQBEAREH3PwUJJxL/PF+hUkgoaGaSV22zIcC52sujMm2xl0bf3VsAACy01wcAYNMPAAD//w=='
 			)
 			(obstructions 
 				(style 'tile')
