@@ -49,9 +49,7 @@ defaultControls = {
     'tool1': 'joy0button3',
     'tool2': 'joy0button4',
     'tool3': 'joy0button5',
-    
-
-    
+   
 }
 
 

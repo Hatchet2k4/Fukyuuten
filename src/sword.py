@@ -42,6 +42,13 @@ slashRange = (
 
 backSlashRange = [x[::-1] for x in slashRange]
 
+def tilesAt(x, y, w, h, l):
+    poslist = [ [x/16, y/16], [(x+w)/16, y/16], [x/16, y+h/16], [(x+w)/16, (y+h)/16] ]
+    resultlist= []
+    for p in poslist:
+        resultlist.append( p + [ika.Map.GetTile(p[0], p[1], l)] )
+        
+    return resultlist
 
 class Sword(object):
     SPRITE = 'sword.ika-sprite'
@@ -69,6 +76,7 @@ class Sword(object):
         rx, ry, w, h = slashRange[d][i]
 
         ika.Video.DrawRect(x + rx, y + ry, x + rx + w, y + ry + h, ika.RGB(255, 255, 255))
+
 
 
     def slashState(self, me):
@@ -104,6 +112,11 @@ class Sword(object):
                     sound.deflect.Play()
                     engine.destroyEntity(x)
 
+            tiles = tilesAt(*rect)
+            for t in tiles:
+                if t[2]>=1:
+                    ika.Map.SetTile(t[0], t[1], me.layer, 0)
+                    ika.Map.SetObs(t[0], t[1], me.layer, 0)
             if controls.up() and me.direction == dir.DOWN:
                 backthrust = True
             elif controls.down() and me.direction == dir.UP:
@@ -231,4 +244,5 @@ class Sword(object):
 
         if spin:
             print 'Spin!!! NYI omfg'
+
 
