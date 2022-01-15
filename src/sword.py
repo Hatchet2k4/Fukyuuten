@@ -43,14 +43,20 @@ slashRange = (
 backSlashRange = [x[::-1] for x in slashRange]
 
 def tilesAt(x, y, w, h, l):
-    poslist = [ [x/16, y/16], [(x+w)/16, y/16], [x/16, y+h/16], [(x+w)/16, (y+h)/16] ]
+    poslist = [ [x/16, y/16], [(x+w)/16, y/16], [x/16, (y+h)/16], [(x+w)/16, (y+h)/16] ]
     resultlist= []
     for p in poslist:
         resultlist.append( p + [ika.Map.GetTile(p[0], p[1], l)] )
-    res = []
-    finallist = [res.append(x) for x in resultlist if x not in res] #remove any duplicate tiles
-    
+    resultlist = dedupe(resultlist)
+        
     return resultlist
+
+def dedupe(lst):
+    new_list = []
+    for a in lst:
+        if a not in new_list:
+            new_list.append(a)
+    return new_list
 
 class Leaf(Entity):
     SPRITE = 'flowerleaf.ika-sprite'
@@ -163,15 +169,19 @@ class Sword(object):
                     engine.destroyEntity(x)
 
             tiles = tilesAt(*rect)
+            ika.Log(str(tiles))
             for t in tiles:
                 if t[2] in [78, 368, 369, 370]: #bush!
                     ika.Map.SetTile(t[0], t[1], me.layer, 0)
                     ika.Map.SetObs(t[0], t[1], me.layer, 0)
-                    for i in range(4):
-                        lx=t[0]*16+ika.Random(0, 16)
+                    flower = Leaf(ika.Entity(t[0]*16+2, t[1]*16+4, me.layer, 'flowercenter.ika-sprite'))                        
+                    engine.addEntity(flower)                      
+                    for i in range(5 + ika.Random(0, 3)):
+                        lx=t[0]*16+ika.Random(-4, 12)
                         ly=t[1]*16+ika.Random(0, 7)                        
                         leaf = Leaf(ika.Entity(lx, ly, me.layer, 'flowerleaf.ika-sprite'))                        
                         engine.addEntity(leaf)
+                      
                         
             if controls.up() and me.direction == dir.DOWN:
                 backthrust = True
