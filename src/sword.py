@@ -75,21 +75,26 @@ class Leaf(Entity):
         self.direction =  self.directions[ika.Random(0, 2)]
 
         self.invincible = True
-        self.speed = 50        
+        self.speed = 20        
         self.ent.isobs = False
         self.ent.entobs = False
+        self.ent.mapobs = False
         self.count=0
+        self.framecount=0
 
     def defaultState(self):
-        self.move(self.direction, 10)
+        self.move(self.direction, 5)
         self.anim = 'fall'
 
         while True:
-            if self.count<100:                        
+            if self.count<50:                        
                 self.count+=1
-                if self.count%10==0:
-                    self.direction =  self.directions[ika.Random(0, 2)]
-                    self.move(self.direction, 10)            
+                self.framecount+=1
+                if self.framecount>8 and ika.Random(0, 6)==0:
+                    self.framecount=0
+                    if self.direction == dir.DOWNLEFT: self.direction=dir.DOWNRIGHT
+                    else: self.direction = dir.DOWNLEFT
+                self.move(self.direction, 5)                
                 yield None
             else:
                 engine.destroyEntity(self)
