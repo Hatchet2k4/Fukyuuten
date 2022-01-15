@@ -52,6 +52,49 @@ def tilesAt(x, y, w, h, l):
     
     return resultlist
 
+class Leaf(Entity):
+    SPRITE = 'flowerleaf.ika-sprite'
+
+    ANIM = {
+        'fall' : ((
+            ((0, 1000),), 
+            ((1, 1000),),
+            ((0, 1000),),
+            ((1, 1000),),
+            ((0, 1000),),
+            ((1, 1000),),
+            ((0, 1000),),
+            ((1, 1000),),
+        ), True),
+    }
+
+    def __init__(self, ent):
+        super(Leaf, self).__init__(ent, self.ANIM)
+
+        self.directions = [dir.DOWNLEFT, dir.DOWNRIGHT]
+        self.direction =  self.directions[ika.Random(0, 2)]
+
+        self.invincible = True
+        self.speed = 50        
+        self.ent.isobs = False
+        self.ent.entobs = False
+        self.count=0
+
+    def defaultState(self):
+        self.move(self.direction, 10)
+        self.anim = 'fall'
+
+        while True:
+            if self.count<100:                        
+                self.count+=1
+                if self.count%10==0:
+                    self.direction =  self.directions[ika.Random(0, 2)]
+                    self.move(self.direction, 10)            
+                yield None
+            else:
+                engine.destroyEntity(self)
+                yield None
+
 class Sword(object):
     SPRITE = 'sword.ika-sprite'
     ICON = 'icon_sword.png'
@@ -119,6 +162,12 @@ class Sword(object):
                 if t[2] in [78, 368, 369, 370]: #bush!
                     ika.Map.SetTile(t[0], t[1], me.layer, 0)
                     ika.Map.SetObs(t[0], t[1], me.layer, 0)
+                    for i in range(4):
+                        lx=t[0]*16+ika.Random(0, 16)
+                        ly=t[1]*16+ika.Random(0, 7)                        
+                        leaf = Leaf(ika.Entity(lx, ly, me.layer, 'flowerleaf.ika-sprite'))                        
+                        engine.addEntity(leaf)
+                        
             if controls.up() and me.direction == dir.DOWN:
                 backthrust = True
             elif controls.down() and me.direction == dir.UP:
