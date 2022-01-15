@@ -4,7 +4,8 @@ import engine
 import sound
 from animator import Animator
 from statset import StatSet
-
+import gui
+from caption import DamageCaption
 
 def _temp():
     yield None
@@ -21,6 +22,7 @@ class Entity(object):
 
     # arbitrary, and meaningless for the most part.
     DIST = 48
+
 
     def __init__(self, ent, anim):
         # ent can be None if all of the entity manipulating methods are
@@ -66,6 +68,10 @@ class Entity(object):
         else:
             self.stats.hp -= amount
             self.state = self.hurtState(recoilSpeed, recoilDir)
+        
+        x=self.ent.x + self.ent.hotwidth/2 - engine.font.StringWidth(str(amount))/2
+        y=self.ent.y 
+        engine.addThing(DamageCaption(str(amount), x, y, 40, 250, 0, 0))            
 
     def recoil(self, speed, direction=None):
         if self.invincible: return

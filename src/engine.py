@@ -11,7 +11,7 @@ import saveload
 import sound
 import subscreen
 from camera import Camera
-from caption import Caption
+from caption import Caption, DamageCaption
 from gameover import EndGameException, GameOverException
 from createentity import createEntity, SpawnException
 from hud import HPBar, EXPBar, ShellsIndicator
