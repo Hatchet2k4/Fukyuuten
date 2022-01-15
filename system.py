@@ -40,7 +40,7 @@ except IOError:
     c = controls.defaultControls
     controls.writeConfig(config.CONTROL_CONFIG, c)
 
-c = controls.defaultControls
+#c = controls.defaultControls
 controls.setConfig(c)
 
 

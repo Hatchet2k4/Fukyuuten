@@ -47,7 +47,9 @@ def tilesAt(x, y, w, h, l):
     resultlist= []
     for p in poslist:
         resultlist.append( p + [ika.Map.GetTile(p[0], p[1], l)] )
-        
+    res = []
+    finallist = [res.append(x) for x in resultlist if x not in res] #remove any duplicate tiles
+    
     return resultlist
 
 class Sword(object):
@@ -114,7 +116,7 @@ class Sword(object):
 
             tiles = tilesAt(*rect)
             for t in tiles:
-                if t[2]>=1:
+                if t[2] in [78, 368, 369, 370]: #bush!
                     ika.Map.SetTile(t[0], t[1], me.layer, 0)
                     ika.Map.SetObs(t[0], t[1], me.layer, 0)
             if controls.up() and me.direction == dir.DOWN:
