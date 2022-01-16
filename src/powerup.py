@@ -2,6 +2,7 @@ import engine
 import sound
 import animator
 from entity import Entity
+from caption import DamageCaption
 
 _powerupAnim = {
 
@@ -36,9 +37,10 @@ class _Powerup(Entity):
     def update(self):
         self.animate()
         if self.touches(engine.player):
+            self.apply()
             engine.destroyEntity(self)
             sound.powerup.Play()
-            self.apply()
+            
 
 def createRedBerry(entity):
     return RedBerry(entity)
@@ -86,6 +88,7 @@ class GoldenEgg(_Powerup):
     
     def apply(self):
         engine.player.stats.pres += 1
+        engine.addThing(DamageCaption('Def +1', self.ent.x, self.ent.y, 60, 241, 156, 73))     
         
 def createSkull(entity):
     return Skull(entity)
