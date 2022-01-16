@@ -40,6 +40,8 @@ class _Powerup(Entity):
             sound.powerup.Play()
             self.apply()
 
+def createRedBerry(entity):
+    return RedBerry(entity, money=1)
 
 class RedBerry(_Powerup):
     SPRITE = 'berry.ika-sprite'
@@ -56,6 +58,7 @@ class GreenBerry(_Powerup):
 
 def createShell(entity):
     return Seashell(entity, money=1)
+
     
 class Seashell(_Powerup):
     SPRITE = 'seashell.ika-sprite'

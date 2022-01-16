@@ -8,6 +8,7 @@ import dir
 from entity import Entity
 from enemy import Enemy
 from goblin import Arrow
+import powerup
 
 thrustRange = ((-22,  -2, 16,  8),
     ( 15,  -2, 16,  8),
@@ -133,8 +134,28 @@ class Sword(object):
 
         ika.Video.DrawRect(x + rx, y + ry, x + rx + w, y + ry + h, ika.RGB(255, 255, 255))
 
-
-
+    def cutBush(self, me, rect):
+        tiles = tilesAt(*rect)
+        ika.Log(str(tiles))
+        for t in tiles:
+            if t[2] in [78, 368, 369, 370]: #bush!
+                ika.Map.SetTile(t[0], t[1], me.layer, 0)
+                ika.Map.SetObs(t[0], t[1], me.layer, 0)
+                flower = Leaf(ika.Entity(t[0]*16+2, t[1]*16+4, me.layer, 'flowercenter.ika-sprite'))
+                engine.addEntity(flower)                      
+                for i in range(5 + ika.Random(0, 3)):
+                    lx=t[0]*16+ika.Random(-4, 12)
+                    ly=t[1]*16+ika.Random(0, 7)                        
+                    leaf = Leaf(ika.Entity(lx, ly, me.layer, 'flowerleaf.ika-sprite'))                        
+                    engine.addEntity(leaf)
+                chance = ika.Random(0,100)
+                if chance > 90: 
+                    shell = powerup.createShell(ika.Entity(t[0]*16+4, t[1]*16+4, me.layer, 'seashell.ika-sprite'))
+                    engine.addEntity(shell)
+                elif chance > 80: 
+                    berry = powerup.createRedBerry(ika.Entity(t[0]*16+4, t[1]*16+4, me.layer, 'berry.ika-sprite'))
+                    engine.addEntity(berry)
+                    
     def slashState(self, me):
         if 0: me.overlay.renderscript = self.drawRect
 
@@ -168,19 +189,8 @@ class Sword(object):
                     sound.deflect.Play()
                     engine.destroyEntity(x)
 
-            tiles = tilesAt(*rect)
-            ika.Log(str(tiles))
-            for t in tiles:
-                if t[2] in [78, 368, 369, 370]: #bush!
-                    ika.Map.SetTile(t[0], t[1], me.layer, 0)
-                    ika.Map.SetObs(t[0], t[1], me.layer, 0)
-                    flower = Leaf(ika.Entity(t[0]*16+2, t[1]*16+4, me.layer, 'flowercenter.ika-sprite'))                        
-                    engine.addEntity(flower)                      
-                    for i in range(5 + ika.Random(0, 3)):
-                        lx=t[0]*16+ika.Random(-4, 12)
-                        ly=t[1]*16+ika.Random(0, 7)                        
-                        leaf = Leaf(ika.Entity(lx, ly, me.layer, 'flowerleaf.ika-sprite'))                        
-                        engine.addEntity(leaf)
+            self.cutBush(me, rect)
+            
                       
                         
             if controls.up() and me.direction == dir.DOWN:
@@ -235,7 +245,7 @@ class Sword(object):
                     hitList.append(x)
                     x.hurt(me.stats.att, 140, me.direction)
                     me.giveMPforHit()
-
+            self.cutBush(me, rect)
             yield None
 
         # Stall:
@@ -288,7 +298,7 @@ class Sword(object):
         while i > 0:
             i -= 1
             me.speed -= (8 - i) * 5
-
+            self.cutBush(me, rect)
             result = hurt()
             if result: break
 

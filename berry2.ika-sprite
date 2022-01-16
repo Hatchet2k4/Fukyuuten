@@ -15,10 +15,10 @@
 			(height '16')
 		)
 		(hotspot 
-			(x '0')
-			(y '0')
-			(width '16')
-			(height '16')
+			(x '4')
+			(y '4')
+			(width '8')
+			(height '8')
 		)
 		(data 
 			(format 'zlib')
