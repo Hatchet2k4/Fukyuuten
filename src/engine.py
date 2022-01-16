@@ -93,11 +93,11 @@ def beginNewGame():
     mapSwitch(config.START_MAP, config.START_POSITION, fade=False)
     init()
     saveData['spear'] = True
-    saveData['sword'] = True
+    #saveData['sword'] = True
 
     raw_draw()
     effects.crossFade(50, screen)
-    sound.playMusic('island')
+    #sound.playMusic('island')
 
     run()
 
@@ -112,7 +112,7 @@ def loadGame():
         init(result)
         raw_draw()
         effects.crossFade(50, temp)
-        sound.playMusic('island')
+        #sound.playMusic('island')
         run()
 
 
@@ -124,7 +124,7 @@ def happyFunTime():
     player.giveXP(5000)
     player.stats.hp = player.stats.maxhp
     player.stats.mp = player.stats.maxmp
-    sound.playMusic('island')
+    #sound.playMusic('island')
 
     run()
 
