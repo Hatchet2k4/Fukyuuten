@@ -67,7 +67,7 @@ class Spear(object):
                 hitlist.add(e)
 
                 if isinstance(e, Enemy):
-                    e.hurt(me.stats.att * 1.5, 190, me.direction)
+                    e.hurt(int(me.stats.att * 1.5), 190, me.direction)
 
             yield None
 
@@ -150,7 +150,7 @@ class Spear(object):
 
                 if isinstance(e, Enemy) and not e.invincible:
                     e.hurt(
-                        me.stats.att * power,
+                        int(me.stats.att * power),
                         200 * power,
                         me.direction
                     )

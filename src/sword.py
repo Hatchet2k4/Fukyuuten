@@ -181,7 +181,7 @@ class Sword(object):
 
                 if isinstance(x, Enemy) and not x.invincible and x not in hitList:
                     hitList.add(x)
-                    x.hurt(me.stats.att, 120, me.direction)
+                    x.hurt(int(me.stats.att), 120, me.direction)
                     me.giveMPforHit()
 
                 elif isinstance(x, Arrow):
@@ -243,7 +243,7 @@ class Sword(object):
                 x = engine.entFromEnt[e]
                 if isinstance(x, Enemy) and not x.invincible and x not in hitList:
                     hitList.append(x)
-                    x.hurt(me.stats.att, 140, me.direction)
+                    x.hurt(int(me.stats.att), 140, me.direction)
                     me.giveMPforHit()
             self.cutBush(me, rect)
             yield None

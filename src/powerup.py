@@ -41,7 +41,7 @@ class _Powerup(Entity):
             self.apply()
 
 def createRedBerry(entity):
-    return RedBerry(entity, money=1)
+    return RedBerry(entity)
 
 class RedBerry(_Powerup):
     SPRITE = 'berry.ika-sprite'
@@ -49,6 +49,8 @@ class RedBerry(_Powerup):
     def apply(self):
         engine.player.stats.hp += 10
 
+def createGreenBerry(entity):
+    return GreenBerry(entity)
 
 class GreenBerry(_Powerup):
     SPRITE = 'berry2.ika-sprite'
