@@ -131,6 +131,20 @@
 					(adj_activate_script '')
 					(activate_script '')
 				)
+				(entity 
+					(label 'sword')
+					(x '210')
+					(y '117')
+					(sprite 'sworditem.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
 			)
 			(zones 
 				(zone 
