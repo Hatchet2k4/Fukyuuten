@@ -88,7 +88,7 @@ class GoldenEgg(_Powerup):
     
     def apply(self):
         engine.player.stats.pres += 1
-        engine.addThing(DamageCaption('Def +1', self.ent.x, self.ent.y, 60, 241, 156, 73))     
+        engine.addThing(DamageCaption('Def +1', self.ent.x, self.ent.y, 80, 241, 156, 73))     
         
 def createSkull(entity):
     return Skull(entity)

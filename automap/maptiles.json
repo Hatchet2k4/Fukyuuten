@@ -1,0 +1,14 @@
+{ "columns":9,
+ "image":"maptiles.png",
+ "imageheight":61,
+ "imagewidth":118,
+ "margin":1,
+ "name":"MapTiles",
+ "spacing":1,
+ "tilecount":54,
+ "tiledversion":"2021.01.13",
+ "tileheight":9,
+ "tilewidth":12,
+ "type":"tileset",
+ "version":1.4
+}
