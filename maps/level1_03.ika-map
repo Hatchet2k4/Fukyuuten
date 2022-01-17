@@ -16,6 +16,10 @@
 	(waypoints )
 	(zones 
 		(zone 
+			(label 'keyDoor')
+			(script 'keyDoor')
+		)
+		(zone 
 			(label 'resetSwitch')
 			(script 'resetSwitch')
 		)
@@ -89,12 +93,12 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJzsmMEOgjAMhofEd/BsfALj8/E8xpPxwjOBF5ULRk3skpHMOrZBKGNLv6SskHb2T0ZDFYJhmBTYyksmxAosy2h/qyDY86jWk/Zs55H3IagFQ6E3Vdbq7LVgOfjPoNXMg9Rag93AriJtza1aH2B3sAbsFa4celRP1Y26v/pSCPre9CbcO6W+uveIiU3vIXQBBMzxzjAMw4RkOyLHty/2xVH3Vdc8WGr+Bn2j4XvJ0vXa6Obe1hr1S4F8bKa4Ifl9+02FrtVnxrJpGlqfK39qvbk6r/WAnJj1yrnZpLVRq2nmilmviUrzTed7ye9v6Q75o9F8+R8CnjVj7s94HqzQves82+jizmq9DMwfS4rzINPPFwAA//8='
+				'eJzsmM0OgjAMx4fEd/BsfALiwafjeYwn44VnAi8qF4ya2CUjmXXsg1DGlv2SumLapX8yGgpjiUQ4FJnvCubl4KB3y38gfgWWEd+nkmDPo1hP0n87i7wPQS0YCr2xshZnrwPLwX96rWYeuNYG7AZ2ZXFr7sT6ALuDtWAvf+XQI3qqbNT91ZaS0femN+HeMfXVwiImNL173wUQMMczk0gkEj7Zjsix7YtDcdR91TQPVpK/Qe9o+JqzdL06+rm300b9UiIfmyrOJX9ov6mQtdrMWDpNrvWZ8qfWm4vz2jjkhKyXz80qra1YVTNXyHpV1JKvOt9Lfn4rc8gfreTzbwh41gy5P+N5sEbXpvOso487i/XimD+WGOfBxDBfAAAA//8='
 			)
 			(obstructions 
 				(style 'tile')
 				(format 'zlib')
-				'eJzUk1sSgCAIRWH/m64ZzAl5yE0/jMYs5chTIlj4fr7KJpZhEUSOyUzkW3vY5oo7TVkZ7nQs+4rwKQcSb1nW2e4U2F3KYsUuG7W/sWCuupq1NlYs9IXVy612gVXxNNfUv+nMgB0WmezacexCvOoLzDPCJj1UuYPR0bnCBQAA//8='
+				'eJzUk1sSgCAIRWH/m64ZHQp5xFU/jMYs5chTIlj4fmZlE8uT0o7JTORbe9juijt9sm2407HsK0IpBBBvWdZZcQrvq8dixS4btb+xYK5EzVobKxb6wurlVrvAqni6a+rfdGbADotMdu04diFe9QXmGWGTHqrcwejoXOECAAD//w=='
 			)
 			(entities 
 				(entity 
@@ -489,6 +493,20 @@
 					(adj_activate_script '')
 					(activate_script '')
 				)
+				(entity 
+					(label 'level1_key1')
+					(x '144')
+					(y '320')
+					(sprite 'key.ika-sprite')
+					(speed '100')
+					(direction 'up')
+					(move_script '')
+					(obstructs_entities 'true')
+					(obstructed_by_entities 'true')
+					(obstructed_by_map 'true')
+					(adj_activate_script '')
+					(activate_script '')
+				)
 			)
 			(zones 
 				(zone 
@@ -532,6 +550,13 @@
 					(y '384')
 					(width '48')
 					(height '48')
+				)
+				(zone 
+					(label 'keyDoor')
+					(x '823')
+					(y '58')
+					(width '36')
+					(height '10')
 				)
 			)
 		)

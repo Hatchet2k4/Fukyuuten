@@ -4,7 +4,6 @@ from thing import Thing
 
 
 class NullSound(object):
-
     def __init__(self):
         self.position = 0
         self.volume = 1.0
@@ -58,6 +57,8 @@ fall = ika.Sound('sounds/fall.ogg')
 # OTHER (FIELD)
 switch = ika.Sound('sounds/switch.ogg')
 powerup = ika.Sound('sounds/powerup.ogg')
+dooropen = ika.Sound('sounds/dooropen.ogg')
+doorclose = ika.Sound('sounds/doorclose.ogg')
 
 # UI (FIELD)
 newGame = ika.Sound('sounds/newgame.ogg')

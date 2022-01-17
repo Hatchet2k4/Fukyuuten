@@ -48,7 +48,24 @@ class _Powerup(Entity):
             self.apply()
             engine.destroyEntity(self)
             sound.powerup.Play()
+
+def createKey1(entity):
+    return Key1(entity)
+    
+class Key1(_Powerup):
+    SPRITE = 'key.ika-sprite'    
+    def apply(self):
+        engine.saveData[self.flagName] = 'True'
             
+class Key2(_Powerup):
+    SPRITE = 'key.ika-sprite'    
+    def apply(self):
+        engine.saveData[self.flagName] = 'True'
+
+class Key3(_Powerup):
+    SPRITE = 'key.ika-sprite'    
+    def apply(self):
+        engine.saveData[self.flagName] = 'True'        
 
 def createRedBerry(entity):
     return RedBerry(entity)

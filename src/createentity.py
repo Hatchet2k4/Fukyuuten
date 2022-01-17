@@ -31,6 +31,7 @@ spawnMap = {
     powerup.GoldenEgg.SPRITE: powerup.createEgg,
     powerup.BlackPearl.SPRITE: powerup.createPearl,
     powerup.Skull.SPRITE: powerup.createSkull,
+    powerup.Key1.SPRITE: powerup.createKey1,
 
     bee.Bee.SPRITE : bee.createBee,
     goblin.Goblin.SPRITE : goblin.createGoblin,
