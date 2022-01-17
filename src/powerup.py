@@ -30,9 +30,17 @@ class _Powerup(Entity):
         
         self.args = args
         self.kwargs = kwargs
+        self.flagName = ent.name
+        
+        if self.flagName.startswith('perm') and self.flagName in engine.saveData:
+            self.remove()
 
     def apply(self):
         pass
+
+    def remove(self):
+        self.x = self.y = -100  # hack!
+        engine.destroyEntity(self)        
 
     def update(self):
         self.animate()
@@ -68,8 +76,10 @@ class Seashell(_Powerup):
     SPRITE = 'seashell.ika-sprite'
     
     def apply(self):
+        if self.flagName.startswith('perm'):
+            engine.saveData[self.flagName] = 'True'
         engine.player.stats.money += self.kwargs['money']
-        print `engine.player.stats.money`
+        #print `engine.player.stats.money`
         
 def createPearl(entity):
     return BlackPearl(entity)
@@ -78,6 +88,8 @@ class BlackPearl(_Powerup):
     SPRITE = 'pearl.ika-sprite'
     
     def apply(self):
+        if self.flagName.startswith('perm'):
+            engine.saveData[self.flagName] = 'True'
         engine.player.stats.att += 1
         
 def createEgg(entity):
@@ -87,6 +99,8 @@ class GoldenEgg(_Powerup):
     SPRITE = 'egg.ika-sprite'
     
     def apply(self):
+        if self.flagName.startswith('perm'):
+            engine.saveData[self.flagName] = 'True'    
         engine.player.stats.pres += 1
         engine.addThing(DamageCaption('Def +1', self.ent.x, self.ent.y, 80, 241, 156, 73))     
         
@@ -97,11 +111,13 @@ class Skull(_Powerup):
     SPRITE = 'skull.ika-sprite'
     
     def apply(self):
-        pass
+        if self.flagName.startswith('perm'):
+            engine.saveData[self.flagName] = 'True'    
+        pass 
         
     
 class Grapple(_Powerup):
     SPRITE = 'grappleicon.ika-sprite'
     
-    def apply(self):
+    def apply(self):    
         engine.saveData['grapple'] = True

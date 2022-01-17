@@ -184,7 +184,7 @@
 					(activate_script '')
 				)
 				(entity 
-					(label 'egg03')
+					(label 'perm_egg03')
 					(x '597')
 					(y '32')
 					(sprite 'egg.ika-sprite')
@@ -254,7 +254,7 @@
 					(activate_script '')
 				)
 				(entity 
-					(label 'egg03b')
+					(label 'perm_egg03b')
 					(x '263')
 					(y '240')
 					(sprite 'egg.ika-sprite')
