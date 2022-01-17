@@ -9,8 +9,8 @@ def toggleBlocks():
 
 
 def AutoExec():
-    #if 'rescued' in engine.saveData:
-    #    del ika.Map.entities['friedrich']
+    if 'rescued' in engine.saveData:
+        del ika.Map.entities['friedrich']
     pass #
 
 def friedrich():

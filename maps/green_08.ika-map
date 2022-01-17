@@ -81,12 +81,12 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJzEl81rU0EUxe9bPXSn/hN16Vcr0qZQaEyxpdVubOpCa5ZZBAIScFMoREGI/6Hu6k536tJ7fXPoyc3My7y8ihcO7yOdO785c+cm7YhIh7Sr6qqeRt516bNtVU+1p5qpPksV56od1UQ1VX1QlapXqmNVP0Mv5Sq6DXU3MDOfEIvFJ9UFcYPtVHW2RCeq544xN8yHLdVhhI89BB/iWWB7q/qtul3M571VVO8t3lDe6QqMvP9HsrjWMsG3T8/gOyA+Dq6b9Yg2MjjNQ1sr70fp+LDnKT5Eiq8MLFZPazJf/4cZjJJg9PXHfLaPN5TnDukm7S/zjYqKZS0wWR2/cMqpU894LldnuJRF/77Q/ddIPvaP2WLnn32JBfYwxogaZD6b55LGf5NFD7x/deffn3e/duxh6Rj/el9U1+PAh3m+U44fsnjG2D9ms/M/1JyDomK3q5/Tr93Xw0lQP/D1Q+5Tmucn5fjlPLD52T/uTQN3jsT50o+s3ddDHR/m8eFrg/1DbYyI7cCNB+NZZO1HDfhibJ6xJ4v+7Uu6/hHYcx82fqQaB00SfBbLekFP5vlS/jUJG2/9boc0cXyj8G4vlSTBN5V8/3L53oXrOPCNw/PFEr4ywjeTf+MfC7x1fOihYOPvdd/bm8ZAql78fok+ql4ncqCHwjc+z5Z/U/WgJeOTJUqxWdje3lM9Dn83pL5bXhNjm/BsVmvoaanfQP+DDVxgsqv/DbTqOVklRu67zNjMPzDN6H0bvtiYnDzMV4ZnePdQ7x+FHMOiPR/yras2ijzGmH/wblOft2h82z6NfB3VNuWtY+Ta83Vn190IH3vclDXmY4qP2TAf1x3+F0Qe7jH4HJ432XPvY2ys7yex2kDwfoDxfobqeqXtS7dmTb7m/JqY10fOd4GtoU2v9GcWa8I+M6/31p9zu+eezme9Ld/Q+cN1h4jVC59z8IJtcI18ltP745//AAAA//8='
+				'eJzEl71vE0EQxeeqE3TAPxFKvhKEEkeKFOOIfEEa4lBA4tKFJUvIEk2kSAYJyfyHpIMOOqBkhttHnud2z3e+IEZ6ug9nZ3/7dnbsdESkQ9pWdVVPI++69NmmqqfaUc1Un6SIc9WWaqKaqt6rctUr1ZGqX0Mv5Sq6DXU3MDOfEIvFR9UFcYPtRHW6QMeq546xbpgPG6qDCB97CD7Es8B2pvqlup3N572VFe8t3lDe6RKMvP+HUl5rnuDbpWfw7REfB9fNakRrNTjNQ1sr70fu+LDnKT5Eii8PLFZPKzJf/wc1GCXB6OuP+WwfbyjPHdJN2l/mG2UFy0pgsjp+4VSnTj3juVyd4VzK/n2m+8tIPvaP2WLnn32JBfYwxogaZD6b5wuN/yplD7x/Veffn3e/duxh7hj/eJ8V16PAh3m+UY7vUj5j7B+z2fkfas5BVrDb1c/p1+7r4TioH/j6IfcJzfNDtR/003lg87N/3JsG7hyJ86UfWbuvhyo+zLPv5GuD/UNtjIhtT+YDjKeRtR824DsrL/9vgLEnZf92JV3/COy5X7uNH6nGQZMEn8jiXtCTeb6Uf03Cxlu/2yJNHN8ovNtJJUnwTaW+f3X53obrOPCNw/PFAr48wjeTf+MfC7xVfOihYOPvdd/bm8ZAil78boE+qF4ncqCHwjc+z5Z/XfWgJeOTBUqxWdje3lM9Dn83pL6bXxNjm/BsVmvoaanfQP+DDVxgsqv/DbTsOVkmRu67zNjMPzDN6H0bvtiYOnmYLw/P8O6h3j8KOYZZez7kW1WtZfUYY/7Bu3V93qDxbfs08nVUm5S3ipFrz9edXbcjfOxxU9aYjyk+ZsN8XHf4XxB5uMfgc3jeZM+9j7Gxvp/EagPB+wHG+zVU1SttX7oVa/I159fEvD7qfBfYGtr0Sn9msSbsM/N6b/05t3vu6XzW2/INnT9cd4hYvfA5By/YBtfIZzm9P/75NwAAAP//'
 			)
 			(obstructions 
 				(style 'tile')
 				(format 'zlib')
-				'eJyUlFEOwCAIQ9v7X3qJmaxASZgfU8KzRYMDdoMylpkagu8MpyDc/Rw0JQldoy7VMdbO14FG7yQZNUaSqcqsIlwwn0ScRi14nfgpkdVCHG5ICXvxTNuw5cwVrDgw8WMzRJ66q4FtRgNTb1R+HK5ZHGabxRTRlaU8q2E4W1S9wQSWzODM7uVCc0Tz0sebaL8Ej/WH/597AAAA//8='
+				'eJyUlFEOwCAIQ+n9L73ETSy0JM4Pp+HZAtFF3A3QuIz0beD7hlMgbk8LLUEEr6Mv2THXzteBRm8FkTlmECXLqkJcMkciq2GLVRV2bTkL94rjYKDjmvx2PT7aZ8OZFlxxgcKPlyHj4FMCyjcELAV1fhzusjjMXhaThCpTelbDcDap3sECtsjgDPVyW1OieeljJ+SX4DF9+P+5BwAA//8='
 			)
 			(entities 
 				(entity 
@@ -106,7 +106,7 @@
 				(entity 
 					(label 'archer2')
 					(x '456')
-					(y '178')
+					(y '210')
 					(sprite 'goblin3.ika-sprite')
 					(speed '100')
 					(direction 'up')
@@ -120,7 +120,7 @@
 				(entity 
 					(label 'archer3')
 					(x '515')
-					(y '179')
+					(y '200')
 					(sprite 'goblin1.ika-sprite')
 					(speed '100')
 					(direction 'up')
@@ -190,7 +190,7 @@
 				(entity 
 					(label 'archer6')
 					(x '217')
-					(y '200')
+					(y '240')
 					(sprite 'goblin2.ika-sprite')
 					(speed '100')
 					(direction 'up')
