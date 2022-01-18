@@ -34,6 +34,7 @@ class _Powerup(Entity):
         
         if self.flagName.startswith('perm') and self.flagName in engine.saveData:
             self.remove()
+        self.sound = sound.powerup #default sound
 
     def apply(self):
         pass
@@ -47,7 +48,7 @@ class _Powerup(Entity):
         if self.touches(engine.player):
             self.apply()
             engine.destroyEntity(self)
-            sound.powerup.Play()
+            self.sound.Play()
 
 def createKey1(entity):
     return Key1(entity)
@@ -135,6 +136,10 @@ class Skull(_Powerup):
     
 class Grapple(_Powerup):
     SPRITE = 'grappleicon.ika-sprite'
-    
+        
     def apply(self):    
+        self.sound = sound.NullSound() #prevent normal powerup sound from playing        
         engine.saveData['grapple'] = True
+        engine.addThing(DamageCaption('Got Grapple', self.ent.x, self.ent.y, 80, 241, 156, 73))     
+        sound.fader.playandresume(sound.music['victory'], 250000)        
+        

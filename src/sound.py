@@ -59,15 +59,18 @@ switch = ika.Sound('sounds/switch.ogg')
 powerup = ika.Sound('sounds/powerup.ogg')
 dooropen = ika.Sound('sounds/dooropen.ogg')
 doorclose = ika.Sound('sounds/doorclose.ogg')
+itempickup = ika.Sound('music/victory.ogg')
 
 # UI (FIELD)
 newGame = ika.Sound('sounds/newgame.ogg')
 menuMove = ika.Sound('sounds/menumov.ogg')
 menuSelect = ika.Sound('sounds/menusel.ogg')
 
+
 # LOOPS (N/A)
 earthquake = ika.Music('sounds/earthquake.ogg')
 earthquake.loop = True
+
 
 # music -----------------------------------------------------------------------
 # all music.  Never ever let go. (because I'm lazy)
@@ -80,19 +83,37 @@ music['town'] = ika.Music('music/town.ogg')
 music['dungeon'] = ika.Music('music/dungeon.ogg')
 music['storyscene'] = ika.Music('music/story.ogg')
 music['boss'] = ika.Music('music/boss.ogg')
+music['victory'] = ika.Music('music/victory.ogg')
+music['victory'].loop = False   
 
-class Crossfader(Thing):
-
+class Crossfader(Thing): #important Music handler!
     def __init__(self):
         self.oldMusic = []
         self._music = None
         self.inc = 0.01
-
+        self.tempmusic = None
+        self._update = self.playnormal
+        self.limit = 0
     def _setMusic(self, value):
         assert value is not None
         self._music = value
 
     music = property(lambda self: self._music, _setMusic)
+
+    def pause(self):
+        self.music.Pause()
+        
+    def resume(self):
+        self.music.Play()
+
+    def playandresume(self, newMusic, timelimit): #plays a song then resumes the original
+        self.pause()
+        self.tempmusic = newMusic
+        self.tempmusic.position=0
+        
+        self.tempmusic.Play()
+        self.limit=timelimit
+        self._update = self.playtemp
 
     def reset(self, newMusic):
         if newMusic is self.music:
@@ -121,7 +142,9 @@ class Crossfader(Thing):
                 m.volume = 0
             self.oldMusic = []
 
-    def update(self):
+
+    #update functions
+    def playnormal(self):
         i = 0
         while i < len(self.oldMusic):
             m = self.oldMusic[i]
@@ -134,9 +157,22 @@ class Crossfader(Thing):
         self.music.volume += self.inc
         if not self.oldMusic and self.music.volume >= 1.0:
             return True
+    
+    def playtemp(self):
+        if self.tempmusic.position>=self.limit:
+            self.tempmusic.Pause()
+            self.tempmusic = None
+            self.resume()
+            self._update = self.playnormal        
+
+    def update(self):
+        self._update() #can be playnormal or playtemp
 
     def draw(self):
         pass
+        #if self.tempmusic:
+        #   engine.font.Print(5, 5, str(self.tempmusic.position))
+        
 
 fader = Crossfader()
 
