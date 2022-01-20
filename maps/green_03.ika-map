@@ -4,6 +4,7 @@
 		(title 'green 03')
 		(meta 
 			(entityLayer 'detail')
+			(music 'town')
 		)
 	)
 	(header 

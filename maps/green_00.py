@@ -31,10 +31,10 @@ def firstConvo():
         ana.specframe = 0
 
         engine.synchTime()
-        text(ana, "anastasia3", "Pfft!  I can't believe I came away empty handed today!  If it wasn't for that flock of gulls I'd still have that seventy-pounder.")
+        text("left", "anastasia3", "Pfft!  I can't believe I came away empty handed today!  If it wasn't for that flock of gulls I'd still have that seventy-pounder.")
         delay(50)
         ana.specframe = 24
-        text(ana, "You hear me?!  Give me back my fish!")
+        text("left", "You hear me?!  Give me back my fish!")
 
         fish.x, fish.y, fish.layer = (110, 60, ana.layer + 1)
         fish.move(dir.DOWN, 120)
@@ -68,14 +68,14 @@ def firstConvo():
         while fried.isMoving(): delay(1)
 
         ana.specframe = 3
-        text(ana, "anastasia", "Friedrich!  It's been almost a week!")
-        text(fried, "friedrich", "Indeed!  It has been quite some time.  Oh, but I've got some stories for you!")
-        text(ana, "anastasia", "Yeah?  Find any new treasure on that deserted isle?")
-        text(fried, "friedrich", "You wouldn't believe me if I told you.  I shall have to take you there someday.  We'll plan a trip!")
-        text(ana, "anastasia", "Ooooh!  Sounds like fun!")
-        text(fried, "friedrich", "As a matter of fact, there is something I'd like to show you at my shop.  Swing by when you get a chance.")
-        text(ana, "anastasia", "Sure!  I need to get this fish down to the village anyway.")
-        text(fried, "friedrich", "Oh do take your time, dear.")
+        text("left", "anastasia", "Friedrich!  It's been almost a week!")
+        text("right", "friedrich", "Indeed!  It has been quite some time.  Oh, but I've got some stories for you!")
+        text("left", "anastasia", "Yeah?  Find any new treasure on that deserted isle?")
+        text("right", "friedrich", "You wouldn't believe me if I told you.  I shall have to take you there someday.  We'll plan a trip!")
+        text("left", "anastasia", "Ooooh!  Sounds like fun!")
+        text("right", "friedrich", "As a matter of fact, there is something I'd like to show you at my shop.  Swing by when you get a chance.")
+        text("left", "anastasia", "Sure!  I need to get this fish down to the village anyway.")
+        text("right", "friedrich", "Oh do take your time, dear.")
 
         engine.destroyEntity(fish)
         fried.move(dir.UP, 160)

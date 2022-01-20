@@ -90,10 +90,11 @@ class Crossfader(Thing): #important Music handler!
     def __init__(self):
         self.oldMusic = []
         self._music = None
-        self.inc = 0.01
+        self.inc = 0.2
         self.tempmusic = None
         self._update = self.playnormal
         self.limit = 0
+        
     def _setMusic(self, value):
         assert value is not None
         self._music = value
@@ -183,6 +184,8 @@ def playMusic(fname):
         m = ika.Music(fname)
         m.loop = True
         music[fname] = m
+    print "playMusic:" + fname
+    print 
     fader.reset(m)
     if fader not in engine.things:
         engine.things.append(fader)

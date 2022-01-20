@@ -3,7 +3,7 @@ import sound
 
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
-    playMusic('town')
+    #playMusic('town')
     if engine.player:
         engine.player.stats.hp = engine.player.stats.maxhp
 

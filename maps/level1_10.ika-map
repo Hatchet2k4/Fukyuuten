@@ -4,7 +4,7 @@
 		(title 'temple 10')
 		(meta 
 			(entityLayer 'B2')
-			(music 'dungeon.ogg')
+			(music 'dungeon')
 		)
 	)
 	(header 

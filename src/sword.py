@@ -136,7 +136,7 @@ class Sword(object):
 
     def cutBush(self, me, rect):
         tiles = tilesAt(*rect)
-        ika.Log(str(tiles))
+        #ika.Log(str(tiles))
         for t in tiles:
             if t[2] in [78, 368, 369, 370]: #bush!
                 ika.Map.SetTile(t[0], t[1], me.layer, 0)

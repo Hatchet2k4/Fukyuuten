@@ -4,7 +4,7 @@ import dir
 
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
-    playMusic('island')
+    #playMusic('island')
     if 'temple01_revealed' in engine.saveData:
         clearWater()
 
