@@ -90,7 +90,7 @@ class Crossfader(Thing): #important Music handler!
     def __init__(self):
         self.oldMusic = []
         self._music = None
-        self.inc = 0.2
+        self.inc = 0.01
         self.tempmusic = None
         self._update = self.playnormal
         self.limit = 0
@@ -133,6 +133,10 @@ class Crossfader(Thing): #important Music handler!
             self.music.volume = 1.0
             self.music.loop = True
             self.music.Play()
+        print str(self.oldMusic) + " - " +str(len(self.oldMusic))
+        
+        
+            
 
     def kill(self):
         if self.music:
@@ -156,6 +160,7 @@ class Crossfader(Thing): #important Music handler!
             else:
                 i += 1
         self.music.volume += self.inc
+        if self.music.volume>1.0: self.music.volume=1.0
         if not self.oldMusic and self.music.volume >= 1.0:
             return True
     
@@ -170,9 +175,11 @@ class Crossfader(Thing): #important Music handler!
         self._update() #can be playnormal or playtemp
 
     def draw(self):
-        pass
         #if self.tempmusic:
-        #   engine.font.Print(5, 5, str(self.tempmusic.position))
+        #engine.font.Print(15, 5, "Main Volume: "+str(self.music.volume))
+        #for i, m in enumerate(self.oldMusic):
+        #    engine.font.Print(15, 15+10*i, "OldMusic Volume: "+str(m.volume))
+        pass
         
 
 fader = Crossfader()
@@ -184,8 +191,9 @@ def playMusic(fname):
         m = ika.Music(fname)
         m.loop = True
         music[fname] = m
+        
     print "playMusic:" + fname
-    print 
+    
     fader.reset(m)
     if fader not in engine.things:
         engine.things.append(fader)
