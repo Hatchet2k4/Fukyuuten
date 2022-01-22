@@ -170,8 +170,7 @@ def mapSwitch(newMapName, dest=None, fade=True):
 
         camera.center()
 
-    if 'music' in metaData:
-        #sound.playMusic('%s/%s' % (config.MUSIC_PATH, metaData['music']))
+    if 'music' in metaData:        
         sound.playMusic(metaData['music'])
 
     if fade:

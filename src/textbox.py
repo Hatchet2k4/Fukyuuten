@@ -50,8 +50,8 @@ def draw():
 #------------------------------------------------------------------------------
 
 def createTextBox(where, txt):
-    # where is either a point or an entity
-    WIDTH = 200
+    # where is either a point or an entity or string
+    WIDTH = 236 #default
     width = WIDTH
     text = wrapText(txt, width, gui.default_font)
     width = max([gui.default_font.StringWidth(s) for s in text])
@@ -59,13 +59,12 @@ def createTextBox(where, txt):
     x, y = (0, 0)
     automove = False #automatic moving of where to display the box
 
-    ika.Log('Textbox logging')
+    
     if where=='left':
-        x, y = (20, 120)
-        ika.Log('left')
+        x, y = (84, ika.Video.yres-64)
+        
     elif where=='right':
-        x, y = (320-20-width, 120)
-        ika.Log('right')
+        x, y = (ika.Video.xres-84-width, ika.Video.yres-64)
             
     if isinstance(where, (tuple, list)):
         x, y = where
@@ -114,7 +113,7 @@ class TextBox(object):
         else:
             self.img = None
         self.left=False    
-        if (isinstance(where, basestring) and where=='left') or self.frame.x < ika.Video.xres / 2:
+        if (isinstance(where, basestring) and where=='left'): # or self.frame.x < ika.Video.xres / 2:
             self.left=True
         
     def update(self):
@@ -124,7 +123,7 @@ class TextBox(object):
         if self.img is not None:
             if self.left:
                 ika.Video.Blit(self.img, 0, ika.Video.yres - self.img.height)
-            else:
+            else: #move to right side and flip!
                 ika.Video.ScaleBlit(self.img, ika.Video.xres, ika.Video.yres - self.img.height, -self.img.width, self.img.height)
 
         self.frame.draw()

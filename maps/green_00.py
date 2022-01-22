@@ -32,9 +32,9 @@ def firstConvo():
 
         engine.synchTime()
         text("left", "anastasia3", "Pfft!  I can't believe I came away empty handed today!  If it wasn't for that flock of gulls I'd still have that seventy-pounder.")
-        delay(50)
+        delay(33)
         ana.specframe = 24
-        text("left", "You hear me?!  Give me back my fish!")
+        text("left", "anastasia3", "You hear me?!  Give me back my fish!")
 
         fish.x, fish.y, fish.layer = (110, 60, ana.layer + 1)
         fish.move(dir.DOWN, 120)
@@ -47,7 +47,7 @@ def firstConvo():
         engine.things.append(Quake(10))
         ana.specframe = 23
         text(ana, "anastasia2", "Ouch!!!")
-        delay(100)
+        delay(80)
 
         fried.x, fried.y = 176, 60
         fried.move(dir.DOWN, 70)

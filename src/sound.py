@@ -174,8 +174,7 @@ class Crossfader(Thing): #important Music handler!
     def update(self):
         self._update() #can be playnormal or playtemp
 
-    def draw(self):
-        #if self.tempmusic:
+    def draw(self):        
         #engine.font.Print(15, 5, "Main Volume: "+str(self.music.volume))
         #for i, m in enumerate(self.oldMusic):
         #    engine.font.Print(15, 15+10*i, "OldMusic Volume: "+str(m.volume))
@@ -190,14 +189,10 @@ def playMusic(fname):
     else:
         m = ika.Music(fname)
         m.loop = True
-        music[fname] = m
-        
-    print "playMusic:" + fname
-    
+        music[fname] = m            
     fader.reset(m)
     if fader not in engine.things:
         engine.things.append(fader)
-
 
 def killMusic():
     fader.kill()

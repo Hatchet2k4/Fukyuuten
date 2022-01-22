@@ -3,10 +3,11 @@ from friedrich import Friedrich
 import dir
 
 def AutoExec():
-    engine.background = ika.Image('gfx/sky_bg.png')
-    #playMusic('island')
+    engine.background = ika.Image('gfx/sky_bg.png')    
+    engine.mapThings.append(Clouds('gfx/sky_clouds.png', tint=ika.RGB(255, 255, 255, 96)))        
     if 'temple01_revealed' in engine.saveData:
         clearWater()
+    
 
 def clearWater():
     ika.Map.SetLayerTint(ika.Map.FindLayerByName("Secret"), ika.RGB(255,255,255,0))
