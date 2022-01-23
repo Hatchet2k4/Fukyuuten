@@ -17,6 +17,10 @@
 	(waypoints )
 	(zones 
 		(zone 
+			(label 'friedMissing')
+			(script 'friedMissing')
+		)
+		(zone 
 			(label 'toGreen02')
 			(script 'toGreen02')
 		)
@@ -276,6 +280,13 @@
 					(y '0')
 					(width '544')
 					(height '16')
+				)
+				(zone 
+					(label 'friedMissing')
+					(x '212')
+					(y '307')
+					(width '39')
+					(height '38')
 				)
 			)
 		)

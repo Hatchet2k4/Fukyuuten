@@ -3,6 +3,8 @@ import textbox
 import dir
 from fish import Fish
 from friedrich import Friedrich
+import ika
+import sound
 
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
@@ -11,11 +13,14 @@ def AutoExec():
 
 def firstConvo():
     if 'firstconvo' not in engine.saveData:
+        xwin = ika.Map.xwin
+        ywin = ika.Map.ywin
+    
         stone = ika.Entity(110, 60, 1, 'artifact.ika-sprite')
 
         fish = Fish(ika.Entity(110, 60, 2, 'fish.ika-sprite'))
         fish.ent.mapobs = fish.ent.entobs = fish.ent.isobs = False
-        fish.ent.speed = 200
+        fish.ent.speed = 300
         engine.addEntity(fish)
 
         fried = Friedrich(ika.Entity(176, 60, 1, 'friedrich.ika-sprite'))
@@ -36,29 +41,39 @@ def firstConvo():
         ana.specframe = 24
         text("left", "anastasia3", "You hear me?!  Give me back my fish!")
 
-        fish.x, fish.y, fish.layer = (110, 60, ana.layer + 1)
-        fish.move(dir.DOWN, 120)
-
+        sound.fall.Play()
+        delay(75)
+        fish.x, fish.y, fish.layer = (110, -20, ana.layer + 1)
+        fish.move(dir.DOWN, 200)
+        
         tick()
         while fish.isMoving():
             tick()
             draw()
 
-        engine.things.append(Quake(10))
+        engine.things.append(Quake(20))
         ana.specframe = 23
-        text(ana, "anastasia2", "Ouch!!!")
+        
+        apos=(ana.x, ana.y+16-ywin)
+        
+        text(apos, "anastasia2", "left", "Ouch!!!")
         delay(80)
 
         fried.x, fried.y = 176, 60
         fried.move(dir.DOWN, 70)
         delay(1)
+        
+        
+        
         while fried.isMoving(): delay(1)
 
-        text((180, 100), "Drop something?")
+        fpos=(160, fried.y+24-ywin)
+
+        text(fpos, "Dropped something?")
         delay(100)
-        text(ana, '...')
+        text((ana.x-8, ana.y+24-ywin), '...')
         delay(50)
-        text(ana, 'mmph.')
+        text((ana.x-8, ana.y+24-ywin), 'Mmph..')
         ana.specframe = 1
 
         fish.move(dir.DOWN, 32)
@@ -68,13 +83,14 @@ def firstConvo():
         while fried.isMoving(): delay(1)
 
         ana.specframe = 3
-        text("left", "anastasia", "Friedrich!  It's been almost a week!")
-        text("right", "friedrich", "Indeed!  It has been quite some time.  Oh, but I've got some stories for you!")
-        text("left", "anastasia", "Yeah?  Find any new treasure on that deserted isle?")
-        text("right", "friedrich", "You wouldn't believe me if I told you.  I shall have to take you there someday.  We'll plan a trip!")
-        text("left", "anastasia", "Ooooh!  Sounds like fun!")
-        text("right", "friedrich", "As a matter of fact, there is something I'd like to show you at my shop.  Swing by when you get a chance.")
-        text("left", "anastasia", "Sure!  I need to get this fish down to the village anyway.")
+        text("left", "anastasia3", "That thing is heavy.. ")
+        text("left", "anastasia", "Oh, Friedrich! Did you scare that fish out of the gulls? It's good to see you, it's been almost a week!")
+        text("right", "friedrich", "Indeed! It has been quite some time.  Oh, but I've got some stories for you!")
+        text("left", "anastasia", "Yeah? Did you find any new treasure on that deserted island?")
+        text("right", "friedrich", "It was a very enlightening experience. I shall have to take you there someday.  We'll plan a trip!")
+        text("left", "anastasia", "Ooooh! Sounds like fun!")
+        text("right", "friedrich", "As a matter of fact, there is something I found that I'd like to show you at my shop. Swing by when you get a chance.")
+        text("left", "anastasia", "Sure! I need to get this fish down to Yolander anyway.")
         text("right", "friedrich", "Oh do take your time, dear.")
 
         engine.destroyEntity(fish)

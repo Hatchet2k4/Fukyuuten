@@ -51,7 +51,7 @@ def draw():
 
 def createTextBox(where, txt):
     # where is either a point or an entity or string
-    WIDTH = 236 #default
+    WIDTH = 228 #default
     width = WIDTH
     text = wrapText(txt, width, gui.default_font)
     width = max([gui.default_font.StringWidth(s) for s in text])
@@ -105,7 +105,7 @@ def createTextBox(where, txt):
 #------------------------------------------------------------------------------
 
 class TextBox(object):
-    def __init__(self, where, portrait, text):
+    def __init__(self, where, portrait, side, text):
         self.frame = createTextBox(where, text)
 
         if portrait is not None:
@@ -113,7 +113,7 @@ class TextBox(object):
         else:
             self.img = None
         self.left=False    
-        if (isinstance(where, basestring) and where=='left'): # or self.frame.x < ika.Video.xres / 2:
+        if (isinstance(where, basestring) and where=='left') or side=='left':
             self.left=True
         
     def update(self):
@@ -134,19 +134,18 @@ def text(where, *args):
     Where can be either a point or an entity.
     TODO: update Things while the textbox is visible
     """
-    portrait, text = None, ''
+    portrait, text, side = None, '', ''
 
     if len(args) == 1:
         text = args[0]
-
     elif len(args) == 2:
         portrait, text = args
     elif len(args) == 3:
-        portrait, text = args
+        portrait, side, text = args
     else:
         assert False, 'text recieves 1 or two arguments.'
 
-    textBox = TextBox(where, portrait, text)
+    textBox = TextBox(where, portrait, side, text)
 
     engine.things.append(textBox)
 
