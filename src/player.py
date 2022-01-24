@@ -284,25 +284,27 @@ class Player(Entity):
         self.stop()
         self.anim = 'stand'
         while True:
-            if controls.attack1():
+            if controls.attack1() or controls.joy_attack1():
                 self.state = self.weapon.attack1(self)
 
-            elif controls.attack2():
+            elif controls.attack2() or controls.joy_attack2():
                 self.state = self.weapon.attack2(self)
 
-            elif controls.tool1() and 'grapple' in engine.saveData:
+            elif (controls.tool1() or controls.joy_tool1()) and 'grapple' in engine.saveData:
                 self.state = self.grapple.activate(self)
 
             elif (controls.left() or controls.right() or
-                 controls.up() or controls.down()
+                 controls.up() or controls.down() or
+                 controls.joy_left() or controls.joy_right() or
+                 controls.joy_up() or controls.joy_down()
             ):
                 self.state = self.walkState()
 
-            elif (controls.left() or controls.right() or
-                 controls.up() or controls.down()
-            ):
-                self.state = self.walkState()
-                self._state()  # get the walk state started right now.
+            #elif (controls.left() or controls.right() or
+            #     controls.up() or controls.down()
+            #):
+            #    self.state = self.walkState()
+            #    self._state()  # get the walk state started right now.
 
             if not self.stats.mp:
                 self.invincible = False
@@ -314,31 +316,31 @@ class Player(Entity):
         oldDir = self.direction
         self.anim = 'walk'
         while True:
-            if controls.attack1():
+            if controls.attack1() or controls.joy_attack1():
                 self.state = self.weapon.attack1(self)
                 yield None
 
-            elif controls.attack2():
+            elif controls.attack2() or controls.joy_attack2():
                 self.state = self.weapon.attack2(self)
                 yield None
 
-            elif controls.left():
-                if controls.up():
+            elif controls.left() or controls.joy_left():
+                if controls.up() or controls.joy_up():
                     d = dir.UPLEFT
-                elif controls.down():
+                elif controls.down() or controls.joy_down():
                     d = dir.DOWNLEFT
                 else:
                     d = dir.LEFT
-            elif controls.right():
-                if controls.up():
+            elif controls.right() or controls.joy_right():
+                if controls.up() or controls.joy_up():
                     d = dir.UPRIGHT
-                elif controls.down():
+                elif controls.down() or controls.joy_down():
                     d = dir.DOWNRIGHT
                 else:
                     d = dir.RIGHT
-            elif controls.up():
+            elif controls.up() or controls.joy_up():
                 d = dir.UP
-            elif controls.down():
+            elif controls.down() or controls.joy_down():
                 d = dir.DOWN
             else:
                 self.state = self.standState()

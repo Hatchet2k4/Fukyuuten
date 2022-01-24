@@ -99,19 +99,19 @@ class SaveLoadMenu(object):
             self.oldY -= 2
         elif self.curY > self.oldY:
             self.oldY += 2
-        elif controls.up() and self.cursorPos > 0:
+        elif (controls.up.pressed or controls.ui_up.pressed or controls.joy_up.pressed) and self.cursorPos > 0:
            sound.menuMove.Play()
            self.cursorPos -= 1
            self.curY = self.cursorPos * self.wndHeight
-        elif controls.down() and \
+        elif (controls.down.pressed or controls.ui_down.pressed or controls.joy_down.pressed) and \
              self.cursorPos < len(self.layout.children) - 1:
            sound.menuMove.Play()
            self.cursorPos += 1
            self.curY = self.cursorPos * self.wndHeight
-        elif controls.attack1():
+        elif (controls.attack1() or controls.joy_attack1() or controls.ui_accept()):
             sound.menuSelect.Play()
             return self.cursorPos
-        elif controls.cancel():
+        elif (controls.cancel() or controls.joy_cancel() or controls.ui_cancel()):
             return Cancel
 
 

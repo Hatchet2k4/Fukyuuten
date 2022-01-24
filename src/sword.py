@@ -9,6 +9,8 @@ from entity import Entity
 from enemy import Enemy
 from goblin import Arrow
 import powerup
+from powerup import _Powerup
+
 
 thrustRange = ((-22,  -2, 16,  8),
     ( 15,  -2, 16,  8),
@@ -176,34 +178,37 @@ class Sword(object):
             ents = ika.EntitiesAt(*rect)
             for e in ents:
                 if e is me.overlay or e in hitList: continue
+                if e in engine.entFromEnt:
+                    x = engine.entFromEnt[e]
 
-                x = engine.entFromEnt[e]
+                    if isinstance(x, Enemy) and not x.invincible and x not in hitList:
+                        hitList.add(x)
+                        x.hurt(int(me.stats.att), 120, me.direction)
+                        me.giveMPforHit()
 
-                if isinstance(x, Enemy) and not x.invincible and x not in hitList:
-                    hitList.add(x)
-                    x.hurt(int(me.stats.att), 120, me.direction)
-                    me.giveMPforHit()
-
-                elif isinstance(x, Arrow):
-                    hitList.add(x)
-                    sound.deflect.Play()
-                    engine.destroyEntity(x)
+                    elif isinstance(x, Arrow):
+                        hitList.add(x)
+                        sound.deflect.Play()
+                        engine.destroyEntity(x)
+                        
+                    elif isinstance(x, _Powerup):
+                        x.touch()
 
             self.cutBush(me, rect)
             
                       
                         
-            if controls.up() and me.direction == dir.DOWN:
+            if (controls.up() or controls.joy_up())  and me.direction == dir.DOWN:
                 backthrust = True
-            elif controls.down() and me.direction == dir.UP:
+            elif (controls.down() or controls.joy_down()) and me.direction == dir.UP:
                 backthrust = True
-            elif controls.left() and me.direction in [dir.RIGHT, dir.UPRIGHT, dir.DOWNRIGHT]:
+            elif (controls.left() or controls.joy_left()) and me.direction in [dir.RIGHT, dir.UPRIGHT, dir.DOWNRIGHT]:
                 backthrust = True
-            elif controls.right() and me.direction in [dir.LEFT, dir.UPLEFT, dir.DOWNLEFT]:
+            elif (controls.right() or controls.joy_right()) and me.direction in [dir.LEFT, dir.UPLEFT, dir.DOWNLEFT]:
                 backthrust = True
-            elif controls.attack1() and not thrust:
+            elif (controls.attack1() or controls.joy_attack1()) and not thrust:
                 backslash = True
-            elif controls.attack2() and not backslash:
+            elif (controls.attack2() or controls.joy_attack2())  and not backslash:
                 thrust = True
             yield None
 
@@ -239,12 +244,14 @@ class Sword(object):
             ents = ika.EntitiesAt(*rect)
             for e in ents:
                 if e is me.overlay: continue
-
-                x = engine.entFromEnt[e]
-                if isinstance(x, Enemy) and not x.invincible and x not in hitList:
-                    hitList.append(x)
-                    x.hurt(int(me.stats.att), 140, me.direction)
-                    me.giveMPforHit()
+                if e in engine.entFromEnt:
+                    x = engine.entFromEnt[e]
+                    if isinstance(x, Enemy) and not x.invincible and x not in hitList:
+                        hitList.append(x)
+                        x.hurt(int(me.stats.att), 140, me.direction)
+                        me.giveMPforHit()
+                    elif isinstance(e, _Powerup):
+                        e.touch()                    
             self.cutBush(me, rect)
             yield None
 
@@ -291,7 +298,9 @@ class Sword(object):
                     me.giveMPforHit()
                     #me.stop()
                     return False
-
+                elif isinstance(e, _Powerup):
+                    e.touch()
+                    
             return False
 
         i = 8

@@ -151,7 +151,7 @@ def text(where, *args):
 
     try:
         engine.beginCutScene()
-        while not controls.attack1():
+        while not (controls.attack1() or controls.joy_attack1() or controls.ui_accept()):
             engine.tick()
             engine.draw()
 

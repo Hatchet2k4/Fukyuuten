@@ -110,20 +110,20 @@ class Menu(gui.Widget):
             # only move the cursor if delta is zero
             # that way movement doesn't get bogged
             # down by a cursor that moves too slowly
-            if controls.up() and self.cursorPos > 0:
+            if (controls.up.pressed or controls.ui_up.pressed or controls.joy_up.pressed) and self.cursorPos > 0:
                 if not unpress:
                     self.cursorPos -= 1
                     sound.menuMove.Play()
                     unpress = True
-            elif controls.down() and self.cursorPos < len(self.Text) - 1:
+            elif (controls.down.pressed or controls.ui_down.pressed or controls.joy_down.pressed) and self.cursorPos < len(self.Text) - 1:
                 if not unpress:
                     self.cursorPos += 1
                     sound.menuMove.Play()
                     unpress = True
-            elif controls.enter():
+            elif (controls.attack1() or controls.joy_attack1() or controls.ui_accept()):
                 sound.menuSelect.Play()
                 return self.cursorPos
-            elif controls.cancel():
+            elif (controls.cancel() or controls.joy_cancel() or controls.ui_cancel()):
                 return Cancel
             else:
                 unpress = False

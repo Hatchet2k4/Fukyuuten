@@ -8,7 +8,8 @@ import sound
 
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
-    engine.mapThings.append(Clouds('gfx/sky_clouds.png', tint=ika.RGB(255, 255, 255, 96)))
+    engine.mapThings.append(Clouds('gfx/sky_shadows.png', tint=ika.RGB(255, 255, 255, 128)))
+    engine.mapThings.append(Clouds('gfx/sky_clouds.png', tint=ika.RGB(255, 255, 255, 128)))
 
 
 def firstConvo():

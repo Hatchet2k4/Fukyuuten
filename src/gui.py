@@ -7,6 +7,8 @@ import sound
 from xi import gui, layout
 from xi.menu import Cancel
 
+
+
 def init(font, wnd=None, csr=None):
     '''Initializes defaults for the GUI system.  This MUST be called
        before creating any instances.
@@ -133,20 +135,20 @@ class IconTableWindow(gui.Frame):
         
         oldPos = self.cursorPos
         
-        if controls.left.pressed:
+        if controls.left.pressed or controls.ui_left.pressed or controls.joy_left.pressed:
             self.cursorPos = max(0, self.cursorPos - 1)
-        elif controls.right.pressed:
+        elif controls.right.pressed or controls.ui_right.pressed or controls.joy_right.pressed:
             self.cursorPos = min(len(self.icons) - 1, self.cursorPos + 1)
-        elif controls.down.pressed and self.cursorPos < len(self.items) - 8:
+        elif (controls.down.pressed or controls.ui_down.pressed or controls.joy_down.pressed) and self.cursorPos < len(self.items) - 8:
             self.cursorPos += 8
-        elif controls.up.pressed and self.cursorPos > 7:
+        elif (controls.up.pressed or controls.ui_up.pressed or controls.joy_up.pressed) and self.cursorPos > 7:
             self.cursorPos -= 8
 
-        elif controls.attack1.pressed:
+        elif controls.attack1.pressed or controls.joy_attack1.pressed or controls.ui_accept.pressed:
             # have to use pressed and not position here, because the other menu eats it
             return self.select(self.cursorPos)
             
-        elif controls.cancel.pressed:
+        elif controls.cancel.pressed or controls.joy_cancel.pressed or controls.ui_cancel.pressed:
             return Cancel
             
         if self.cursorPos != oldPos:

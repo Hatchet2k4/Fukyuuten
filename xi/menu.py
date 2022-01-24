@@ -139,7 +139,7 @@ class Menu(gui.Widget):
             # a counter variable (_cursorCount) that is reset when no key is pressed.
             # When a key is pressed, the cursor is moved iff the count is maxed, or at 0.
             # when the counter goes below 0, it is set to the repeat count.
-            if controls.up() and self.cursorPos > 0:
+            if (controls.up() or controls.joy_up() or controls.ui_up()) and self.cursorPos > 0:
                 if self._cursorCount == 0 or self._cursorCount == self._pauseDelay:
                     self.cursorPos -= 1
                     sound.cursormove.Play()
@@ -149,7 +149,7 @@ class Menu(gui.Widget):
                 if self._cursorCount < 0:
                     self._cursorCount = self._repeatDelay
 
-            elif controls.down() and self.cursorPos < len(self.text) - 1:
+            elif (controls.down() or controls.joy_down() or controls.ui_down) and self.cursorPos < len(self.text) - 1:
                 if self._cursorCount == 0 or self._cursorCount == self._pauseDelay:
                     self.cursorPos += 1
                     sound.cursormove.Play()
@@ -159,9 +159,9 @@ class Menu(gui.Widget):
                 if self._cursorCount < 0:
                     self._cursorCount = self._repeatDelay
 
-            elif controls.enter():
+            elif controls.enter() or controls.joy_enter() or controls.ui_accept():
                 return self.cursorPos
-            elif controls.cancel():
+            elif controls.cancel() or controls.joy_cancel() or controls.ui_cancel():
                 return Cancel
             else:
                 self._cursorCount = self._pauseDelay

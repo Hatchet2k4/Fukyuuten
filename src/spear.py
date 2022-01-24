@@ -7,6 +7,7 @@ import dir
 
 from entity import Entity
 from enemy import Enemy
+from powerup import _Powerup
 
 from obstacle import Obstacle
 from quake import Quake
@@ -67,7 +68,9 @@ class Spear(object):
                 hitlist.add(e)
 
                 if isinstance(e, Enemy):
-                    e.hurt(int(me.stats.att * 1.5), 190, me.direction)
+                    e.hurt(int(me.stats.att), 190, me.direction)
+                elif isinstance(e, _Powerup):
+                    e.touch()
 
             yield None
 
@@ -85,20 +88,23 @@ class Spear(object):
 
         sound.spear2.Play()
         
-        power = 1.5
+        power = 1.25
         animcount = 0
-        while controls.attack2.position:
-            power = min(4, power + 0.01)
+        charged = False
+        while controls.attack2.position or controls.joy_attack2.position:
+            power = min(3, power + 0.0125)
 
             # speed up the animation
             animcount += 25 * power
             while animcount > 100:
                 me.animate()
                 animcount -= 100
-
-            if controls.attack1():
-                if power > 2.0:
-                    
+            if power > 2.0 and not charged:                
+                sound.spearCharged.Play()
+                charged=True
+                
+            if controls.attack1() or controls.joy_attack1():
+                if charged:                    
                     me.state = self.powerLungeState(me, power)
                 else:
                     me.state = self.lungeState(me)
@@ -156,6 +162,8 @@ class Spear(object):
                     )
 
                     engine.mapThings.append(Quake(10))
+                elif isinstance(e, _Powerup):
+                    e.touch()
 
             yield None
 

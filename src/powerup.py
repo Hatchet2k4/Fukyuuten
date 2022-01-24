@@ -43,12 +43,15 @@ class _Powerup(Entity):
         self.x = self.y = -100  # hack!
         engine.destroyEntity(self)        
 
+    def touch(self):
+        self.apply()
+        engine.destroyEntity(self)
+        self.sound.Play()
+        
     def update(self):
         self.animate()
         if self.touches(engine.player):
-            self.apply()
-            engine.destroyEntity(self)
-            self.sound.Play()
+            self.touch()
 
 def createKey1(entity):
     return Key1(entity)

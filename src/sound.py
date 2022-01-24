@@ -32,6 +32,8 @@ class Sound(NullSound):
 # TOOLS (BATTLE)
 sword1, sword2, sword3 = [ika.Sound('sounds/sword%i.ogg' % i) for i in range(1,4)]
 spear1, spear2, spear3 = [ika.Sound('sounds/spear%i.ogg' % i) for i in range(1,4)]
+spearCharged = ika.Sound('sounds/spear2.ogg')
+spearCharged.pitchshift = 1.125 #range from 0.5 to 2.0, default 1.0
 grapple1, grapple2 = [ika.Sound('sounds/grapple%i.ogg' % i) for i in range(1,3)]
 
 # HIT (BATTLE)

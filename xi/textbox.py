@@ -66,9 +66,11 @@ def text(text, **kw):
 
     # unpress
     controls.enter()
+    controls.joy_enter()
+    controls.ui_accept()
 
     # Let the player read
-    while not controls.enter():
+    while not (controls.enter() or controls.joy_enter() or controls.ui_accept()):
         draw()
         trans.draw()
 

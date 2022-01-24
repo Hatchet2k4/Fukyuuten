@@ -28,7 +28,7 @@ def delay(draw, count):
         count -= 1
         ika.Video.ShowPage()
         ika.Input.Update()
-        if controls.attack1():
+        if controls.attack1() or controls.joy_attack1() or controls.ui_accept():
             raise _DoneException()
 
     draw()
@@ -41,6 +41,8 @@ def intro():
     yourmom = ika.Image('%s/yourmother.png' % config.IMAGE_PATH)
     isabitch = ika.Image('%s/yourmother2.png' % config.IMAGE_PATH)
     controls.attack1() # unpress
+    controls.joy_attack1() # unpress
+    controls.ui_accept() # unpress
     v = ika.Video
     d = 40
 
@@ -115,7 +117,7 @@ def menu():
         ika.Input.Update()
         ika.Delay(1)
         if opacity2 == 255:
-            if controls.up.pressed:
+            if controls.up.pressed or controls.ui_up.pressed or controls.joy_up.pressed:
                 sound.menuMove.Play()
                 if cursorPos > 0:
                     cursorPos -= 1
@@ -125,13 +127,13 @@ def menu():
                         menuItems = ("New Game", "Load Game", "Quit Game", "New Game +")
                         cursorPos = 3
     
-            elif controls.down.pressed and cursorPos < (len(menuItems) - 1):
+            elif (controls.down.pressed  or controls.ui_down.pressed or controls.joy_down.pressed) and cursorPos < (len(menuItems) - 1):
                 sound.menuMove.Play()
                 cursorPos += 1
-            elif controls.attack1():
+            elif controls.attack1() or controls.joy_attack1() or controls.ui_accept():
                 result = cursorPos
 
-    if result == 0:
+    if result in (0, 3):
         sound.newGame.Play()
     else:
         sound.menuSelect.Play()
