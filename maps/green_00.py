@@ -5,12 +5,14 @@ from fish import Fish
 from friedrich import Friedrich
 import ika
 import sound
+from caption import Caption
+import engine
 
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
-    engine.mapThings.append(Clouds('gfx/sky_shadows.png', tint=ika.RGB(255, 255, 255, 128)))
-    engine.mapThings.append(Clouds('gfx/sky_clouds.png', tint=ika.RGB(255, 255, 255, 128)))
-
+    engine.mapThings.append(Clouds('gfx/sky_shadows.png', tint=ika.RGB(255, 255, 255, 128)))        
+    if 'firstconvo' in engine.saveData:
+        engine.things.append(Caption("Anastasia's House", font=engine.font2))
 
 def firstConvo():
     if 'firstconvo' not in engine.saveData:
@@ -106,7 +108,7 @@ def firstConvo():
         engine.destroyEntity(fried)
         engine.endCutScene()
         engine.synchTime()
-
+        engine.things.append(Caption("Anastasia's House", font=engine.font2))
 
 
 toGreen01 = exitTo('green_01.ika-map', 5, 25, 1)

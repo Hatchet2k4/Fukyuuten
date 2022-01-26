@@ -24,7 +24,11 @@ entities = []
 killList = []
 player = None
 background = None
+
 font = ika.Font(config.FONT)
+font2 = ika.Font(config.FONT2)
+
+
 mapName = ''
 mapModule = None
 
@@ -230,7 +234,7 @@ def run():
     try:
         while True:
             tick()
-            if controls.cancel():
+            if controls.cancel() or controls.ui_cancel():
                 pause()
             draw()
 
@@ -407,7 +411,7 @@ def gameOver():
         c.draw()
         ika.Video.ShowPage()
         ika.Delay(4)
-        if i == t and controls.attack1():
+        if i == t and (controls.attack1() or controls.joy_attack1() or controls.ui_accept() or controls.ui_cancel()):
             break
 
 

@@ -2,18 +2,18 @@ import ika
 import engine
 from thing import Thing
 
-
 MAXIMUM_OPACITY = 255
 
 
 class Caption(Thing):
-    def __init__(self, text, x=None, y=None, duration=200):
+    def __init__(self, text, x=None, y=None, duration=200, font=None):
         super(Caption, self).__init__()
-        font = engine.font
+        if not font:
+            font = engine.font
         width = font.StringWidth(text)
         height = font.height
         self.x = x or (ika.Video.xres - width) / 2
-        self.y = y or ika.Video.yres - height - 40
+        self.y = y or ika.Video.yres - height - 30
         canvas = ika.Canvas(width, height)
         canvas.DrawText(font, 0, 0, text)
         self.img = ika.Image(canvas)
@@ -39,10 +39,9 @@ class Caption(Thing):
                                    min(self.opacity, MAXIMUM_OPACITY)))
                                    
                                    
-                                   
 class DamageCaption(Caption):
-    def __init__(self, text, x = None, y = None, duration=200, r=255,g=255,b=255):
-        Caption.__init__(self, text, x, y, duration)
+    def __init__(self, text, x = None, y = None, duration=200, font=None, r=255,g=255,b=255):
+        Caption.__init__(self, text, x, y, duration, font)
         self.r=r
         self.g=g
         self.b=b    
