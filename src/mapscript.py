@@ -11,6 +11,7 @@ from thing import Thing
 from textbox import text
 from engine import delay, draw, tick
 from shop import *
+import sound
 
 def exitTo(destMap, offsetFrom, offsetTo, otherCoord, axis='x'):
     offsetFrom *= 16
@@ -89,6 +90,7 @@ class NoEnemyListener(Thing):
         self.pos = pos
         self.flag = flag
 
+
     def update(self):
         hadToClear = False
         if self.flag and self.flag in engine.saveData:
@@ -99,6 +101,7 @@ class NoEnemyListener(Thing):
                 l = ika.Map.FindLayerByName(p[2])
                 ika.Map.SetObs(p[0], p[1], l, 0)
                 ika.Map.SetTile(p[0], p[1], l, 0)
+                sound.dooropen.Play()
             if self.flag and not hadToClear:
                 engine.saveData[self.flag] = True
             return True

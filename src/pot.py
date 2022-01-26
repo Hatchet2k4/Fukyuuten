@@ -89,17 +89,10 @@ def createPot(entity):
 class Pot(Enemy):
 
     SPRITE = 'pot.ika-sprite'
-    MAX_JELLIES = 12
+    MAX_JELLIES = 4
 
     def __init__(self, ent):
         super(Pot, self).__init__(ent, _potAnim, Brain.Brain())
-
-        # Test code:
-        # Equal probability of attacking or doing nothing.
-        #self.addMoods(
-        #    (Brain.Attack(1), self.attackMood),
-        #    (Brain.Flee(1), self.passiveMood)
-        #)
 
         self.mood = self.spawnMood
 
@@ -128,7 +121,6 @@ class Pot(Enemy):
             self.anim = 'idle'
             
             # This bit is for gradual destruction frames.
-            # DO NOT FUCK WITH IT ANDY.
             self.direction = int(int(self.stats.hp - 1) / int(self.divisor))
             
             yield None
