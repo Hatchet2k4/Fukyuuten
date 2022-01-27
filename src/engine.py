@@ -33,6 +33,7 @@ mapName = ''
 mapModule = None
 
 things = []     # Things that are not entities, but still need to be updated and/or drawn
+bgThings = []  # same as things, but is cleared every mapSwitch and is drawn under the map
 mapThings = []  # same as things, but is cleared every mapSwitch
 fields = []     # Like zones, except the same!
 entFromEnt = {} # Maps ika Entity objects to our Entity instances
@@ -47,9 +48,10 @@ fps = FPSManager(config.FRAME_RATE)
 
 
 def _clear():
-    global things, mapThings, field, entFromEnt, saveData
+    global things, mapThings, bgThings, field, entFromEnt, saveData
     things = []
     mapThings = []
+    bgThings = []
     fields = []
     entFromEnt = {}
     saveData = {}
@@ -133,7 +135,7 @@ def happyFunTime():
     run()
 
 def mapSwitch(newMapName, dest=None, fade=True):
-    global mapName, mapModule, mapThings, fields
+    global mapName, mapModule, mapThings, bgThings, fields
 
     fade = False # temp
 
@@ -147,6 +149,7 @@ def mapSwitch(newMapName, dest=None, fade=True):
     mapName = '%s/%s' % (config.MAP_PATH, mapName)
     background = None
     mapThings = []
+    bgThings = []
     fields = []
     ika.Map.entities.clear()
 
@@ -250,9 +253,14 @@ def run():
 def raw_draw():
     if background:
         ika.Video.ScaleBlit(background, 0, 0, ika.Video.xres, ika.Video.yres)
-        ika.Map.Render(*range(ika.Map.layercount))
+        for t in bgThings:
+                t.draw()               
+        ika.Map.Render(*range(ika.Map.layercount))        
     else:
+        for t in bgThings:
+            t.draw()           
         ika.Map.Render()
+             
     for t in mapThings:
         t.draw()
     for t in things:
@@ -299,7 +307,7 @@ def updateThings():
         If the result is true, we delete the thing, else
         move on.'''
 
-    for thingList in (things, mapThings):
+    for thingList in (things, mapThings, bgThings):
         index = 0
         while index < len(thingList):
             result = thingList[index].update()
