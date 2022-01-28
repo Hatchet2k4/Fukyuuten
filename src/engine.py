@@ -48,6 +48,80 @@ nextFrameTime = 0
 fps = FPSManager(config.FRAME_RATE)
 
 
+
+def rip_tiles(image, width, height, span, tilecount):
+    """This is a simple function that takes any image that is formatted
+    like a tileset and rips the tiles into a list which is then
+    returned.
+
+    image - path of image to rip from
+    width/height - width and height of a single tile
+    span - how many tiles per row
+    tilecount - number of tiles to rip
+    """
+    tiles = []
+    big_image = ika.Canvas(image)
+    for i in range(tilecount):
+        tile = ika.Canvas(width, height)
+        big_image.Blit(tile, -1 - (i % span * (width + 1)),
+                       -1 - (i / span * (height + 1)), ika.Opaque)
+        #tiles.append(ika.Image(tile))
+        tiles.append(tile)
+    return tiles        
+    
+def saveallmaps():
+    savemaps=['green_00', 'green_01', 'green_02','green_03']
+    """
+    try:
+        #raw_names = os.listdir('.\\maps')
+        
+        savemaps = []
+        for f in raw_names:
+            if f.endswith('ika-map'):
+                savemaps.append(f)
+        
+        ika.Log( str(savemaps) )
+    except: 
+        #ika.Log(str(e))
+        return None
+  
+    ika.Log('maps: ' + str(savemaps))
+    
+    #mantiles={'mannux.vsp': rip_tiles('mannuxvsp.png', 16, 16, 10, 1645) }
+    
+    """
+    tiles = rip_tiles('resources/tiles3.png', 16, 16, 8, 8*52)
+    for m in savemaps:
+        Map2Img(m+'.ika-map', tiles)  
+
+test = False
+pixeldict = {
+False: ika.RGB(0,0,0,0),
+True: ika.RGB(255,255,255,255)
+}
+black=ika.RGB(0,0,0,0)
+
+def Map2Img(mapName, tileset):        
+    ika.Log('Saving map ' + mapName)
+    ika.Map.Switch('maps/' + mapName)
+    
+    canvas = ika.Canvas(ika.Map.width, ika.Map.height) 
+     
+       
+    for y in range(int(ika.Map.height/16)):
+        for x in range(int(ika.Map.width/16)):
+            for l in range(ika.Map.layercount):
+                t=ika.Map.GetTile(x,y,l)
+                tileset[t].Blit(canvas, x*16, y*16, ika.Matte)
+                
+    #canvas.Save('map2img/' +  mapName + '.png')          
+    for y in range(ika.Map.height):
+        for x in range(ika.Map.width):
+            canvas.SetPixel(x,y, pixeldict[canvas.GetPixel(x,y) == black])   
+    
+    canvas.Save('stencils/' +  mapName + '.png')
+
+
 def _clear():
     global things, mapThings, bgThings, field, entFromEnt, saveData
     things = []
@@ -251,26 +325,21 @@ def run():
         killList = entities[:]
         clearKillQueue()
 
-test = False
-pixeldict = {
-False: ika.RGB(0,0,0,0),
-True: ika.RGB(255,255,255,255)
-}
-black=ika.RGB(0,0,0)
+
 
 def raw_draw():
     #global test
     #if not test:
 
     if background:
-        ika.Video.DrawRect(0,0,320,240,ika.RGB(200, 0, 0, 0), 0,1) #clear screen
-        ika.Render(0, 1) #render first 3 layers - hack
-        bg = ika.Video.GrabCanvas(0,0, 320,240)
-        stencil.Clear()
+        #ika.Video.DrawRect(0,0,320,240,ika.RGB(200, 0, 0, 0), 0,1) #clear screen
+        #ika.Render(0, 1) #render first 3 layers - hack
+        #bg = ika.Video.GrabCanvas(0,0, 320,240)
+        #stencil.Clear()
         
-        for y in range(240):
-            for x in range(320):
-                stencil.SetPixel(x,y, pixeldict[bg.GetPixel(x,y) == black])   
+        #for y in range(240):
+        #    for x in range(320):
+        #        stencil.SetPixel(x,y, pixeldict[bg.GetPixel(x,y) == black])   
 
         #test = True
         #bg.Save("testbg.png")
@@ -493,3 +562,7 @@ class Field(object):
            y - p.ent.hotheight < p.y < y + h:
             return True
         return False
+
+
+
+#saveallmaps()

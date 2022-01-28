@@ -10,14 +10,15 @@ import engine
 
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
-    #engine.bgThings.append(Clouds('gfx/sky_clouds.png', speed=(0.1, 0.025), tint=ika.RGB(255, 255, 255, 128)))        
-    #engine.mapThings.append(ClippedClouds('gfx/sky_shadows.png'))        
-    engine.mapThings.append(ClippedClouds('gfx/sky_clouds.png'))        
+    engine.bgThings.append(Clouds('gfx/sky_clouds.png', speed=(0.1, 0.025), tint=ika.RGB(255, 255, 255, 220)))        
+    engine.mapThings.append(ClippedClouds('stencils/green_00.ika-map.png', 'gfx/sky_shadows.png', speed=(-0.8, -0.2), tint=ika.RGB(255, 5, 5, 255)))        
+
+    #engine.mapThings.append(ClippedClouds('gfx/sky_clouds.png'))        
     if 'firstconvo' in engine.saveData:
         engine.things.append(Caption("Anastasia's House", font=engine.font2))
 
 def firstConvo():
-    if 'firstconvo' not in engine.saveData:
+    if 'firstconvo' not in engine.saveData:    
         xwin = ika.Map.xwin
         ywin = ika.Map.ywin
     
