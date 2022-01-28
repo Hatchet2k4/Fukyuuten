@@ -32,6 +32,7 @@ font2 = ika.Font(config.FONT2)
 
 mapName = ''
 mapModule = None
+curMap = ''
 
 things = []     # Things that are not entities, but still need to be updated and/or drawn
 bgThings = []  # same as things, but is cleared every mapSwitch and is drawn under the map
@@ -95,10 +96,12 @@ def saveallmaps():
         Map2Img(m+'.ika-map', tiles)  
 
 test = False
+
 pixeldict = {
 False: ika.RGB(0,0,0,0),
 True: ika.RGB(255,255,255,255)
 }
+
 black=ika.RGB(0,0,0,0)
 
 def Map2Img(mapName, tileset):        
@@ -117,7 +120,7 @@ def Map2Img(mapName, tileset):
     #canvas.Save('map2img/' +  mapName + '.png')          
     for y in range(ika.Map.height):
         for x in range(ika.Map.width):
-            canvas.SetPixel(x,y, pixeldict[canvas.GetPixel(x,y) == black])   
+            canvas.SetPixel(x,y, pixeldict[ canvas.GetPixel(x,y) == black  ])   
     
     canvas.Save('stencils/' +  mapName + '.png')
 

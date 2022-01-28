@@ -8,12 +8,12 @@ import sound
 from caption import Caption
 import engine
 
+
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
-    engine.bgThings.append(Clouds('gfx/sky_clouds.png', speed=(0.1, 0.025), tint=ika.RGB(255, 255, 255, 220)))        
-    engine.mapThings.append(ClippedClouds('stencils/green_00.ika-map.png', 'gfx/sky_shadows.png', speed=(-0.8, -0.2), tint=ika.RGB(255, 5, 5, 255)))        
-
-    #engine.mapThings.append(ClippedClouds('gfx/sky_clouds.png'))        
+    engine.bgThings.append(Clouds('gfx/sky_clouds.png', speed=(0.1, 0.025), tint=ika.RGB(255, 255, 255, 220)))           
+    engine.mapThings.append(ClippedClouds('stencils/green_00.ika-map.png', 'gfx/sky_shadows.png', tint=ika.RGB(255, 5, 5, 255)))        
+    
     if 'firstconvo' in engine.saveData:
         engine.things.append(Caption("Anastasia's House", font=engine.font2))
 

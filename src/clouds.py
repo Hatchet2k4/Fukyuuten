@@ -10,7 +10,6 @@ class Clouds(object):
         self.pos = [0.0, 0.0]
         self.speed = speed
         self.tint = tint
-        #self.speed = (0.0, 0.1)
 
     def update(self):
         self.pos[0] += self.speed[0]
@@ -19,7 +18,6 @@ class Clouds(object):
     def draw(self):
         x = int(self.pos[0] + ika.Map.xwin) % self.image.width
         y = int(self.pos[1] + ika.Map.ywin) % self.image.height
-
         ika.Video.TintTileBlit(self.image, -x, -y, ika.Video.xres * 2 + x, ika.Video.yres * 2 + y, self.tint)
 
 
@@ -30,9 +28,7 @@ class ClippedClouds(object):
         self.speed = speed
         self.canvas = ika.Canvas(320,240)
         self.stencil = ika.Canvas(stencilName)
-        self.tint = tint
-        
-        #self.speed = (0.0, 0.1)
+        self.tint = tint               
 
     def update(self):
         self.pos[0] += self.speed[0]

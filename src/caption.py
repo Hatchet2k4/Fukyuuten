@@ -40,7 +40,7 @@ class Caption(Thing):
                                    
                                    
 class DamageCaption(Caption):
-    def __init__(self, text, x = None, y = None, duration=200, font=None, r=255,g=255,b=255):
+    def __init__(self, text, x = None, y = None, duration=200, r=255,g=255,b=255, font=None):
         Caption.__init__(self, text, x, y, duration, font)
         self.r=r
         self.g=g

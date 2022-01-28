@@ -1,11 +1,14 @@
 from mapscript import *
 import sound
+from caption import Caption
 
 def AutoExec():
     engine.background = ika.Image('gfx/sky_bg.png')
-    engine.mapThings.append(Clouds('gfx/sky_shadows.png', tint=ika.RGB(255, 255, 255, 128)))
-    engine.mapThings.append(Clouds('gfx/sky_clouds.png', tint=ika.RGB(255, 255, 255, 128)))    
-    #playMusic('town')
+    engine.bgThings.append(Clouds('gfx/sky_clouds.png', speed=(0.1, 0.025), tint=ika.RGB(255, 255, 255, 220)))           
+    engine.mapThings.append(ClippedClouds('stencils/green_03.ika-map.png', 'gfx/sky_shadows.png', tint=ika.RGB(255, 5, 5, 255)))          
+    
+    engine.things.append(Caption("Haven Town", font=engine.font2))
+        
     if engine.player:
         engine.player.stats.hp = engine.player.stats.maxhp
 
