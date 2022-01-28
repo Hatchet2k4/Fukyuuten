@@ -2,7 +2,7 @@
 import ika
 import engine
 from textbox import text
-from clouds import Clouds
+from clouds import Clouds, ClippedClouds
 from quake import Quake
 from sound import playMusic, killMusic, switch
 from enemy import Enemy
