@@ -233,12 +233,12 @@ class ToolWindow(SubScreenWindow):
             ika.Video.TintBlit(self.cursor, x, y, ika.RGB(128, 128, 128))
 
     def update(self):
-        if controls.left.pressed:
+        if controls.left.pressed or controls.joy_left.pressed or controls.joy_left.pressed:
             self.cursorPos = max(0, self.cursorPos - 1)
             return self.select(self.cursorPos)
             sound.menuMove.Play()
 
-        elif controls.right.pressed:
+        elif controls.right.pressed or controls.joy_right.pressed or controls.joy_right.pressed:
             self.cursorPos = min(len(self.WEAPONS) - 1, self.cursorPos + 1)
             return self.select(self.cursorPos)
             sound.menuMove.Play()
@@ -401,7 +401,7 @@ class PauseScreen(object):
                 self.hide()
                 return
 
-            elif menuChoices[result] == 'Items' and engine.player.items:
+            elif menuChoices[result] == 'Items': #and engine.player.items:
                 self.hide()
                 i = InventoryScreen()
                 i.run()

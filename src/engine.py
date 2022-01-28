@@ -167,6 +167,10 @@ def init(saveGame=None):
             ika.Map.GetMetaData()['entityLayer']
         )
 
+    #temp hack
+    player.items.append(player.spear.item)
+    player.items.append(player.sword.item)
+
     camera = Camera()
     camera.center()
     addThing(HPBar(), EXPBar(), ShellsIndicator(), camera)
@@ -331,23 +335,7 @@ def run():
 
 
 def raw_draw():
-    #global test
-    #if not test:
-
     if background:
-        #ika.Video.DrawRect(0,0,320,240,ika.RGB(200, 0, 0, 0), 0,1) #clear screen
-        #ika.Render(0, 1) #render first 3 layers - hack
-        #bg = ika.Video.GrabCanvas(0,0, 320,240)
-        #stencil.Clear()
-        
-        #for y in range(240):
-        #    for x in range(320):
-        #        stencil.SetPixel(x,y, pixeldict[bg.GetPixel(x,y) == black])   
-
-        #test = True
-        #bg.Save("testbg.png")
-        #stencil.Save("test.png")
-    
         ika.Video.ScaleBlit(background, 0, 0, ika.Video.xres, ika.Video.yres)
         for t in bgThings:
                 t.draw()               

@@ -149,7 +149,7 @@ class Menu(gui.Widget):
                 if self._cursorCount < 0:
                     self._cursorCount = self._repeatDelay
 
-            elif (controls.down() or controls.joy_down() or controls.ui_down) and self.cursorPos < len(self.text) - 1:
+            elif (controls.down() or controls.joy_down() or controls.ui_down()) and self.cursorPos < len(self.text) - 1:
                 if self._cursorCount == 0 or self._cursorCount == self._pauseDelay:
                     self.cursorPos += 1
                     sound.cursormove.Play()
