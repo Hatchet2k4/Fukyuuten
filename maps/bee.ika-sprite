@@ -1,0 +1,28 @@
+(ika-sprite 
+	(version '1.2')
+	(information 
+		(title 'Untitled')
+		(meta )
+	)
+	(header 
+		(depth '32')
+	)
+	(scripts )
+	(frames 
+		(count '12')
+		(dimensions 
+			(width '16')
+			(height '16')
+		)
+		(hotspot 
+			(x '0')
+			(y '0')
+			(width '16')
+			(height '16')
+		)
+		(data 
+			(format 'zlib')
+			'eJzsWUtOLDEMZM2VkDgKKw7KgtNwCIJ6wFHF8T+NotG0pah5eVN2YructLu19tTOGSR97v35qdHwfttGuWG/P17aV/t9go6m4Pv/Hb/9fHu9jQNPf//p0LBdRwDv+kJZfwQ7+I2wih9F7IHhOJzz8MeaCUf7xnlr3+g/snc8A/5vHM8Hw3MdfQ5t0lBySPUBYSh+YD/EB76HDFaKRRaLOqrY1ZHJWwmr8D/le4G//4XvgpzD9Rv52yS8wn9TR5D/HCvmXIH/E38E/qe5U4mfw//w+i/+h8eUU7vO/0OIuzSOfzvYSQfaD2InHc6ZpcaM4zLnP9+DsJ7w2iH/InsYsMShwNmtYo37A9fR5wL1w9zHWfWD59+O+lE9f88Yu8//qv+L9R+l68Cn9DthbhChbnGZdOBZT/ylOQU7+Z2f+Thv+ED0YTX37/3+8Kj8D9h188/gfdPwiKWRuDv0+xbe/bPvjYgX7v2hvEMc8D/te+G9IayD1pE5N7kfhDww/S/tIRtDxCOHWR65eOTvCnez5xfuucJ9JfYh7Flj57nv8D/k+9XYKfznuTfpdPiviRv/qH1pHZWzx+B/On+qeeDw38Vf/E8NNZ+C62iSjmQtGHQUa4GIx1gG/dmkHEz2cobeW7R/z+0nc2HYP9WwoN3J/8jhauyS+dPzxqnBLodW+c9zp1IDcQ+VPuB1F1i7CyT4jzLsO8B/VRL8V+1X41/gvxr3bO4W+G9y5+L/+j0sg+M+2MFdnnuZfSDnhO93Hn6wp3y/U7GEl77fAV7T0fG0b8o9oY8vYgm/of8+4Avf7yf7Rv/Q8sGQA5g/ki1rGHnnYh997Kw9C73bgTvBbwcNng114JMJx4vi9A4kHUP/nz8Fe2bchNo32ZPwwd6/ib96/3u//a2uYff9wTh/0/azd1DCG33AsO8FicZgkGQeDlLMg469eoB30QNU11DB3jP3Nf4H8DdZ6Pt1HSTZGAi1hqQS97QO9F3gfUdd//XuH6sBPwAAAP//'
+		)
+	)
+)

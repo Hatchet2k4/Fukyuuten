@@ -29,6 +29,7 @@ class ClippedClouds(object):
         self.canvas = ika.Canvas(320,240)
         self.stencil = ika.Canvas(stencilName)
         self.tint = tint               
+        self.first = True
 
     def update(self):
         self.pos[0] += self.speed[0]
@@ -41,6 +42,11 @@ class ClippedClouds(object):
 
         self.image.TileBlit(self.canvas, 0, 0, ika.Video.xres *2, ika.Video.yres*2, -x, -y) #draw the clouds                
         self.stencil.Blit(self.canvas,-ika.Map.xwin, -ika.Map.ywin, ika.SubtractBlend) #remove shadow where the sky exists        
+        
+        if self.first:
+            self.first = False
+            self.canvas.Save("final.png")
+        
         img = ika.Image(self.canvas)       
         ika.Video.TintBlit(img, 0, 0, self.tint)
 
