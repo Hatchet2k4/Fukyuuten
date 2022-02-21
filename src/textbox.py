@@ -9,7 +9,7 @@ from xi import gui
 from xi.misc import wrapText
 #from xi.scrolltext import scrollableTextFrame
 import xi.effects
-
+from subscreen import MenuWindow
 
 #controls.init()
 
@@ -158,6 +158,49 @@ def text(where, *args):
     finally:
         engine.endCutScene()
         engine.things.remove(textBox)
+
+def textMenu(where, *args, **kwargs):
+    """Displays a text frame with list of options.
+
+    """
+    
+    options = kwargs.get('options', [])
+    menu = MenuWindow()
+    menu.addText(*options)
+    menu.autoSize()
+    
+    portrait, text, side = None, '', ''
+
+    if len(args) == 1:
+        text = args[0]
+    elif len(args) == 2:
+        portrait, text = args
+    elif len(args) == 3:
+        portrait, side, text = args
+    else:
+        assert False, 'text recieves 1 or two arguments.'
+
+    textBox = TextBox(where, portrait, side, text)
+    menu.position = 100, 100
+    
+
+    engine.things.append(textBox)
+    result = None
+    try:
+        engine.beginCutScene()
+        while True: #not (controls.attack1() or controls.joy_attack1() or controls.ui_accept()):
+            engine.tick()
+            engine.draw()
+            result = menu.update()
+            if result is None:
+                continue
+            else:
+                break
+
+    finally:
+        engine.endCutScene()
+        engine.things.remove(textBox)        
+        return result
 
 #------------------------------------------------------------------------------
 

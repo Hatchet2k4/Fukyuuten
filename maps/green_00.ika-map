@@ -17,6 +17,10 @@
 	(waypoints )
 	(zones 
 		(zone 
+			(label 'AnaHouse')
+			(script 'AnaHouse')
+		)
+		(zone 
 			(label 'firstConvo')
 			(script 'firstConvo')
 		)
@@ -49,7 +53,7 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJzUlUFOw0AMRd02oDYFAoS0UpBAIkA3QC/AokuuwIol978BtvotPqMknUlggaWvVtP65Y89noj8j5gMUF8sOtTH++jgTv6Ad97Cmv+iv3mEv88e3gV59O/GLFRT1Ux1ht+LgNsWbc/PoCW0Vp2qygheV2Qky81H8sI95PAZw+qqu9WtwCd7i3l+G6OS/X4rSdsrs47AuFFdq26xdiU/+3uIZ6xjYj2onlX3YJ5IWv1WqkvwatWT6kW1VTUJLN7vFNxH8Fwb2mtscA0zYm7k+xzGxDtkYbPgPbUaNoks5jnTcu3s1uCVCSzn7VRvtDaGJ2Bx70Le6wAm96MKeENm3+8nn4+QN+Z+8vnw/vrdmsK0PJ83n4+G1paSdqbZn53lLZg2uzZrK/Iaw3SWz7Ax7+DRGDNixpxv+4/XnvNqeHRf+QEev4NK+OC8sM++Ht6tXwAAAP//'
+				'eJzUlU1uwjAQhQ0NiAZK2oYfCSQqkQKbtlygiy65AiuW3P8GzEjzxMNKgp20i470CWTwx4vtMc79j+o0oK4eK6jznSq8nT/wPZe4Br+YbxCQ71zje6GMeK/OTOgKY2Fon2eet6zKfj8x1DMVZsKTkAf4qiohdG7a0sf5x5ZzHuiqWnf1ZCXZQjL4DmRK7DXmWdnVM8dKWApvNjZxt/t7z6euPrk2wqfwbs6Ri1s/PROv5lsIH8KXsBeKCBc/b9e8W/OBHT1raPEacsadu57DkDoaWugH+IpIF/vg1Lkp+fIIF3w/woHG2vicuXjvfN93Ayfvx9TzNel93E/oD9/X5n5Cf2B/cbfGOHUe+g1nr6CxoYs705xP+2NvTu1d7bUZZQ1xwoUeVufaMqrjgZwh51u/g7XneQvLiFzpHR//B+WWg+f5+4xx/269AAAA//8='
 			)
 			(obstructions 
 				(style 'tile')
@@ -82,12 +86,12 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJyslLtKA1EQhnervI6IhYhF7FaiEE0KYyyi2IQsxKfQznvh7QHEC4gXUDGgnb6Edtppp63/kBkcx3N2N2t++Nhs9ux39lzmBEH/E4PBnLQdrgEwDEZ6ZBQMGae4GjnGtehwFsFYDpekBCYYSgTGwXoYBBtgE2yB7bD7/BDcgwdwBI7BCThN8e3g/V2wB/bBAfvOwCN4AufgAlyCK4+vDKbAjGc81+CGueX/7kDH46sx5Jw2UB9x2IXyrPp5AXOg4vERswbbx6vyvbGrDqoOX5kdCwrbx7vyfbCrrpyUJrtkXSYZyrzxfyrfl/G11LNI+Xxph7/vaU5LPOaqaZvFZ7MU/qxtpQ++OPy7V/7jk72i1zavT1yutRBfWp1kdQXskminrx6SXJSauZe68NVDkovS5GuLf0td+OohySWJ+EprInVh64E89nxP8ska014tONq4zvcsvmWw4mmX1al9q2AtoW0Wpx1vWrQzzeeaOx2ZD6lf1zf2UnMyH77zgFLswUcpGJ/+xph9RCOjLzA++cZvAAAA//8='
+				'eJyslLtKA1EQhnervI6IhYhF7CJRiGYLoxZRbEIW4lNo573w9gDiBcQLqBjQTl9CO+20M63/kBkcx3N2N2t++Njs7sl39lzmBEH/E4PBnLQcrgEwDEZ6ZBQMGae46jnGteRwFsFYDpekDCYYSgmMg40wCDbBFtgGO2H3/RF4AI/gGJyAU3CW4tvF//fAPjgAh+w7B0/gGVyAS3AFrj2+CpgCM57x3IBb5o6f3YO2x1djyDltoD7isMuL6ecVzIOqx0fMGnQfb8b3zq45EDl8FXYsKnQfH8b3yS4h4ucNdsm6TDKUBeX+Mr6O8TXVu5Ly+dIKf9/TnJZ5zJFpm8Vnsxz+rG21D744/LtX/uOTvaLXNq9PXK61EF9anWR1BeySaKeuCV0PSS5KzdxLXeia0PWQ5KI0+Nrk31IXuiZ0PSS5JCW+0ppIXeia6LDHnu9JPllj2qsFRxvX+Z7FtwJWPe2yOrVvDawntM3itONNi3am+VxzpyPzIfXr+sZeak7mw3ceUIo9+CgF49PfGLOPqGf0BcYn3/gNAAD//w=='
 			)
 			(obstructions 
 				(style 'tile')
 				(format 'zlib')
-				'eJyUkFEKACAIQ+f9Lx0I1ZpDzB/hOXUKDCMkkonk6rb8k3XziJGhzGIRYITCblKGD4aZ7iA2xR3vDcxgmOjcvLIkzGYuG4NhipU1f1kAAAD//w=='
+				'eJyUkFEOwCAIQ9v7X3pxUemgM8iP8fGkRKBZTPWypIS39Ev2O28GqrLgbiFERSgsjsxwwdDzNtKl9MW4kZ/Bk8Gw5Ll5JYQmWdtmQZpmZYd/eQAAAP//'
 			)
 			(entities 
 				(entity 
@@ -119,6 +123,13 @@
 					(y '205')
 					(width '20')
 					(height '22')
+				)
+				(zone 
+					(label 'AnaHouse')
+					(x '192')
+					(y '112')
+					(width '16')
+					(height '8')
 				)
 			)
 		)

@@ -1,5 +1,4 @@
 from mapscript import *
-import textbox
 import dir
 from fish import Fish
 from friedrich import Friedrich
@@ -7,6 +6,7 @@ import ika
 import sound
 from caption import Caption
 import engine
+
 
 
 def AutoExec():
@@ -18,7 +18,8 @@ def AutoExec():
         engine.things.append(Caption("Anastasia's House", font=engine.font2))
 
 def firstConvo():
-    if 'firstconvo' not in engine.saveData:    
+    #if 'firstconvo' not in engine.saveData:    
+    if False:    
         xwin = ika.Map.xwin
         ywin = ika.Map.ywin
     
@@ -112,6 +113,19 @@ def firstConvo():
         engine.endCutScene()
         engine.synchTime()
         engine.things.append(Caption("Anastasia's House", font=engine.font2))
+
+
+timer = 0
+
+def AnaHouse():
+    global timer
+    if timer == 0:
+        result = textMenu("left","anastasia","Should I take a rest?", options=["Yes", "No"] )
+        timer = 100
+    else:
+        timer -=1
+    
+    
 
 
 toGreen01 = exitTo('green_01.ika-map', 5, 25, 1)

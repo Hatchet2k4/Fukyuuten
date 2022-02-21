@@ -1,14 +1,13 @@
 
 import ika
 import engine
-from textbox import text
+from textbox import text, textMenu
 from clouds import Clouds, ClippedClouds
 from quake import Quake
 from sound import playMusic, killMusic, switch
 from enemy import Enemy
 from thing import Thing
 
-from textbox import text
 from engine import delay, draw, tick
 from shop import *
 import sound
