@@ -7,6 +7,7 @@
 #
 # There is no warranty, express or implied on the functionality, or
 # suitability of this code for any purpose.
+import ika
 
 class NullSound(object):
     'Sound stub.  Behaves like an ika sound object, but does nothing.'
@@ -22,8 +23,8 @@ null = NullSound()
 # Simply assign these to a new value to add sound to the menus and
 # such.  Be sure you don't use the from sounds import * form when you
 # import, or it won't work.
-cursormove = null
-cursoraccept = null
+cursormove = ika.Sound('sounds/menumov.ogg')
+cursoraccept = ika.Sound('sounds/menusel.ogg')
 cursorcancel = null
 buzz = null
 buysell = null

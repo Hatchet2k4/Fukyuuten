@@ -65,7 +65,7 @@ itempickup = ika.Sound('music/victory.ogg')
 
 # UI (FIELD)
 newGame = ika.Sound('sounds/newgame.ogg')
-menuMove = ika.Sound('sounds/menumov.ogg')
+menuMove = cursorMove = ika.Sound('sounds/menumov.ogg')
 menuSelect = ika.Sound('sounds/menusel.ogg')
 
 

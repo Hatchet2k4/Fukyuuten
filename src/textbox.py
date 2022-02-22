@@ -1,15 +1,18 @@
 import ika
 import controls
 import system
-
+import sound
 import engine
 import entity
 
 from xi import gui
 from xi.misc import wrapText
+from subscreen import ScrollableTextFrame
+
+
 #from xi.scrolltext import scrollableTextFrame
 import xi.effects
-from subscreen import MenuWindow
+from xi.menu import Menu
 
 #controls.init()
 
@@ -128,6 +131,10 @@ class TextBox(object):
 
         self.frame.draw()
 
+
+
+
+
 def text(where, *args):
     """Displays a text frame.
 
@@ -165,9 +172,13 @@ def textMenu(where, *args, **kwargs):
     """
     
     options = kwargs.get('options', [])
-    menu = MenuWindow()
+    menu = Menu(textctrl=ScrollableTextFrame())
     menu.addText(*options)
+    #menu.position = 100, 100
     menu.autoSize()
+    
+    
+    frame = gui.Frame()
     
     portrait, text, side = None, '', ''
 
@@ -181,25 +192,32 @@ def textMenu(where, *args, **kwargs):
         assert False, 'text recieves 1 or two arguments.'
 
     textBox = TextBox(where, portrait, side, text)
-    menu.position = 100, 100
-    
+    menu.dockLeft(textBox.frame).dockTop(textBox.frame)
+    menu.width += 16 #hack!
+    menu.x+=20 #hack hack!
+    menu.y-=12 #hack hack haaaaack
 
     engine.things.append(textBox)
+    engine.things.append(menu)
+    
     result = None
     try:
         engine.beginCutScene()
         while True: #not (controls.attack1() or controls.joy_attack1() or controls.ui_accept()):
             engine.tick()
             engine.draw()
+            menu.draw()
             result = menu.update()
             if result is None:
                 continue
             else:
+
                 break
 
     finally:
         engine.endCutScene()
         engine.things.remove(textBox)        
+        engine.things.remove(menu)        
         return result
 
 #------------------------------------------------------------------------------

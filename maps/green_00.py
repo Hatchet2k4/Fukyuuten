@@ -115,15 +115,20 @@ def firstConvo():
         engine.things.append(Caption("Anastasia's House", font=engine.font2))
 
 
-timer = 0
+housetimer = 0
 
 def AnaHouse():
-    global timer
-    if timer == 0:
+    global housetimer
+    if housetimer == 0:
+        engine.player.y+=4
         result = textMenu("left","anastasia","Should I take a rest?", options=["Yes", "No"] )
-        timer = 100
+        housetimer = 100
+        if result == 0:
+            text("left", "anastasia", "Nap time!")
+        elif result == 1:
+            text("left", "anastasia", "Not that tired anyway.")            
     else:
-        timer -=1
+        housetimer -=1
     
     
 
