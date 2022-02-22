@@ -65,9 +65,9 @@ spawnMap = {
     Dancer.SPRITE2 : Dancer,
     Friedrich.SPRITE : Friedrich,
     Spirit.SPRITE : Spirit
-    
-    
-    
+
+
+
 }
 
 

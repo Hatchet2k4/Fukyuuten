@@ -11,7 +11,8 @@ from npc import Npc
 class TownPerson(Npc):
     SPRITES = (
         'townguy2.ika-sprite',
-        'townguy3.ika-sprite',
+        'townguy3.ika-sprite',        
+        'blank.ika-sprite',
         'townwoman.ika-sprite',
         'guard.ika-sprite',
         'townwoman2.ika-sprite',
@@ -19,6 +20,7 @@ class TownPerson(Npc):
         'smith.ika-sprite',
         'fish.ika-sprite',
         'nothing.ika-sprite',
+        'nobody.ika-sprite'
     )
 
 

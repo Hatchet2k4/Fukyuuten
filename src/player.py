@@ -280,6 +280,8 @@ class Player(Entity):
     def defaultState(self):
         return self.standState()
 
+
+
     def standState(self):
         self.stop()
         self.anim = 'stand'

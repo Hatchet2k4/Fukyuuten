@@ -4,6 +4,7 @@ import textbox
 import dir
 
 from entity import Entity
+import controls
 
 class Npc(Entity):
     '''Npcs are, specifically, non-combat entities.
@@ -23,7 +24,7 @@ class Npc(Entity):
         super(Npc, self).update()
 
         if self.touches(engine.player):
-            if not self.__touching:
+            if not self.__touching and (controls.attack1() or controls.joy_attack1()): #feels dirty to be checking controls here, but... 
                 self.__touching = True
                 self.__activate()
         else:
@@ -38,11 +39,11 @@ class Npc(Entity):
             self.activate()
         finally:
             # Bump the player away, so he does not instantly activate the Npc again.
-            p = engine.player
-            d = dir.invert[p.direction]
-            deltaX, deltaY = dir.delta[d]
-            p.x += deltaX
-            p.y += deltaY
+            #p = engine.player
+            #d = dir.invert[p.direction]
+            #deltaX, deltaY = dir.delta[d]
+            #p.x += deltaX
+            #p.y += deltaY
 
             engine.synchTime()
 

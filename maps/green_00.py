@@ -6,6 +6,16 @@ import ika
 import sound
 from caption import Caption
 import engine
+from npc import Npc
+
+class House(Npc):
+    SPRITE = 'nobody.ika-sprite'
+
+    def __init__(self, ent):
+        super(House, self).__init__(ent, {})
+
+    def activate(self):
+        pass
 
 
 
@@ -115,22 +125,15 @@ def firstConvo():
         engine.things.append(Caption("Anastasia's House", font=engine.font2))
 
 
-housetimer = 0
-
+   
 def AnaHouse():
-    global housetimer
-    if housetimer == 0:
-        engine.player.y+=4
-        result = textMenu("left","anastasia","Should I take a rest?", options=["Yes", "No"] )
-        housetimer = 100
-        if result == 0:
-            text("left", "anastasia", "Nap time!")
-        elif result == 1:
-            text("left", "anastasia", "Not that tired anyway.")            
-    else:
-        housetimer -=1
+    result = textMenu("left","anastasia","Should I take a rest?", options=["Yes", "No"] )
     
-    
+    if result == 0:
+        text("left", "anastasia", "Nap time!")
+    elif result == 1:
+        text("left", "anastasia", "Not that tired anyway.")            
+   
 
 
 toGreen01 = exitTo('green_01.ika-map', 5, 25, 1)
