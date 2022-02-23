@@ -131,6 +131,7 @@ def AnaHouse():
     
     if result == 0:
         text("left", "anastasia", "Nap time!")
+        goodNight()
     elif result == 1:
         text("left", "anastasia", "Not that tired anyway.")            
    

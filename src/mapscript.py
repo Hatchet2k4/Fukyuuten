@@ -7,6 +7,7 @@ from quake import Quake
 from sound import playMusic, killMusic, switch
 from enemy import Enemy
 from thing import Thing
+import effects
 
 from engine import delay, draw, tick
 from shop import *
@@ -107,3 +108,17 @@ class NoEnemyListener(Thing):
 
     def draw(self, *args):
         pass
+        
+
+
+def goodNight(): #stay at an inn!
+    engine.beginCutScene()
+    sound.fader.playandresume(sound.music['goodnight'], 250000)    
+    effects.fadeOut(100, draw=engine.raw_draw)    
+    delay(300, drawfunc='blank')    
+    effects.fadeIn(100, draw=engine.raw_draw)
+    engine.endCutScene()
+    engine.player.stats.hp = engine.player.stats.maxhp
+
+
+

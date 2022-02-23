@@ -231,6 +231,8 @@ class Player(Entity):
         if self.stats.exp >= 100:
             self.levelUp()
 
+    
+
     def update(self):
         try:
             super(Player, self).update()

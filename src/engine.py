@@ -522,11 +522,15 @@ def endCutScene():
     isCutScene = max(0, isCutScene - 1)
 
 
-def delay(duration):
+def delay(duration, drawfunc=None):
     endTime = ika.GetTime() + duration
     while ika.GetTime() < endTime:
         tick()
-        draw()
+        if not drawfunc:
+            draw()
+        elif drawfunc=='blank':
+            pass
+        else: drawfunc()
 
 class Field(object):
     '''A field is just a big invisible thing that does something if the

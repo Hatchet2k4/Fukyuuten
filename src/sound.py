@@ -87,6 +87,9 @@ music['storyscene'] = ika.Music('music/story.ogg')
 music['boss'] = ika.Music('music/boss.ogg')
 music['victory'] = ika.Music('music/victory.ogg')
 music['victory'].loop = False   
+music['goodnight'] = ika.Music('music/Goodnight.mp3')
+music['goodnight'].loop = False   
+
 
 class Crossfader(Thing): #important Music handler!
     def __init__(self):
