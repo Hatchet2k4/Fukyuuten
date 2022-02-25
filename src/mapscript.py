@@ -113,7 +113,7 @@ class NoEnemyListener(Thing):
 
 def goodNight(): #stay at an inn!
     engine.beginCutScene()
-    sound.fader.playandresume(sound.music['goodnight'], 250000)    
+    sound.fader.playandresume(sound.music['sleep'], 250000)    
     effects.fadeOut(100, draw=engine.raw_draw)    
     delay(300, drawfunc='blank')    
     effects.fadeIn(100, draw=engine.raw_draw)
