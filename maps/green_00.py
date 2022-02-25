@@ -127,12 +127,12 @@ def firstConvo():
 
    
 def AnaHouse():
-    result = textMenu("left","anastasia","Should I take a rest?", options=["Yes", "No"] )
+    result = textMenu("left","anastasia","Should I take a rest? af kna fjakfh akj h kjah kjh khjkh kjh kjh kjh kjh akjsfdhlh lkjh akl jh", options=["Yes", "No"] )
     
     if result == 0:
         text("left", "anastasia", "Nap time!")
         goodNight()
-    elif result == 1:
+    else:
         text("left", "anastasia", "Not that tired anyway.")            
    
 

@@ -17,8 +17,18 @@ def AutoExec():
 
 def innkeeper():
     me = ika.Map.entities['innkeeper']
-    text('right', "I'll be running an inn... soon!")
-        
+    
+    result = textMenu("right", None, "Want to rest for a while? Only 5 shells!", options=["Yes", "No"] )    
+    if result == 0:
+        if engine.player.stats.money >=5:
+            text("left", "anastasia", "Nap time!")
+            goodNight()
+            engine.player.stats.money -= 5
+        else:
+            text("left", "anastasia", "Hmm, need a few more shells..")
+    else:
+        text("left", "anastasia", "Not that tired anyway.")            
+           
 
 def guard1():
     me = ika.Map.entities['guard1']

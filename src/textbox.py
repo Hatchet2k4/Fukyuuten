@@ -52,22 +52,29 @@ def draw():
 
 #------------------------------------------------------------------------------
 
-def createTextBox(where, txt):
+def createTextBox(where, txt, hasportrait=False, hasmenu=False):
     # where is either a point or an entity or string
-    WIDTH = 228 #default
+    WIDTH = 220 #default    
+    if hasportrait:         
+        offset = 80 #adjust textbox position if there is a portrait
+        WIDTH -= 60 #max width goes down a bit if portrait
+    else:
+        offset=0        
+        
     width = WIDTH
     text = wrapText(txt, width, gui.default_font)
     width = max([gui.default_font.StringWidth(s) for s in text])
     height = len(text) * gui.default_font.height
     x, y = (0, 0)
     automove = False #automatic moving of where to display the box
+        
 
     
     if where=='left':
-        x, y = (84, ika.Video.yres-64)
+        x, y = (4+offset, ika.Video.yres-64)
         
     elif where=='right':
-        x, y = (ika.Video.xres-84-width, ika.Video.yres-64)
+        x, y = (ika.Video.xres-4-width-offset, ika.Video.yres-64)
             
     if isinstance(where, (tuple, list)):
         x, y = where
@@ -86,12 +93,6 @@ def createTextBox(where, txt):
     if automove and x < ika.Video.xres / 2:
         x -= width / 2
 
-    width = WIDTH
-    if x + width + 16 > ika.Video.xres:
-        text = wrapText(txt, ika.Video.xres - x - 16, gui.default_font)
-        width = max([gui.default_font.StringWidth(s) for s in text])
-        height = len(text) * gui.default_font.height
-
     frame = gui.Frame()
     frame.addChild(gui.ScrollableTextLabel(text=text))
     frame.autoSize()
@@ -109,7 +110,7 @@ def createTextBox(where, txt):
 
 class TextBox(object):
     def __init__(self, where, portrait, side, text):
-        self.frame = createTextBox(where, text)
+        self.frame = createTextBox(where, text, portrait is not None)
 
         if portrait is not None:
             self.img = getPortrait(portrait)
@@ -173,8 +174,7 @@ def textMenu(where, *args, **kwargs):
     
     options = kwargs.get('options', [])
     menu = Menu(textctrl=ScrollableTextFrame())
-    menu.addText(*options)
-    #menu.position = 100, 100
+    menu.addText(*options)    
     menu.autoSize()
     
     
@@ -192,11 +192,23 @@ def textMenu(where, *args, **kwargs):
         assert False, 'text recieves 1 or two arguments.'
 
     textBox = TextBox(where, portrait, side, text)
-    menu.dockLeft(textBox.frame).dockTop(textBox.frame)
+    
     menu.width += 16 #hack!
-    menu.x+=20 #hack hack!
-    menu.y-=12 #hack hack haaaaack
-
+    #menu.dockBottom(textBox.frame)    
+    menu.y = textBox.frame.y
+    if where=='right':        
+        menu.dockRight(textBox.frame)
+        #menu.dockTop(textBox.frame)        
+        #menu.x = textBox.frame.x - menu.width - 20
+        
+        menu.x-=20 #hack hack!        
+    else:
+        menu.dockLeft(textBox.frame)        
+        menu.x+=20 #hack hack!
+        
+        
+    #menu.y-=24 #hack hack haaaaack!!        
+    
     engine.things.append(textBox)
     engine.things.append(menu)
     
