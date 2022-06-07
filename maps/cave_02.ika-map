@@ -49,7 +49,7 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJzMl71KBDEQx7Odp97hN+f5gRaKFspZKOqpnZ3gEwhiZyGI2dYHsVM7Sx/BN/O/sIdhyMzm6+IWPzJhszv/zEyGbKGUKsBdiygIt2AKdMA0mPkHZkEX9MCNRd8cmAcLYDETb4a9BJbBCqOvD1bBAKxl4B18gM96vg42wCajbwtsgyfwmoEH8AXu63nldwfsMvr2wH69tgSPBuO5NkZN1pjP6XoXKr8H4NBBn+s3U6ED9HF794mJttglGWPjF5Ir6tumk85T5tdH6yTqT1ti4IP0Lre3mPg11aKLHum8p8gv13NSkPL82uJG64GzU9Vfqpj4rAnRR+Nifi82v2WkPqmH0R5r+hrb1D99l+49tj/79gzp3KbKb+p6m/T5cImJa+3RMURfU8+Tcu+7hzbfr2L0STF06THSHcu0ffTZeouth4TEidMbW39ST8ud36YcSr1bihl3N3XRNwRHKt//2wv4Bs/q7//tGJww+k7BGTgHo0z8GPYFuARXFn0V1y2CamszvwAAAP//'
+				'eJzM17lOxDAUheFMxy52sQsKEBSgoQCxd3RIPAESomJYJCDTUvEUdEBHSUXNm/FHygjrynbs2AkpPo3DJPjk2rnKtJIkaeGiQVrCOfrQjwEM/oMhDGMEZ5p8oxjDOCZq8qqMJzGFaUO+GcxiDvM1eMM7PvLjBSxiyZBvGSu4x3MF7vCIW7zgCp+4zL/P5l3FmiHfOjbyc7voKHrHqfKZinPU7+X5mRt841pzXSefdxNbDvl011cpLZFPVx/b34vOlbWVa1S2frq1KiLn1uWUxzHX1yerK598qaYGPmzXmu4tpH5Fe9Elj+15j7G+pp4TQ8znV1c3uR9M41j7L1ZNfM4pk0/WRf1/oevbDcxn62Gyx6pz9cZyfnmtvPfQ/uzbM2zPbaz1jb3fqn4+XGriuvfkZ5l8RT3Ptva+99Dk96uQfLYauvQY2zuWOvbJp+stuh5Spk6mvKH7z9bT6l7fojW09W5bzUzvpi752thOqvv9Jj3hCw/J3++3Hewa8u1hHwc4rMmPMj7CMU40+TKnDSKzNdkvAAAA//8='
 			)
 			(obstructions 
 				(style 'tile')
@@ -106,8 +106,8 @@
 				)
 				(entity 
 					(label 'pot1')
-					(x '428')
-					(y '72')
+					(x '432')
+					(y '80')
 					(sprite 'pot.ika-sprite')
 					(speed '100')
 					(direction 'up')
