@@ -101,7 +101,7 @@ displayControls = {
     'ui_cancel': 'ESCAPE'      
 }
 
-#for mapping joystick buttons to names
+#for mapping joystick buttons to names. A lot more than should ever be needed but you never know!
 buttonmapping = {
 '0-': 'Stick Left',
 '0+': 'Stick Right',
@@ -164,7 +164,6 @@ def init():
         ika.Log(str(len(ika.Input.joysticks)) +' gamepad(s) found:')
             
         for joyIndex, joy in enumerate(ika.Input.joysticks):
-
             # joystick axes:
             for axisIndex, axis in enumerate(joy.axes):
                 _allControls['joy%iaxis%i+' % (joyIndex, axisIndex)] = axis
@@ -188,11 +187,23 @@ def writeConfig(f, config):
     aries.writeDict(f, config)
 
 
+class NullControl(object):        
+    def Pressed(self):
+        return False
+    def Position(self):
+        return 0
+    def __call__(self):
+        return False
+
 def setConfig(config=None):
     class PosControl(object):
         def __init__(self, name):
             self.name = name
-            self.c = _allControls[config[name]]
+            try:
+                self.c = _allControls[config[name]]
+            except:
+                ika.Log('Unable to set control '+name) 
+                self.c = NullControl()
         def __call__(self):
             return self.c.Position() > 0.5
 
