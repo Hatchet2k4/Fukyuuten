@@ -35,14 +35,12 @@ def exitTo(destMap, offsetFrom, offsetTo, otherCoord, axis='x'):
 
 
 def toggleBlocks():
-
     b1 = ika.Map.FindLayerByName('B1')
     b2 = ika.Map.FindLayerByName('B2')
     cx = (engine.player.x + engine.player.ent.hotwidth / 2) / ika.Tileset.width
     cy = (engine.player.y + engine.player.ent.hotheight / 2) / ika.Tileset.height
 
     if engine.player.ent.mapobs and ika.Map.GetTile(cx, cy, b2) == 183:
-
         for tx in range(ika.Map.width / ika.Tileset.width):
             for ty in range(ika.Map.height / ika.Tileset.height):
                 if ika.Map.GetTile(tx, ty, b1) == 127:
@@ -110,6 +108,7 @@ class NoEnemyListener(Thing):
         pass
         
 
+        
 
 def goodNight(): #stay at an inn!
     engine.beginCutScene()

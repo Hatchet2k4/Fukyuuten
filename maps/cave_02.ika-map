@@ -49,7 +49,7 @@
 			)
 			(data 
 				(format 'zlib')
-				'eJzM17lOxDAUheFMxy52sQsKEBSgoQCxd3RIPAESomJYJCDTUvEUdEBHSUXNm/FHygjrynbs2AkpPo3DJPjk2rnKtJIkaeGiQVrCOfrQjwEM/oMhDGMEZ5p8oxjDOCZq8qqMJzGFaUO+GcxiDvM1eMM7PvLjBSxiyZBvGSu4x3MF7vCIW7zgCp+4zL/P5l3FmiHfOjbyc7voKHrHqfKZinPU7+X5mRt841pzXSefdxNbDvl011cpLZFPVx/b34vOlbWVa1S2frq1KiLn1uWUxzHX1yerK598qaYGPmzXmu4tpH5Fe9Elj+15j7G+pp4TQ8znV1c3uR9M41j7L1ZNfM4pk0/WRf1/oevbDcxn62Gyx6pz9cZyfnmtvPfQ/uzbM2zPbaz1jb3fqn4+XGriuvfkZ5l8RT3Ptva+99Dk96uQfLYauvQY2zuWOvbJp+stuh5Spk6mvKH7z9bT6l7fojW09W5bzUzvpi752thOqvv9Jj3hCw/J3++3Hewa8u1hHwc4rMmPMj7CMU40+TKnDSKzNdkvAAAA//8='
+				'eJzM17lOxDAQBmCn4xa3uAUFCAoQFCDujg6JJ0BCVCyHBGRbKp6CDugoeQTejD+SV1ij8fhMSPFpHTbBf8bOKFsopQq4bJGCuIA+6IcBGPwHQzAMI3DO5BuFMRiHiYa8GeNJmIJpS74ZmIU5mG/AO3zApz5egEVYsuRbhhV4gJca3MMT3MErXMMXXOnvq3lXYc2Sbx029Lld6Bh6x6XxWZJzzO/p+ZVbneGGua6j592ELY983PV1KiPycfWR/u46l9aWrlFs/bi1cqFzcznpcc71DcnqKyRfydQghHSt7d5S6ufaiz55pOc9x/raek4OOZ9frm50P9jGufZfrpqEnBOTj9bF/H+p69tNzCf1MNpjzbl6Yzo/vZbee2p/Du0Z0nOba31z77e6nw+fmvjuPfoZk8/V86S1D72HNr9fpeSTaujTY6R3LHMcko/rLVwPiamTLW/q/pN6WtPr61pDqXdLNbO9m/rk24YdVd/vN+oZvuFR/f1+24U9S759OIBDOGrIjzE+hhM4ZfJVzlqEZmuzXwAAAP//'
 			)
 			(obstructions 
 				(style 'tile')
@@ -345,7 +345,7 @@
 			)
 			(zones 
 				(zone 
-					(label 'toCave03')
+					(label 'toCave01')
 					(x '496')
 					(y '32')
 					(width '16')

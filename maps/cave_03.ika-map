@@ -22,7 +22,7 @@
 		)
 		(zone 
 			(label 'toggleBlocks')
-			(script 'toggleBlocks')
+			(script 'switchBlocks')
 		)
 	)
 	(layers 

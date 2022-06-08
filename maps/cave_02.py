@@ -1,7 +1,6 @@
 from mapscript import *
 
-def AutoExec():
-    
+def AutoExec():    
     pos = []
     pos.append((31, 2, 'B2'))
     pos.append((31, 3, 'B2'))

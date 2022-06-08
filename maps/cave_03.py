@@ -2,20 +2,25 @@ from mapscript import *
 from friedrich import Friedrich
 import sound
 
-def toggleBlocks():
+def switchBlocks():
+    if 'cave03block' not in engine.saveData:
+        engine.saveData['cave03block'] = True
+        sound.switch.Play()
+        removeBlocks()
+
+def removeBlocks():
     for y in range(4, 9):
         ika.Map.SetTile(10, y, 1, 0)
         ika.Map.SetObs(10, y, 1, False)
-
+    ika.Map.SetTile(8, 5, 1, 191)    
 
 def AutoExec():
     if 'rescued' in engine.saveData:
         del ika.Map.entities['friedrich']
-    pass #
+        removeBlocks()
+    
 
 def friedrich():
-
-
     fried = engine.entFromEnt[ika.Map.entities['friedrich']]
 
     if 'rescued' not in engine.saveData:

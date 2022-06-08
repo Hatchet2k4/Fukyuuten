@@ -120,6 +120,7 @@ class Crossfader(Thing): #important Music handler!
         self.tempmusic.Play()
         self.limit=timelimit
         self._update = self.playtemp
+        	
 
     def reset(self, newMusic):
         if newMusic is self.music:
