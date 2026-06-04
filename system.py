@@ -27,6 +27,7 @@ import engine
 import gui
 from intro import intro, menu
 import sound
+import map2tmx
 
 import controls
 controls.init()
@@ -49,6 +50,8 @@ import data
 data.init()
 
 sound.playMusic('title')
+
+map2tmx.Map2TMX('maps/green_00.ika-map', 'green.tsx')
 
 # LEAVE THIS FOR LATER K
 #for n in range(1,100):
