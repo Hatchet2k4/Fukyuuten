@@ -50,7 +50,7 @@ import data
 data.init()
 
 #map2tmx.Map2TMX('maps/green_05.ika-map', 'green.tsx')
-#map2tmx.SaveAllMaps()
+map2tmx.SaveAllMaps()
 
 sound.playMusic('title')
 
