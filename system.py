@@ -49,9 +49,12 @@ controls.setConfig(c)
 import data
 data.init()
 
+#map2tmx.Map2TMX('maps/green_05.ika-map', 'green.tsx')
+#map2tmx.SaveAllMaps()
+
 sound.playMusic('title')
 
-map2tmx.Map2TMX('maps/green_00.ika-map', 'green.tsx')
+
 
 # LEAVE THIS FOR LATER K
 #for n in range(1,100):

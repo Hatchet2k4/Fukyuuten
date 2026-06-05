@@ -1,4 +1,5 @@
 import ika
+import os
 
 def Map2TMX(mapName, tilesetName):
         
@@ -25,9 +26,8 @@ def Map2TMX(mapName, tilesetName):
 '''          
         
         
-        for y in range(mwidth): #hack, using 100/100 instead of actual map height because for some reason it wasn't giving the right numbers
-            for x in range(mheight):
-            
+        for y in range(mheight):
+            for x in range(mwidth):            
                 t=ika.Map.GetTile(x,y,l)
                 if t>0: t+=1 #Tile ID's seem to be off by 1 in the TSX tileset, using this to correct. 
                 s+= str(t) + ','
@@ -48,20 +48,22 @@ def SaveAllMaps():
     #tiles=self.rip_tiles('tiles.png', 16, 16, 6, 503)
     
     #hack!
+    ika.Log('SaveAllMaps')
     try:
-        raw_names = os.listdir('.')
+        raw_names = os.listdir('maps')
         savemaps = []
         for f in raw_names:
-            if f.endswith('ika-map'):
-                savemaps.append(f)
+            if f.endswith('ika-map') and f.startswith('green') and not f.startswith('green_05'):
+                savemaps.append('maps/'+f)
         
         ika.Log( str(savemaps) )
     except: 
-        #ika.Log(str(e))
+        
+        ika.Log('Error')
         return None
 
     ika.Log('maps: ' + str(savemaps))
     
     for m in savemaps:
         #self.Map2Img(m, tiles)    
-        Map2TMX(m, 'finaleclipse.tsx')
+        Map2TMX(m, 'green.tsx')
