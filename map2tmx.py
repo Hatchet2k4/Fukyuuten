@@ -22,7 +22,11 @@ def Map2TMX(mapName, tilesetName):
         layerid+=1    
         if l==1: 
             s += WriteLayer(l, layerid, obs=True)
-            layerid+=1            
+            layerid+=1       
+            s += WriteZones(l, layerid)
+            layerid+=1
+            
+            
     s+='\n</map>'
     
     file(mapName + '.tmx', 'wt').write(s)                    
@@ -55,6 +59,7 @@ def WriteLayer(l, layerid, obs=False):
                 t=ika.Map.GetObs(x,y,l)
                 if t>0: t=75 #using tile 75 (74+1) as obstruction for now
                 s+= str(t) + ','
+        
 
     else:
         for y in range(mheight):
@@ -66,7 +71,26 @@ def WriteLayer(l, layerid, obs=False):
     s = s[:-1] #hack to remove the last comma from the list
     s+='\n</data></layer>'   
     return s
-        
+
+def WriteZones(l, layerid):   
+    
+    zones = ika.Map.GetZones(l)
+    zid=1
+    s='<objectgroup id="'+str(layerid)+ '" name="zones">'    
+    for z in zones:
+        x,y,w,h,script=z
+        scriptname = script
+        s+='''
+        <object id="''' +str(zid) + '''" name="''' + scriptname + '''" x="''' +str(x) + '''" y="''' +str(y) + '''" width="''' +str(w) + '''" height="''' +str(h) + '''">
+        <properties>
+        <property name="Script" value="''' +scriptname +''' "/>
+        </properties>
+        </object>'''       
+        zid+=1
+    
+    s+='''</objectgroup>'''
+    return s 
+
 def SaveAllMaps():
     savemaps=[]
     #tiles=self.rip_tiles('tiles.png', 16, 16, 6, 503)
