@@ -25,7 +25,8 @@ def Map2TMX(mapName, tilesetName):
             layerid+=1       
             s += WriteZones(l, layerid)
             layerid+=1
-            
+            s+=WriteEntities(l, layerid)
+            layerid+=1
             
     s+='\n</map>'
     
@@ -40,6 +41,22 @@ mapping = {
 3:'moreabove',
 }
 
+def WriteEntities(l, layerid):
+    ents = ika.Map.GetAllEntities()
+    #ika.Log(str(ents))
+    s=''
+    
+
+
+    
+    for e in ents:
+        ika.Log(e.spritename)
+        ika.Log(e.name)
+        ika.Log(str(e.x))
+        ika.Log(str(e.y))
+        
+        pass
+    return s
 def WriteLayer(l, layerid, obs=False):
     twidth = theight = 16
     
