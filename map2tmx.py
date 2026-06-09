@@ -43,20 +43,22 @@ mapping = {
 
 def WriteEntities(l, layerid):
     ents = ika.Map.GetAllEntities()
-    #ika.Log(str(ents))
-    s=''
-    
-
-
-    
+    s='<objectgroup id="'+str(layerid)+ '" name="entities">'    
+    eid=1
     for e in ents:
-        ika.Log(e.spritename)
-        ika.Log(e.name)
-        ika.Log(str(e.x))
-        ika.Log(str(e.y))
+
+
+        s+='''
+        <object id="''' +str(eid) + '''" name="''' + e.spritename + '''" x="''' +str(e.x) + '''" y="''' +str(e.y) + '''" width="''' +str(e.hotwidth) + '''" height="''' +str(e.hotheight) + '''">
+        </object>'''       
+        eid+=1
+    
+    s+='''</objectgroup>
+    '''
         
-        pass
     return s
+    
+    
 def WriteLayer(l, layerid, obs=False):
     twidth = theight = 16
     
@@ -105,7 +107,8 @@ def WriteZones(l, layerid):
         </object>'''       
         zid+=1
     
-    s+='''</objectgroup>'''
+    s+='''</objectgroup>
+    '''
     return s 
 
 def SaveAllMaps():
