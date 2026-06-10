@@ -25,19 +25,68 @@
         </properties>
         </object></objectgroup>
     <objectgroup id="5" name="entities">
-        <object id="1" name="goblin2.ika-sprite" x="133" y="240" width="13" height="10">
+        <object id="1" name="archer1" type="goblin2" x="133" y="240" width="48" height="48">
+        <properties>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
+        
+        </properties>
         </object>
-        <object id="2" name="goblin2.ika-sprite" x="170" y="415" width="13" height="10">
+        <object id="2" name="goblin2" type="goblin2" x="170" y="415" width="48" height="48">
+        <properties>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
+        
+        </properties>
         </object>
-        <object id="3" name="hive.ika-sprite" x="176" y="544" width="16" height="16">
+        <object id="3" name="hive1" type="hive" x="176" y="544" width="16" height="16">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
+        
+        </properties>
         </object>
-        <object id="4" name="vgap.ika-sprite" x="352" y="460" width="16" height="64">
+        <object id="4" name="gap1" type="vgap" x="352" y="460" width="16" height="64">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="64 "/>
+        
+        </properties>
         </object>
-        <object id="5" name="goblin1.ika-sprite" x="269" y="277" width="13" height="10">
+        <object id="5" name="goblin1" type="goblin1" x="269" y="277" width="48" height="48">
+        <properties>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
+        
+        </properties>
         </object>
-        <object id="6" name="vgap.ika-sprite" x="448" y="460" width="16" height="64">
+        <object id="6" name="gap2" type="vgap" x="448" y="460" width="16" height="64">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="64 "/>
+        
+        </properties>
         </object>
-        <object id="7" name="egg.ika-sprite" x="544" y="512" width="16" height="16">
+        <object id="7" name="egg01" type="egg" x="544" y="512" width="16" height="16">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
+        
+        </properties>
         </object></objectgroup>
     
 <layer id="6" name="above" width="40" height="45"> 

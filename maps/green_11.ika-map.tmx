@@ -20,29 +20,113 @@
         </properties>
         </object></objectgroup>
     <objectgroup id="5" name="entities">
-        <object id="1" name="hive.ika-sprite" x="368" y="176" width="16" height="16">
+        <object id="1" name="plant1" type="plant" x="563" y="541" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="2" name="hive.ika-sprite" x="592" y="176" width="16" height="16">
+        <object id="2" name="plant3" type="plant" x="622" y="573" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="3" name="plant.ika-sprite" x="164" y="267" width="32" height="32">
+        <object id="3" name="hive3" type="hive" x="368" y="176" width="16" height="16">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
+        
+        </properties>
         </object>
-        <object id="4" name="plant.ika-sprite" x="622" y="573" width="32" height="32">
+        <object id="4" name="plant10" type="plant" x="485" y="233" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="5" name="hive.ika-sprite" x="320" y="304" width="16" height="16">
+        <object id="5" name="plant2" type="plant" x="614" y="512" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="6" name="plant.ika-sprite" x="614" y="512" width="32" height="32">
+        <object id="6" name="hive5" type="hive" x="320" y="480" width="16" height="16">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
+        
+        </properties>
         </object>
-        <object id="7" name="plant.ika-sprite" x="563" y="541" width="32" height="32">
+        <object id="7" name="hive6" type="hive" x="592" y="176" width="16" height="16">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
+        
+        </properties>
         </object>
-        <object id="8" name="hive.ika-sprite" x="320" y="480" width="16" height="16">
+        <object id="8" name="plant6" type="plant" x="106" y="264" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="9" name="plant.ika-sprite" x="106" y="264" width="32" height="32">
+        <object id="9" name="hive1" type="hive" x="320" y="304" width="16" height="16">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
+        
+        </properties>
         </object>
-        <object id="10" name="plant.ika-sprite" x="485" y="233" width="32" height="32">
+        <object id="10" name="plant9" type="plant" x="361" y="332" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="11" name="plant.ika-sprite" x="361" y="332" width="32" height="32">
+        <object id="11" name="plant7" type="plant" x="164" y="267" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="12" name="smith.ika-sprite" x="802" y="119" width="32" height="32">
+        <object id="12" name="smith" type="smith" x="802" y="119" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object></objectgroup>
     
 <layer id="6" name="above" width="60" height="45"> 

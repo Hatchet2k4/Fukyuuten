@@ -25,21 +25,77 @@
         </properties>
         </object></objectgroup>
     <objectgroup id="5" name="entities">
-        <object id="1" name="plant.ika-sprite" x="167" y="392" width="32" height="32">
+        <object id="1" name="plant1" type="plant" x="43" y="54" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="2" name="plant.ika-sprite" x="360" y="150" width="32" height="32">
+        <object id="2" name="plant3" type="plant" x="215" y="153" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="3" name="goblin3.ika-sprite" x="363" y="201" width="13" height="10">
+        <object id="3" name="archer9" type="goblin3" x="363" y="201" width="48" height="48">
+        <properties>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
+        
+        </properties>
         </object>
-        <object id="4" name="plant.ika-sprite" x="64" y="208" width="32" height="32">
+        <object id="4" name="plant5" type="plant" x="329" y="294" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="5" name="plant.ika-sprite" x="329" y="294" width="32" height="32">
+        <object id="5" name="plant6" type="plant" x="167" y="392" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="6" name="plant.ika-sprite" x="43" y="54" width="32" height="32">
+        <object id="6" name="plant4" type="plant" x="360" y="150" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="7" name="goblin1.ika-sprite" x="165" y="57" width="13" height="10">
+        <object id="7" name="plant2" type="plant" x="64" y="208" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
+        
+        </properties>
         </object>
-        <object id="8" name="plant.ika-sprite" x="215" y="153" width="32" height="32">
+        <object id="8" name="archer5" type="goblin1" x="165" y="57" width="48" height="48">
+        <properties>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
+        
+        </properties>
         </object></objectgroup>
     
 <layer id="6" name="above" width="40" height="30"> 

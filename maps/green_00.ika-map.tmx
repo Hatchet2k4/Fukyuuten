@@ -25,9 +25,23 @@
         </properties>
         </object></objectgroup>
     <objectgroup id="5" name="entities">
-        <object id="1" name="savepoint.ika-sprite" x="101" y="407" width="16" height="16">
+        <object id="1" name="sp" type="savepoint" x="101" y="407" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="8 "/>
+        <property name="hoty"  type="int" value="16 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
+        
+        </properties>
         </object>
-        <object id="2" name="blank.ika-sprite" x="192" y="99" width="16" height="16">
+        <object id="2" name="AnaHouse" type="blank" x="192" y="99" width="32" height="32">
+        <properties>
+        <property name="hotx" type="int" value="8 "/>
+        <property name="hoty"  type="int" value="16 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
+        
+        </properties>
         </object></objectgroup>
     
 <layer id="6" name="above" width="30" height="30"> 

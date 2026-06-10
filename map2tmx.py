@@ -49,7 +49,14 @@ def WriteEntities(l, layerid):
 
 
         s+='''
-        <object id="''' +str(eid) + '''" name="''' + e.spritename + '''" x="''' +str(e.x) + '''" y="''' +str(e.y) + '''" width="''' +str(e.hotwidth) + '''" height="''' +str(e.hotheight) + '''">
+        <object id="''' +str(eid) + '''" name="''' + e.name + '''" type="''' + e.spritename[:-11] + '''" x="''' +str(e.x) + '''" y="''' +str(e.y) + '''" width="''' +str(e.spritewidth) + '''" height="''' +str(e.spriteheight) + '''">
+        <properties>
+        <property name="hotx" type="int" value="''' + str(e.hotx) + ''' "/>
+        <property name="hoty"  type="int" value="''' + str(e.hoty) + ''' "/>
+        <property name="hotwidth" type="int" value="''' + str(e.hotwidth) + ''' "/>
+        <property name="hotheight" type="int" value="''' + str(e.hotheight) + ''' "/>
+        
+        </properties>
         </object>'''       
         eid+=1
     
