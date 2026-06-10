@@ -28,6 +28,7 @@ import gui
 from intro import intro, menu
 import sound
 import map2tmx
+import sprite2tsx
 
 import controls
 controls.init()
@@ -50,7 +51,9 @@ import data
 data.init()
 
 #map2tmx.Map2TMX('maps/green_05.ika-map', 'green.tsx')
-map2tmx.SaveAllMaps()
+#map2tmx.SaveAllMaps()
+
+sprite2tsx.SaveAllSprites()
 
 sound.playMusic('title')
 

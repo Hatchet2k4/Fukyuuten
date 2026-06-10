@@ -1,0 +1,28 @@
+(ika-sprite 
+	(version '1.2')
+	(information 
+		(title 'Untitled')
+		(meta )
+	)
+	(header 
+		(depth '32')
+	)
+	(scripts )
+	(frames 
+		(count '1')
+		(dimensions 
+			(width '32')
+			(height '32')
+		)
+		(hotspot 
+			(x '8')
+			(y '16')
+			(width '16')
+			(height '16')
+		)
+		(data 
+			(format 'zlib')
+			'eJzMl9sNwyAMRfnKSh2nS3STTtIVukrH6ActVR2Zm4tDYhOlksWjwDEX80jOOWVlaTIspfy633J+P39pKc9m9ZtqxswqHTfyC1tMypUvo/jALkzRQte1fHDxQXeW15qM4iNb12sfq7X45yP1F56wNBd9mNs6549xhpov5q7YEfoz7mLdG+yo+Gd+YH3rTIjQH1NWp9MR+4+tAcZHFQte/rfJ9fL4GYsxZJd2zIddfMWWvD5v9D7EdhgDXr4eWwy1QD/c6w88GdeK+yP4bP1pOw+fsNF07LP/Xet/cj6eB6Ucxt8w994Y6OYb87HOoTUNts7f8kHYbF9KH/f5B++NlvbC0j6wt9je/Y9+rN65g+5fy1CDEe/PBQPP2sTfPRH3L37rMB/kHdzSwMPH8SsG2Qej9G8yGjEXxu9kWNbLP9LO8PsAAAD//w=='
+		)
+	)
+)

@@ -46,8 +46,6 @@ def WriteEntities(l, layerid):
     s='<objectgroup id="'+str(layerid)+ '" name="entities">'    
     eid=1
     for e in ents:
-
-
         s+='''
         <object id="''' +str(eid) + '''" name="''' + e.name + '''" type="''' + e.spritename[:-11] + '''" x="''' +str(e.x) + '''" y="''' +str(e.y) + '''" width="''' +str(e.spritewidth) + '''" height="''' +str(e.spriteheight) + '''">
         <properties>

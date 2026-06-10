@@ -47,34 +47,35 @@ class Node(NodeList):
         self.name = name
 
     def toDict(self, flat=True):
+        '''
         if flat:
             result = {}
             for child in self:
                 if hasattr(child, 'name'):
                     result[child.name] = child
             return result
+        else:'''
+        if len(self) == 1 and not isinstance(self[0], Node):
+            # A single non-Node value: leaf node
+            result = self[0]
+
         else:
-            if len(self) == 1 and not isinstance(self[0], Node):
-                # A single non-Node value: leaf node
-                result = self[0]
+            # recursively grab all child nodes.  Dictify them
+            result = {}
+            for child in self:
+                if hasattr(child, 'name') and hasattr(child, 'toDict'):
+                    result[child.name] = child.toDict(flat)
+                else:
+                    # character data
 
-            else:
-                # recursively grab all child nodes.  Dictify them
-                result = {}
-                for child in self:
-                    if hasattr(child, 'name') and hasattr(child, 'toDict'):
-                        result[child.name] = child.toDict(flat)
-                    else:
-                        # character data
+                    # Make up a key name so it fits in a dict
+                    bs_keyname = 'cdata'
+                    while bs_keyname in result:
+                        bs_keyname += '_'
 
-                        # Make up a key name so it fits in a dict
-                        bs_keyname = 'cdata'
-                        while bs_keyname in result:
-                            bs_keyname += '_'
+                    result[bs_keyname] = child
 
-                        result[bs_keyname] = child
-
-            return result
+        return result
         """
         if flat:
             # TODO: refactor into something slightly less opaque.
