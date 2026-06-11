@@ -27,7 +27,8 @@ def RipTiles(image, width, height, span=None, tilecount=None):
         tile = ika.Canvas(width, height)
         big_image.Blit(tile, -1 - (i % span * (width + 1)),
                        -1 - (i / span * (height + 1)), ika.Opaque)
-        tiles.append(ika.Image(tile))
+        #tiles.append(ika.Image(tile))
+        tiles.append(tile)
     return tiles
 
 
@@ -57,42 +58,57 @@ def Sprite2TSX(folder, sprite):
     parsed_data = parse_file_to_dict(folder+sprite)
     
     tile_width = int(parsed_data['ika-sprite']['frames']['dimensions']['width'])
-    tile_height = parsed_data['ika-sprite']['frames']['dimensions']['height']
-    hotx = parsed_data['ika-sprite']['frames']['hotspot']['x']
-    hoty = parsed_data['ika-sprite']['frames']['hotspot']['x']
-    hotwidth = parsed_data['ika-sprite']['frames']['hotspot']['width']
-    hotheight = parsed_data['ika-sprite']['frames']['hotspot']['height']   
-    count = parsed_data['ika-sprite']['frames']['count']
+    tile_height = int(parsed_data['ika-sprite']['frames']['dimensions']['height'])
+    hotx = int(parsed_data['ika-sprite']['frames']['hotspot']['x'])
+    hoty = int(parsed_data['ika-sprite']['frames']['hotspot']['x'])
+    hotwidth = int(parsed_data['ika-sprite']['frames']['hotspot']['width'])
+    hotheight = int(parsed_data['ika-sprite']['frames']['hotspot']['height'])
+    count = int(parsed_data['ika-sprite']['frames']['count'])
     
     image = ika.Canvas(folder + sname+ '.png')
-    columns = (image.width - 1) // (int(tile_width) + 1)
-    rows = (image.height - 1) // (int(tile_height) + 1)
+    columns = (image.width - 1) // (tile_width + 1)
+    rows = (image.height - 1) // (tile_height + 1)
+    
+    if columns==0 and rows==0: 
+        columns=1
+        rows=1
+        print("possible error with: "+sprite)
+    
     
     s='''<?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.12.2" name="''' + sname + '''" tilewidth="''' + tile_width +  '''" tileheight="''' + tile_height +  '''" tilecount="''' + count +  '''" columns="''' + str(columns) +  '''">
+<tileset version="1.10" tiledversion="1.12.2" name="''' + sname + '''" tilewidth="''' + str(tile_width) +  '''" tileheight="''' + str(tile_height) +  '''" tilecount="''' + str(count) +  '''" columns="''' + str(columns) +  '''">
  <image source="''' + sname + '_sheet.png' + '''" width="''' + str(tile_width * columns) +  ''' " height="''' + str(tile_height * rows) +  ''' "/>
  <tile id="0">
   <objectgroup>
-   <object id="0" name="Hitbox" x="''' + hotx + '''" y="''' + hoty + '''" width="''' + hotwidth + '''" height="''' + hotheight + '''"/>
+   <object id="0" name="Hitbox" x="''' + str(hotx) + '''" y="''' + str(hoty) + '''" width="''' + str(hotwidth) + '''" height="''' + str(hotheight) + '''"/>
   </objectgroup>
  </tile>
 </tileset>'''
 
     print(s)
 
-    #tiles = RipTiles(folder + sname+ '.png', int(tile_width), int(tile_height))
-    #bigimage = ika.Canvas(int(tile_width)*columns, int(tile_height)*rows)
-    #for y in range(rows):
-    #    for x in range(columns):
-    #        tiles[y*columns + x].Blit(            bigimage,             x*int(tile_width),            int(int(y)*int(tile_height)))
+    tiles = RipTiles(folder + sname+ '.png', tile_width, tile_height)
     
-    #bigimage.Save(folder+sname+'_sheet.png')
+    print("data")
+    print(rows)
+    print(columns)
+    print(tile_width)
+    print(tile_height)
+    print(sname)
+    bigimage = ika.Canvas(tile_width*columns, tile_height*rows)
+    
+    for y in range(rows):
+        for x in range(columns):
+            try:
+                c=tiles[y*columns + x]
+                c.Blit(bigimage, x*tile_width, y*tile_height)
+            except: 
+                print("error with y*columns + x. x="+str(x)+" y="+str(y))
+    
+    bigimage.Save(folder+sname+'_sheet.png')
 
     file(folder + sname + '.tsx', 'wt').write(s)  
     
-    
-
-
     
 
 def tokenize(text):
