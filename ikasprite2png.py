@@ -61,9 +61,12 @@ def Sprite2TSX(folder, sprite_filename, columns=4):
 <tileset version="1.10" tiledversion="1.12.2" name="''' + sname + '''" tilewidth="''' + str(tile_width) +  '''" tileheight="''' + str(tile_height) +  '''" tilecount="''' + str(count) +  '''" columns="''' + str(columns) +  '''">
  <image source="''' + sname + '_sheet.png' + '''" width="''' + str(tile_width * columns) +  ''' " height="''' + str(tile_height * rows) +  ''' "/>
  <tile id="0">
-  <objectgroup>
-   <object id="0" name="Hitbox" x="''' + str(hotx) + '''" y="''' + str(hoty) + '''" width="''' + str(hotwidth) + '''" height="''' + str(hotheight) + '''"/>
-  </objectgroup>
+  <objectgroup>'''
+    
+    for i in range(count):
+     s+='''<object id="''' + str(i) + '''" name="Hitbox" x="''' + str(hotx) + '''" y="''' + str(hoty) + '''" width="''' + str(hotwidth) + '''" height="''' + str(hotheight) + '''"/>'''
+    
+    s+='''</objectgroup>
  </tile>
 </tileset>'''
     output_name = sname + ".tsx"
