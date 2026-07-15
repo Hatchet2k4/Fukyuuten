@@ -2,10 +2,10 @@ import ika
 
 #import os
 
-def Map2TMX(mapName, tilesetName):
+def Map2TMX(mapPath, tilesetName, mapName, area=''):
         
-    ika.Log('Saving map ' + mapName)
-    ika.Map.Switch(mapName)
+    ika.Log('Saving map ' + mapPath)
+    ika.Map.Switch(mapPath)
     
     twidth = theight = 16
     
@@ -23,15 +23,15 @@ def Map2TMX(mapName, tilesetName):
         if l==1: 
             s += WriteLayer(l, layerid, obs=True)
             layerid+=1       
-            s += WriteZones(l, layerid)
+            s += WriteZones(l, layerid, mapName)
             layerid+=1
             s+=WriteEntities(l, layerid)
             layerid+=1
             
     s+='\n</map>'
+        
     
-    file(mapName + '.tmx', 'wt').write(s)                    
-    #canvas.Save('map2img/' +  mapName + '.png')
+    file(mapPath.replace('ika-map','tmx'), 'wt').write(s)                    
                     
         
 mapping = {
@@ -96,22 +96,30 @@ def WriteLayer(l, layerid, obs=False):
     s+='\n</data></layer>'   
     return s
 
-def WriteZones(l, layerid):   
-    
+
+def WriteZones(l, layerid, mapName):   
     zones = ika.Map.GetZones(l)
     zid=1
-    s='<objectgroup id="'+str(layerid)+ '" name="zones">'    
+    s='<objectgroup id="'+str(layerid)+ '" name="zones" class="area">'    
     for z in zones:
         x,y,w,h,script=z
         scriptname = script
         s+='''
-        <object id="''' +str(zid) + '''" name="''' + scriptname + '''" x="''' +str(x) + '''" y="''' +str(y) + '''" width="''' +str(w) + '''" height="''' +str(h) + '''">
+        <object id="''' +str(zid) + '''" name="''' + scriptname + '''" x="''' +str(x) + '''" y="''' +str(y) + '''" width="''' +str(w) + '''" height="''' +str(h) + '''" class="area">
         <properties>
-        <property name="Script" value="''' +scriptname +''' "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="''' +scriptname +'''"/>        
         </properties>
         </object>'''       
-        zid+=1
-    
+        zid+=1    
+
+    s+='''
+    <object id="''' +str(zid) + '''" name="Cam_''' + mapName + '''" x="0" y="0" width="''' +str(ika.Map.width) + '''" height="''' +str(ika.Map.height) + '''" class="area">
+    <properties>
+    <property name="godot_script" value="res://scripts/camerabounds.gd"/>   
+    </properties>
+    </object>'''       
+        
     s+='''</objectgroup>
     '''
     return s 
@@ -140,4 +148,4 @@ def SaveAllMaps():
     
     for m in savemaps:
         #self.Map2Img(m, tiles)    
-        Map2TMX('maps/'+m+'.ika-map', 'green.tsx')
+        Map2TMX('maps/'+m+'.ika-map', 'green.tsx', m, area='green')

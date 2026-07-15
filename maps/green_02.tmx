@@ -13,42 +13,50 @@
 <layer id="3" name="obstructions" width="40" height="45"> 
     <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,75,75,75,75,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,75,75,75,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,75,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,75,75,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,75,75,75,75,75,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,75,75,0,0,75,75,75,75,75,75,75,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,75,75,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,75,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,75,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,75,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,75,0,0,75,0,0,0,0,0,0,75,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,75,0,0,75,0,0,0,0,0,75,75,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,75,75,75,75,75,0,0,75,75,75,75,75,75,75,75,0,0,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75
-</data></layer><objectgroup id="4" name="zones">
-        <object id="1" name="toGreen03" x="48" y="704" width="544" height="16">
+</data></layer><objectgroup id="4" name="zones" class="area">
+        <object id="1" name="toGreen03" x="48" y="704" width="544" height="16" class="area">
         <properties>
-        <property name="Script" value="toGreen03 "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="toGreen03"/>        
         </properties>
         </object>
-        <object id="2" name="toGreen01" x="224" y="0" width="48" height="16">
+        <object id="2" name="toGreen01" x="224" y="0" width="48" height="16" class="area">
         <properties>
-        <property name="Script" value="toGreen01 "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="toGreen01"/>        
         </properties>
         </object>
-        <object id="3" name="toGreen04" x="0" y="304" width="16" height="112">
+        <object id="3" name="toGreen04" x="0" y="304" width="16" height="112" class="area">
         <properties>
-        <property name="Script" value="toGreen04 "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="toGreen04"/>        
         </properties>
-        </object></objectgroup>
+        </object>
+    <object id="4" name="Cam_green_02" x="0" y="0" width="640" height="720" class="area">
+    <properties>
+    <property name="godot_script" value="res://scripts/camerabounds.gd"/>   
+    </properties>
+    </object></objectgroup>
     <objectgroup id="5" name="entities">
-        <object id="1" name="hive1" type="hive" x="160" y="208" width="16" height="16">
+        <object id="1" name="archer2" type="goblin1" x="455" y="549" width="48" height="48">
         <properties>
-        <property name="hotx" type="int" value="0 "/>
-        <property name="hoty"  type="int" value="0 "/>
-        <property name="hotwidth" type="int" value="16 "/>
-        <property name="hotheight" type="int" value="16 "/>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
         
         </properties>
         </object>
-        <object id="2" name="hive2" type="hive" x="224" y="448" width="16" height="16">
+        <object id="2" name="archer1" type="goblin1" x="249" y="308" width="48" height="48">
         <properties>
-        <property name="hotx" type="int" value="0 "/>
-        <property name="hoty"  type="int" value="0 "/>
-        <property name="hotwidth" type="int" value="16 "/>
-        <property name="hotheight" type="int" value="16 "/>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
         
         </properties>
         </object>
-        <object id="3" name="archer2" type="goblin1" x="455" y="549" width="48" height="48">
+        <object id="3" name="goblin2" type="goblin3" x="143" y="327" width="48" height="48">
         <properties>
         <property name="hotx" type="int" value="18 "/>
         <property name="hoty"  type="int" value="31 "/>
@@ -66,21 +74,21 @@
         
         </properties>
         </object>
-        <object id="5" name="archer1" type="goblin1" x="249" y="308" width="48" height="48">
+        <object id="5" name="hive2" type="hive" x="224" y="448" width="16" height="16">
         <properties>
-        <property name="hotx" type="int" value="18 "/>
-        <property name="hoty"  type="int" value="31 "/>
-        <property name="hotwidth" type="int" value="13 "/>
-        <property name="hotheight" type="int" value="10 "/>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
         
         </properties>
         </object>
-        <object id="6" name="goblin2" type="goblin3" x="143" y="327" width="48" height="48">
+        <object id="6" name="hive1" type="hive" x="160" y="208" width="16" height="16">
         <properties>
-        <property name="hotx" type="int" value="18 "/>
-        <property name="hoty"  type="int" value="31 "/>
-        <property name="hotwidth" type="int" value="13 "/>
-        <property name="hotheight" type="int" value="10 "/>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="16 "/>
+        <property name="hotheight" type="int" value="16 "/>
         
         </properties>
         </object></objectgroup>

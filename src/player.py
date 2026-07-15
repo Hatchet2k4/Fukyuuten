@@ -16,7 +16,6 @@ from sword import Sword
 from spear import Spear
 from grapple import Grapple
 
-
 PLAYER_SPRITE = 'anastasia.ika-sprite'
 
 # Helper functions.  More for clarity than anything else.
@@ -129,36 +128,9 @@ _playerAnim = {
         _strand(_frame(31, 1000)),
         _strand(_frame(35, 1000)),
         _strand(_frame(31, 1000)),
-        ), False),
-    #~ 'die': ((
-        #~ zip((90,  91,  92), (20, 20, 1000)),
-        #~ zip((99, 100, 101), (20, 20, 1000)),
-        #~ zip((72,  73,  74), (20, 20, 1000)),
-        #~ zip((81,  82,  83), (20, 20, 1000)),
-        #~ zip((90,  91,  92), (20, 20, 1000)),
-        #~ zip((99, 100, 101), (20, 20, 1000)),
-        #~ zip((90,  91,  92), (20, 20, 1000)),
-        #~ zip((99, 100, 101), (20, 20, 1000))), False),
-    #~ # temporary:  copy the normal standing frames.
-    #~ 'magic': ((
-        #~ ((27, 1000),),
-        #~ ((18, 1000),),
-        #~ (( 9, 1000),),
-        #~ (( 0, 1000),),
-        #~ ((27, 1000),),
-        #~ ((18, 1000),),
-        #~ ((27, 1000),),
-        #~ ((18, 1000),)), True),
-    #~ 'shiver': ((zip((65, 47, 56, 38), (5, 5, 5, 5)),
-        #~ zip((56, 38, 65, 47), (5, 5, 5, 5)),
-        #~ zip((47, 56, 38, 65), (5, 5, 5, 5)),
-        #~ zip((38, 65, 47, 56), (5, 5, 5, 5)),
-        #~ zip((65, 47, 56, 38), (5, 5, 5, 5)),
-        #~ zip((56, 38, 65, 47), (5, 5, 5, 5)),
-        #~ zip((65, 47, 56, 38), (5, 5, 5, 5)),
-        #~ zip((56, 38, 65, 47), (5, 5, 5, 5))), True),
-}
+        ), False)
 
+}
 
 initialStats = StatSet(
     maxhp=120,

@@ -13,29 +13,37 @@
 <layer id="3" name="obstructions" width="40" height="30"> 
     <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,75,75,75,75,75,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,75,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,75,75,75,0,0,0,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,75,75,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,75,75,75,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,75,75,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,75,75,0,0,0,75,75,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,75,75,0,75,0,75,75,0,0,0,0,0,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,75,75,0,0,0,75,75,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,75,0,0,75,75,75,75,0,0,0,75,75,0,0,0,0,0,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,75,0,0,75,75,75,0,0,0,0,75,75,0,0,0,0,0,0,75,75,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,0,75,75,0,0,0,0,0,75,75,0,0,0,0,0,0,75,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,75,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,0,0,0,75,0,0,75,75,75,75,0,0,0,0,0,0,75,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,75,75,0,0,75,75,75,75,0,0,0,0,0,0,75,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,75,75,75,0,0,75,75,75,0,0,0,0,0,0,0,75,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,75,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,75,75,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,75,75,75,0,0,75,75,0,0,75,75,75,0,0,0,0,0,0,0,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,0,0,0,0,0,0,0,75,75,75,0,75,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,0,0,0,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data></layer><objectgroup id="4" name="zones">
-        <object id="1" name="toGreen04" x="624" y="320" width="16" height="112">
+</data></layer><objectgroup id="4" name="zones" class="area">
+        <object id="1" name="toGreen04" x="624" y="320" width="16" height="112" class="area">
         <properties>
-        <property name="Script" value="toGreen04 "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="toGreen04"/>        
         </properties>
         </object>
-        <object id="2" name="toGreen10" x="0" y="192" width="16" height="64">
+        <object id="2" name="toGreen10" x="0" y="192" width="16" height="64" class="area">
         <properties>
-        <property name="Script" value="toGreen10 "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="toGreen10"/>        
         </properties>
         </object>
-        <object id="3" name="toGreen08" x="240" y="0" width="224" height="16">
+        <object id="3" name="toGreen08" x="240" y="0" width="224" height="16" class="area">
         <properties>
-        <property name="Script" value="toGreen08 "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="toGreen08"/>        
         </properties>
-        </object></objectgroup>
+        </object>
+    <object id="4" name="Cam_green_07" x="0" y="0" width="640" height="480" class="area">
+    <properties>
+    <property name="godot_script" value="res://scripts/camerabounds.gd"/>   
+    </properties>
+    </object></objectgroup>
     <objectgroup id="5" name="entities">
-        <object id="1" name="plant1" type="plant" x="325" y="170" width="32" height="32">
+        <object id="1" name="goblin1" type="goblin2" x="99" y="370" width="48" height="48">
         <properties>
-        <property name="hotx" type="int" value="0 "/>
-        <property name="hoty"  type="int" value="0 "/>
-        <property name="hotwidth" type="int" value="32 "/>
-        <property name="hotheight" type="int" value="32 "/>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
         
         </properties>
         </object>
@@ -48,7 +56,16 @@
         
         </properties>
         </object>
-        <object id="3" name="hive1" type="hive" x="344" y="128" width="16" height="16">
+        <object id="3" name="archer2" type="goblin1" x="406" y="315" width="48" height="48">
+        <properties>
+        <property name="hotx" type="int" value="18 "/>
+        <property name="hoty"  type="int" value="31 "/>
+        <property name="hotwidth" type="int" value="13 "/>
+        <property name="hotheight" type="int" value="10 "/>
+        
+        </properties>
+        </object>
+        <object id="4" name="hive1" type="hive" x="344" y="128" width="16" height="16">
         <properties>
         <property name="hotx" type="int" value="0 "/>
         <property name="hoty"  type="int" value="0 "/>
@@ -57,21 +74,12 @@
         
         </properties>
         </object>
-        <object id="4" name="goblin1" type="goblin2" x="99" y="370" width="48" height="48">
+        <object id="5" name="plant1" type="plant" x="325" y="170" width="32" height="32">
         <properties>
-        <property name="hotx" type="int" value="18 "/>
-        <property name="hoty"  type="int" value="31 "/>
-        <property name="hotwidth" type="int" value="13 "/>
-        <property name="hotheight" type="int" value="10 "/>
-        
-        </properties>
-        </object>
-        <object id="5" name="archer2" type="goblin1" x="406" y="315" width="48" height="48">
-        <properties>
-        <property name="hotx" type="int" value="18 "/>
-        <property name="hoty"  type="int" value="31 "/>
-        <property name="hotwidth" type="int" value="13 "/>
-        <property name="hotheight" type="int" value="10 "/>
+        <property name="hotx" type="int" value="0 "/>
+        <property name="hoty"  type="int" value="0 "/>
+        <property name="hotwidth" type="int" value="32 "/>
+        <property name="hotheight" type="int" value="32 "/>
         
         </properties>
         </object></objectgroup>

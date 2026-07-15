@@ -13,28 +13,32 @@
 <layer id="3" name="obstructions" width="30" height="30"> 
     <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,75,75,75,75,75,75,75,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,75,75,75,75,75,75,75,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,0,75,75,75,75,75,75,75,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,75,75,75,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,75,75,75,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,75,75,75,75,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,75,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,75,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,75,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,75,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data></layer><objectgroup id="4" name="zones">
-        <object id="1" name="toGreen01" x="80" y="464" width="144" height="16">
+</data></layer><objectgroup id="4" name="zones" class="area">
+        <object id="1" name="toGreen01" x="80" y="464" width="144" height="16" class="area">
         <properties>
-        <property name="Script" value="toGreen01 "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="toGreen01"/>        
         </properties>
         </object>
-        <object id="2" name="firstConvo" x="110" y="205" width="20" height="22">
+        <object id="2" name="firstConvo" x="110" y="205" width="20" height="22" class="area">
         <properties>
-        <property name="Script" value="firstConvo "/>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="firstConvo"/>        
         </properties>
-        </object></objectgroup>
+        </object>
+        <object id="3" name="AnaHouse" x="182" y="101" width="36" height="15" class="area">
+        <properties>
+        <property name="godot_script" value="res://scripts/zones.gd"/>
+        <property name="script_name" value="AnaHouse"/>        
+        </properties>
+        </object>
+    <object id="4" name="Cam_green_00" x="0" y="0" width="480" height="480" class="area">
+    <properties>
+    <property name="godot_script" value="res://scripts/camerabounds.gd"/>   
+    </properties>
+    </object></objectgroup>
     <objectgroup id="5" name="entities">
         <object id="1" name="sp" type="savepoint" x="101" y="407" width="32" height="32">
-        <properties>
-        <property name="hotx" type="int" value="8 "/>
-        <property name="hoty"  type="int" value="16 "/>
-        <property name="hotwidth" type="int" value="16 "/>
-        <property name="hotheight" type="int" value="16 "/>
-        
-        </properties>
-        </object>
-        <object id="2" name="AnaHouse" type="blank" x="192" y="99" width="32" height="32">
         <properties>
         <property name="hotx" type="int" value="8 "/>
         <property name="hoty"  type="int" value="16 "/>
